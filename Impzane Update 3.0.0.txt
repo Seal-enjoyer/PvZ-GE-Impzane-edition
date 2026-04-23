@@ -1,0 +1,33 @@
+Impzane update 3.0.0
+Pirateseas: now has all level from day 1 to 25 fully custom (expansion will be next update)
+Made Sunshroom cooldown 1.9 instead of 2.9 so it's more spammable.
+Bloomerang: cost now 200 instead of 250 and cooldown is 15.
+All of AE got challenge decks and recommend decks.
+Boomerang projectile: stun is now 0.20 instead of 0.15.
+Bonkchoy : now does 5 dmg instead of 3, but his attack interval is 0.25 instead of 0.1.
+Kernelpult : butter chance doubled.
+Toadstool : cost is now 250, but recharge is 20 seconds.
+AE 24: fixed a bug that this level didn't give you Twin Sunflower.
+Explorer now has a 30% speed nerf.
+Dusklobber : now stuns and shoots slower.
+Snappea : cooldown reduced from 35 seconds to 20.
+Puffshroom: damage reduced from 20 to 10 and shotspeed to 1.
+Twin Sunflower : now shows in the right place when you choose a seed.
+Potatomines : cooldown is now 30s.
+Seagull : is now slower, and his eat speed is less.
+Gravebuster : HP is now 20% less, and his cooldown is now 70% more.
+Bonk: his cost is now 200 and his cooldown is 12.
+Wallnut : cooldown increased from 13 to 17 seconds.
+Peashooter: now shoots 20% slower and cooldown is 20% longer .
+Abbot Imp : HP increased from 1000 to 3000.
+Splitpea : HP is now 300.
+Troglobite : his ice cubes count is now 3 instead of 5.
+Summerbugs: now fly on your lawn , and when they die, they drop a zombie that doesn't move but has high HP .
+Seagull : speed is now 0.345 instead of 0.145.
+Endless : all endless modes have new starting plants.
+Lang: added some special tips.
+Pirate Parrot : lost his cone.
+Vamporcini: now can go into infinite HP with its sucking ability, but it only sucks for 3 seconds and does 200 DPS, and its base HP is 50.
+Pirate Captain : HP reduced from 7500 to 1500.
+Imp Cannon : shot speed increased from 0.000001 to 0 . 1, max imps reduced from 100 to 17, and tiles it shoots are now 3, 4, 5 instead of 1, 2, 3, 4, 5.
+ArmaMint : now shoots any lobber projectile a bunch of times.
