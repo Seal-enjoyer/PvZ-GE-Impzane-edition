@@ -3,19 +3,17 @@ A mod for the fangame PvZGE, it gives every plant and zombie a new coat of paint
 
 How you install this mod:
 
-Releases
-
 First you need PvZGE you can get it from https://pvzge.com/en/download/
+
 Download the zip folder from the github
+
 Go into Gardendless press f10 it should open a menu then look down at "Patch Files Directory" and click the blue
 
-Packages
-
 button that says "Open folder".
-Then add the extractet mod
-Then go back to Gardendless and press f10 and look at "Datapacks" and click "Save and Reload".
 
-Contributors 1
+Then add the extractet mod
+
+Then go back to Gardendless and press f10 and look at "Datapacks" and click "Save and Reload".
 
 And you should be done.
 
