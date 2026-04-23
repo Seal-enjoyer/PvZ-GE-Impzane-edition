@@ -18,3 +18,5 @@ Then go back to Gardendless and press f10 and look at "Datapacks" and click "Sav
 And you should be done.
 
 Enjoy the game!
+
+For a changelog of all plants, please check the doc: https://docs.google.com/document/d/1lNavD5_v8fG1h9e09S4V02lPivVp2CUVqBurdgjNubE/edit?usp=sharing
