@@ -19,6 +19,4 @@ Contributors 1
 
 And you should be done.
 
-aof93722-netizen Seal_enjoyer
-
 Enjoy the game!
