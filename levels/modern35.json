@@ -1,0 +1,561 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Newspaper Revenge",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Newspaper Revenge",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to modern day",
+        "LevelNumber": 35,
+        "FlagWaveVeteranOverrideTypes": [0, 1],
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(LostCityTrapTileGroups@CurrentLevel)",
+           "RTID(PiratePlanks@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+           "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Newspaper Revenge",
+        "NameMultiLanguage": {
+          "en": "Newspaper Revenge",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TutorialStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "fumeshroom"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "dusklobber"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "threepeater"
+                },
+            ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial_armor1@ZombieTypes)",
+                 "RTID(tutorial@ZombieTypes)",
+                 "RTID(modern_newspaper@ZombieTypes)",
+                 "RTID(modern_balloon@ZombieTypes)"
+
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(tutorial_armor1@ZombieTypes)",
+                 "RTID(tutorial@ZombieTypes)",
+                 "RTID(modern_newspaper@ZombieTypes)",
+                 "RTID(modern_balloon@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(tutorial_armor1@ZombieTypes)",
+                 "RTID(tutorial@ZombieTypes)",
+                 "RTID(modern_newspaper@ZombieTypes)",
+                 "RTID(modern_balloon@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 300, // Difficulty AAAAAAAAA
+            "StartingPoints": 150,
+            "StartingWave": 1,
+            "ZombiePool": [
+                 "RTID(tutorial_armor1@ZombieTypes)",
+                 "RTID(tutorial@ZombieTypes)",
+                 "RTID(modern_newspaper@ZombieTypes)",
+                 "RTID(modern_balloon@ZombieTypes)"
+           ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        },
+		{
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive a modern attack",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 12,
+        "WaveCount": 12,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+           [
+            "RTID(Wave12@CurrentLevel)"
+           ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)",
+            },
+            {
+            "Type": "RTID(tutorial@ZombieTypes)"
+           }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          },
+          {
+            "Type":"RTID(modern_allstar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+            },
+          {
+           "Type": "RTID(modern_balloon@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(modern_balloon@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(modern_balloon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_newspaper@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(newspaper_veteran@ZombieTypes)"
+            }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_superfanimp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zomboni@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(catapult@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(catapult@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+         },
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+         },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

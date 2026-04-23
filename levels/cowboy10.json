@@ -1,0 +1,227 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "wildwest day 12 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "wildwest day 12 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to The wildwest",
+        "LevelNumber": 10,
+        "FirstRewardParam": "peanut",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(WestMowers@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "wildwest day 10 but better",
+        "NameMultiLanguage": {
+          "en": "wildwest day 10 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(WestStage@LevelModules)"
+      }
+	},
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "OverrideSeedSlotsCount" : 2,
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "peanut"
+                    }
+                ],
+        "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(prospector@ZombieTypes)",
+              "RTID(poncho@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(prospector@ZombieTypes)",
+              "RTID(poncho@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(prospector@ZombieTypes)",
+              "RTID(poncho@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 350, // Difficulty AAAAAAAAA
+            "StartingPoints": 250,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(prospector@ZombieTypes)",
+              "RTID(poncho@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 12.5,
+        "WaveCount": 14,
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)","RTID(ZweiterFrostWindSnowstormEventSmall@CurrentLevel)","RTID(ZweiterFrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+	{
+        "aliases": [
+				"FrostWindSnowstormEventSmall"
+			],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 2,
+				"ColumnStart": 9,
+				"GroupSize": 100,
+				"TimeBetweenGroups": 0.5,
+				"Type": "sandstorm",
+				"Zombies": [
+				{"Type": "RTID(chicken_farmer@ZombieTypes)", "Row" : "0"},
+                			]
+			}
+    },
+    {
+        "aliases": [
+				"ZweiterFrostWindSnowstormEventSmall"
+			],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 2,
+				"ColumnStart": 9,
+				"GroupSize": 100,
+				"TimeBetweenGroups": 0.5,
+				"Type": "sandstorm",
+				"Zombies": [
+				{"Type": "RTID(chicken_farmer@ZombieTypes)", "Row" : "5"},
+                			]
+			}
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 5,
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)",
+          },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,575 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Zero's Skibiday",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Zero's Skibiday",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to modern day",
+        "LevelNumber": 42,
+        "FlagWaveVeteranOverrideTypes": [0, 1],
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(LostCityTrapTileGroups@CurrentLevel)",
+           "RTID(PiratePlanks@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+           "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Zero's Skibiday",
+        "NameMultiLanguage": {
+          "en": "Zero's Skibiday",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(PirateStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "primalpotatomine"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "marigold_purple"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "umbrellaleaf"
+                },
+            ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+        "aliases": [
+				"PiratePlanks"
+			],
+			"objclass": "PiratePlankProperties",
+			"objdata": {
+				"PlankRows": [
+                    0,
+				]
+			}
+	},
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(dark_king@ZombieTypes)",
+
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dark_king@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(dark_king@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 5000, // Difficulty AAAAAAAAA
+            "StartingPoints": 100,
+            "StartingWave": 1,
+            "ZombiePool": [
+                 "RTID(dark_king@ZombieTypes)",
+           ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        },
+		{
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive zeros last braincell",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+        {
+             },
+        {
+      "aliases": [
+        "LostCityTrapTileGroups"
+      ],
+      "objclass": "TrapTileProperties",
+      "objdata": {
+        "TrapTiles": [
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+               "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 1
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 2
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 3
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 4
+            },
+            "RecoverDelay": 1.1
+                    },
+          {
+            "Group": "boulder_forward",
+            "Location": {
+              "mX": 0,
+              "mY": 5
+            },
+            "RecoverDelay": 1.1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 12,
+        "WaveCount": 12,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+           [
+            "RTID(Wave12@CurrentLevel)"
+           ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)",
+            },
+            {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+           }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+           "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type":"RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+           "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+           "Type": "RTID(dark_king@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(abbot_chi@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+         },
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)"
+         },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

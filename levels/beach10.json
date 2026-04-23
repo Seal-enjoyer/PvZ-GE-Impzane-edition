@@ -1,0 +1,200 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Bigwave beach day 10 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Bigwave beach day 10 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.3.8",
+    "Version": "1.0",
+    "CreatedAt": "2025-08-02",
+    "UpdatedAt": "2025-08-02",
+    "Difficulty": "IMPZANSE",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to The big wave beach",
+        "LevelNumber": 10,
+        "FirstRewardParam": "homingthistle",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(BeachMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Bigwave beach day 10 but better",
+        "NameMultiLanguage": {
+          "en": "Bigwave beach day 10 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(BeachStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "homingthistle"
+                    }
+                ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(beach@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+			  "RTID(beach_armor4@ZombieTypes)",
+              "RTID(beach_snorkel@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(beach@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+			  "RTID(beach_armor4@ZombieTypes)",
+              "RTID(beach_snorkel@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(beach@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+			  "RTID(beach_armor4@ZombieTypes)",
+              "RTID(beach_snorkel@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 800, // Difficulty AAAAAAAAA
+            "StartingPoints": 1500,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(beach@ZombieTypes)",
+              "RTID(beach_armor2@ZombieTypes)",
+			  "RTID(beach_armor4@ZombieTypes)",
+              "RTID(beach_snorkel@ZombieTypes)",
+              "RTID(beach_surfer_veteran@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 14.5,
+        "WaveCount": 14,
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+
+          ]
+        ]
+      }
+    },
+	{
+        "aliases": [
+				"FrostWindSnowstormEventSmall"
+			],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 5,
+				"ColumnStart": 7,
+				"GroupSize": 100,
+				"TimeBetweenGroups": 0.5,
+				"Type": "sandstorm",
+				"Zombies": [
+				{"Type": "beach_octopus"},
+                			]
+			}
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 5,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_gargantuar@ZombieTypes)",
+          },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

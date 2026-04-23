@@ -1,0 +1,1966 @@
+{
+  "$schema": "https://pvzge.com/jsons/schema/gpn-worldmap.schema.json",
+  "apiVersion": 1,
+  "worlds": {
+    "egypt": {
+      "map": {
+        "mode": "replace",
+        "mainline": [
+          {
+            "id": "lvl-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt1"
+            ],
+            "title": "1"
+          },
+          {
+            "id": "lvl-2",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt2"
+            ],
+            "title": "2"
+          },
+          {
+            "id": "plant-c",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "cabbagepult"
+          },
+          {
+            "id": "lvl-3",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt3"
+            ],
+            "title": "3"
+          },
+          {
+            "id": "plant-b",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "bloomerang"
+          },
+          {
+            "id": "lvl-4",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt4"
+            ],
+            "title": "4"
+          },
+          {
+            "id": "lvl-5",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt5"
+            ],
+            "title": "5"
+          },
+          {
+            "id": "lvl-6",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt6"
+            ],
+            "title": "6"
+          },
+          {
+            "id": "plant-f",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "iceburg"
+          },
+          {
+            "id": "lvl-7",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt7"
+            ],
+            "title": "7"
+          },
+          {
+            "id": "lvl-8",
+            "type": "level",
+            "appearance": "gargantuar",
+            "levels": [
+              "egypt8"
+            ],
+            "title": "8"
+          },
+          {
+            "id": "lvl-9",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt9"
+            ],
+            "title": "9"
+          },
+          {
+            "id": "plant-d",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "gravebuster"
+          },
+          {
+            "id": "lvl-10",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt10"
+            ],
+            "title": "10"
+          },
+          {
+            "id": "lvl-11",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt11"
+            ],
+            "title": "11"
+          },
+          {
+            "id": "lvl-12",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt12"
+            ],
+            "title": "12"
+          },
+          {
+            "id": "lvl-13",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt13"
+            ],
+            "title": "13"
+          },
+          {
+            "id": "plant-bo",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "bonkchoy"
+          },
+          {
+            "id": "lvl-14",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt14"
+            ],
+            "title": "14"
+          },
+          {
+            "id": "lvl-15",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt15"
+            ],
+            "title": "15"
+          },
+          {
+            "id": "lvl-16",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt16"
+            ],
+            "title": "16"
+          },
+          {
+            "id": "plant-a",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "buttercup"
+          },
+          {
+            "id": "lvl-17",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt17"
+            ],
+            "title": "17"
+          },
+          {
+            "id": "lvl-18",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt18"
+            ],
+            "title": "18"
+          },
+          {
+            "id": "lvl-19",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt19"
+            ],
+            "title": "19"
+          },
+          {
+            "id": "plant-i",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "repeater"
+          },
+          {
+            "id": "lvl-20",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt20"
+            ],
+            "title": "20",
+            "children": [
+              "branch-20-1"
+            ]
+          },
+          {
+            "id": "lvl-21",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt21"
+            ],
+            "title": "21",
+            "children": [
+              "branch-21-1"
+            ]
+          },
+          {
+            "id": "upgrade-SunStart",
+            "type": "upgrade",
+            "template": {
+              "type": "upgrade"
+            },
+            "upgradeReward": "upgrade_starting_sun_lvl1"
+          },
+          {
+            "id": "lvl-22",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt22"
+            ],
+            "title": "22",
+            "children": [
+              "branch-22-1"
+            ]
+          },
+          {
+            "id": "lvl-23",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt23"
+            ],
+            "title": "23"
+          },
+          {
+            "id": "plant-e",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "snowdrop"
+          },
+          {
+            "id": "lvl-24",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt24"
+            ],
+            "title": "24",
+            "children": [
+              "branch-24-1"
+            ]
+          },
+          {
+            "id": "plant-h",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "twinsunflower"
+          },
+          {
+            "id": "lvl-25",
+            "type": "level",
+            "appearance": "zomboss",
+            "levels": [
+              "egypt25"
+            ],
+            "title": "25",
+            "relativePosition": {
+              "x": 450,
+              "y": 0
+            }
+          },
+          {
+            "id": "lvl-26",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt26"
+            ],
+            "title": "26",
+            "relativePosition": {
+              "x": 480,
+              "y": -10
+            }
+          },
+          {
+            "id": "gift-main",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "relativePosition": {
+              "x": 200,
+              "y": 40
+            }
+          },
+          {
+            "id": "lvl-27",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt27"
+            ],
+            "title": "27",
+            "relativePosition": {
+              "x": 175,
+              "y": -40
+            }
+          },
+          {
+            "id": "lvl-28",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt28"
+            ],
+            "title": "28",
+            "relativePosition": {
+              "x": 175,
+              "y": 20
+            }
+          },
+          {
+            "id": "lvl-29",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt29"
+            ],
+            "title": "29",
+            "children": [
+              "branch-29-1"
+            ],
+            "relativePosition": {
+              "x": 175,
+              "y": -60
+            }
+          },
+          {
+            "id": "gift-main1",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "relativePosition": {
+              "x": 200,
+              "y": 40
+            }
+          },
+          {
+            "id": "lvl-30",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt30"
+            ],
+            "title": "30",
+            "relativePosition": {
+              "x": 175,
+              "y": -40
+            }
+          },
+          {
+            "id": "lvl-31",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt31"
+            ],
+            "title": "31",
+            "relativePosition": {
+              "x": 175,
+              "y": 40
+            }
+          },
+          {
+            "id": "lvl-32",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt32"
+            ],
+            "title": "32",
+            "relativePosition": {
+              "x": 175,
+              "y": -60
+            }
+          },
+          {
+            "id": "upgrade-Sun2",
+            "type": "upgrade",
+            "template": {
+              "type": "upgrade"
+            },
+            "upgradeReward": "upgrade_starting_sun_lvl2",
+            "relativePosition": {
+              "x": 175,
+              "y": 60
+            }
+          },
+          {
+            "id": "lvl-33",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt33"
+            ],
+            "title": "33",
+            "relativePosition": {
+              "x": 175,
+              "y": 60
+            }
+          },
+          {
+            "id": "lvl-34",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "egypt34"
+            ],
+            "title": "34",
+            "relativePosition": {
+              "x": 175,
+              "y": 40
+            }
+          },
+          {
+            "id": "plant-g",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "appeasemint",
+            "relativePosition": {
+              "x": 175,
+              "y": 40
+            }
+          },
+          {
+            "id": "lvl-35",
+            "type": "level",
+            "appearance": "zomboss",
+            "levels": [
+              "egypt35"
+            ],
+            "title": "35",
+            "relativePosition": {
+              "x": 400,
+              "y": -80
+            }
+          }
+        ],
+        "branches": [
+          {
+            "id": "branch-20-1",
+            "type": "level",
+            "appearance": "normal",
+            "template": {
+              "levelId": "lvl-21"
+            },
+            "levels": [
+              "egypt20_1"
+            ],
+            "title": "20-1",
+            "relativePosition": {
+              "x": 110,
+              "y": 190
+            }
+          },
+          {
+            "id": "branch-21-1",
+            "type": "level",
+            "appearance": "normal",
+            "template": {
+              "levelId": "lvl-21"
+            },
+            "levels": [
+              "egypt21_1"
+            ],
+            "title": "21-1",
+            "relativePosition": {
+              "x": -90,
+              "y": -190
+            }
+          },
+          {
+            "id": "branch-22-1",
+            "type": "level",
+            "appearance": "normal",
+            "template": {
+              "levelId": "lvl-22"
+            },
+            "levels": [
+              "egypt22_1"
+            ],
+            "title": "22-1",
+            "relativePosition": {
+              "x": 110,
+              "y": 160
+            }
+          },
+          {
+            "id": "branch-24-1",
+            "type": "level",
+            "appearance": "normal",
+            "template": {
+              "levelId": "lvl-24"
+            },
+            "levels": [
+              "egypt24_1"
+            ],
+            "title": "24-1",
+            "relativePosition": {
+              "x": -120,
+              "y": -120
+            }
+          },
+          {
+            "id": "branch-29-1",
+            "type": "level",
+            "appearance": "normal",
+            "template": {
+              "levelId": "lvl-29"
+            },
+            "levels": [
+              "SQUASH_1"
+            ],
+            "title": "29-1",
+            "relativePosition": {
+              "x": 120,
+              "y": 120
+            }
+          }
+        ]
+      }
+    },
+    "pirate": {
+      "data": {
+        "epicTarget": "epic_pirate"
+      },
+      "map": {
+        "mode": "replace",
+        "reuseOriginalPositions": true,
+        "mainline": [
+          {
+            "id": "lvl-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate1"
+            ],
+            "title": "1"
+          },
+          {
+            "id": "plant-a",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "kernelpult"
+          },
+          {
+            "id": "lvl-2",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate2"
+            ],
+            "title": "2"
+          },
+          {
+            "id": "lvl-3",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate3"
+            ],
+            "title": "3"
+          },
+          {
+            "id": "plant-b",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "snapdragon"
+          },
+          {
+            "id": "lvl-4",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate4"
+            ],
+            "title": "4"
+          },
+          {
+            "id": "lvl-5",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate5"
+            ],
+            "title": "5"
+          },
+          {
+            "id": "gift-a",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-6",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate6"
+            ],
+            "title": "6"
+          },
+          {
+            "id": "plant-c",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "spikeweed"
+          },
+          {
+            "id": "lvl-7",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate7"
+            ],
+            "title": "7"
+          },
+          {
+            "id": "mini-boss-main",
+            "type": "level",
+            "appearance": "gargantuar",
+            "levels": [
+              "pirate8"
+            ],
+            "title": "8"
+          },
+          {
+            "id": "lvl-9",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate9"
+            ],
+            "title": "9"
+          },
+          {
+            "id": "plant-d",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "springbean"
+          },
+          {
+            "id": "lvl-10",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate10"
+            ],
+            "title": "10"
+          },
+          {
+            "id": "lvl-11",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate11"
+            ],
+            "title": "11"
+          },
+          {
+            "id": "plant-e",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "coconutcannon"
+          },
+          {
+            "id": "lvl-12",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate12"
+            ],
+            "title": "12"
+          },
+          {
+            "id": "upgrade-a",
+            "type": "upgrade",
+            "template": {
+              "type": "upgrade"
+            },
+            "upgradeReward": "upgrade_sunshovel_lvl1"
+          },
+          {
+            "id": "lvl-13",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate13"
+            ],
+            "title": "13"
+          },
+          {
+            "id": "plant-cr",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "cranjelly",
+            "relativePosition": {
+              "x": 130,
+              "y": 40
+            }
+          },
+          {
+            "id": "lvl-14",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate14"
+            ],
+            "title": "14"
+          },
+          {
+            "id": "plant-f",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "threepeater"
+          },
+          {
+            "id": "lvl-15",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate15"
+            ],
+            "title": "15"
+          },
+          {
+            "id": "lvl-16",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate16"
+            ],
+            "title": "16"
+          },
+          {
+            "id": "gift-b",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-17",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate17"
+            ],
+            "title": "17",
+            "relativePosition": {
+              "x": 100,
+              "y": -5
+            }
+          },
+          {
+            "id": "lvl-18",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate18"
+            ],
+            "title": "18",
+            "relativePosition": {
+              "x": 135,
+              "y": 30
+            },
+            "children": [
+              "branch-18-1"
+            ]
+          },
+          {
+            "id": "plant-g",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "spikerock",
+            "relativePosition": {
+              "x": 135,
+              "y": 75
+            }
+          },
+          {
+            "id": "lvl-19",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate19"
+            ],
+            "title": "19",
+            "relativePosition": {
+              "x": 100,
+              "y": -25
+            }
+          },
+          {
+            "id": "plant-da",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "dandelion",
+            "relativePosition": {
+              "x": 150,
+              "y": -20
+            }
+          },
+          {
+            "id": "gift-c",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "relativePosition": {
+              "x": 115,
+              "y": -25
+            }
+          },
+          {
+            "id": "lvl-20",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate20"
+            ],
+            "title": "20",
+            "relativePosition": {
+              "x": 150,
+              "y": -45
+            },
+            "children": [
+              "branch-20-1"
+            ]
+          },
+          {
+            "id": "lvl-21",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate21"
+            ],
+            "title": "21",
+            "relativePosition": {
+              "x": 157,
+              "y": -25
+            }
+          },
+          {
+            "id": "upgrade-b",
+            "type": "upgrade",
+            "template": {
+              "type": "upgrade"
+            },
+            "upgradeReward": "upgrade_7_slots",
+            "relativePosition": {
+              "x": 175,
+              "y": 35
+            }
+          },
+          {
+            "id": "lvl-22",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate22"
+            ],
+            "title": "22",
+            "relativePosition": {
+              "x": 115,
+              "y": 25
+            },
+            "children": [
+              "branch-22-1"
+            ]
+          },
+          {
+            "id": "plant-va",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "vamporcini",
+            "relativePosition": {
+              "x": 130,
+              "y": 30
+            }
+          },
+          {
+            "id": "lvl-23",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate23"
+            ],
+            "title": "23",
+            "relativePosition": {
+              "x": 125,
+              "y": 35
+            },
+            "children": [
+              "branch-23-1"
+            ]
+          },
+          {
+            "id": "gift-d",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "relativePosition": {
+              "x": 145,
+              "y": 60
+            }
+          },
+          {
+            "id": "lvl-24",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate24"
+            ],
+            "title": "24",
+            "relativePosition": {
+              "x": 135,
+              "y": 55
+            },
+            "children": [
+              "branch-24-1"
+            ]
+          },
+          {
+            "id": "plant-h",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "cherry_bomb",
+            "relativePosition": {
+              "x": 135,
+              "y": -10
+            }
+          },
+          {
+            "id": "lvl-25",
+            "type": "level",
+            "appearance": "zomboss",
+            "template": {
+              "levelId": "pirate25"
+            },
+            "levels": [
+              "pirate25"
+            ],
+            "title": "25",
+            "relativePosition": {
+              "x": 425,
+              "y": -195
+            }
+          },
+          {
+            "id": "lvl-26",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate26"
+            ],
+            "title": "26",
+            "relativePosition": {
+              "x": 380,
+              "y": 165
+            }
+          },
+          {
+            "id": "lvl-27",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate27"
+            ],
+            "title": "27",
+            "relativePosition": {
+              "x": 135,
+              "y": -75
+            }
+          },
+          {
+            "id": "gift-e",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "relativePosition": {
+              "x": 155,
+              "y": -70
+            }
+          },
+          {
+            "id": "lvl-28",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate28"
+            ],
+            "title": "28",
+            "relativePosition": {
+              "x": 145,
+              "y": 0
+            }
+          },
+          {
+            "id": "lvl-29",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate29"
+            ],
+            "title": "29",
+            "relativePosition": {
+              "x": 155,
+              "y": 30
+            }
+          },
+          {
+            "id": "lvl-30",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate30"
+            ],
+            "title": "30",
+            "relativePosition": {
+              "x": 135,
+              "y": 85
+            }
+          },
+          {
+            "id": "gift-f",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "relativePosition": {
+              "x": 135,
+              "y": 95
+            }
+          },
+          {
+            "id": "lvl-31",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate31"
+            ],
+            "title": "31",
+            "relativePosition": {
+              "x": 135,
+              "y": 15
+            }
+          },
+          {
+            "id": "lvl-32",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate32"
+            ],
+            "title": "32",
+            "relativePosition": {
+              "x": 155,
+              "y": -15
+            }
+          },
+          {
+            "id": "lvl-33",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate33"
+            ],
+            "title": "33",
+            "relativePosition": {
+              "x": 150,
+              "y": -75
+            },
+            "children": [
+              "branch-33-1"
+            ]
+          },
+          {
+            "id": "lvl-34",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate34"
+            ],
+            "title": "34",
+            "relativePosition": {
+              "x": 145,
+              "y": -55
+            }
+          },
+          {
+            "id": "gift-g",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "relativePosition": {
+              "x": 175,
+              "y": 35
+            }
+          },
+          {
+            "id": "plant-re",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "reinforcemint",
+            "relativePosition": {
+              "x": 130,
+              "y": 30
+            }
+          },
+          {
+            "id": "lvl-35",
+            "type": "level",
+            "appearance": "zomboss",
+            "template": {
+              "levelId": "pirate35"
+            },
+            "levels": [
+              "pirate35"
+            ],
+            "title": "35",
+            "relativePosition": {
+              "x": 450,
+              "y": -135
+            }
+          }
+        ],
+        "branches": [
+          {
+            "id": "branch-18-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate18_1"
+            ],
+            "title": "18-1",
+            "relativePosition": {
+              "x": -25,
+              "y": -12
+            }
+          },
+          {
+            "id": "branch-18-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate18_1"
+            ],
+            "title": "18-1",
+            "relativePosition": {
+              "x": 90,
+              "y": -75
+            }
+          },
+          {
+            "id": "branch-22-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate22_1"
+            ],
+            "title": "22-1",
+            "relativePosition": {
+              "x": 75,
+              "y": -100
+            }
+          },
+          {
+            "id": "branch-23-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate23_1"
+            ],
+            "title": "23-1",
+            "relativePosition": {
+              "x": 25,
+              "y": 115
+            }
+          },
+          {
+            "id": "branch-24-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "pirate24_1"
+            ],
+            "title": "24-1",
+            "relativePosition": {
+              "x": 125,
+              "y": 100
+            }
+          },
+          {
+            "id": "branch-33-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "buttercup0"
+            ],
+            "title": "33-1",
+            "relativePosition": {
+              "x": -100,
+              "y": -65
+            },
+            "children": [
+              "portal-a"
+            ]
+          },
+          {
+            "id": "portal-a",
+            "type": "epicPortal",
+            "template": {
+              "type": "epicPortal"
+            },
+            "relativePosition": {
+              "x": -125,
+              "y": -75
+            },
+            "portalLevels": [
+              "buttercup1",
+              "buttercup2",
+              "buttercup3",
+              "buttercup4",
+              "buttercup5"
+            ]
+          }
+        ]
+      }
+    },
+    "cowboy": {
+      "data": {
+        "epicTarget": "epic_cowboy"
+      },
+      "map": {
+        "mode": "replace",
+        "reuseOriginalPositions": true,
+        "mainline": [
+          {
+            "id": "lvl-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy1"
+            ],
+            "title": "1"
+          },
+          {
+            "id": "plant-a",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "splitpea"
+          },
+          {
+            "id": "lvl-2",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy2"
+            ],
+            "title": "2"
+          },
+          {
+            "id": "gift-a",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-3",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy3"
+            ],
+            "title": "3"
+          },
+          {
+            "id": "lvl-4",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy4"
+            ],
+            "title": "4"
+          },
+          {
+            "id": "plant-b",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "chilibean"
+          },
+          {
+            "id": "lvl-5",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy5"
+            ],
+            "title": "5"
+          },
+          {
+            "id": "lvl-6",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy6"
+            ],
+            "title": "6"
+          },
+          {
+            "id": "plant-c",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "peapod"
+          },
+          {
+            "id": "lvl-7",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy7"
+            ],
+            "title": "7"
+          },
+          {
+            "id": "mini-boss-main",
+            "type": "level",
+            "appearance": "gargantuar",
+            "levels": [
+              "cowboy8"
+            ],
+            "title": "8"
+          },
+          {
+            "id": "lvl-9",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy9"
+            ],
+            "title": "9"
+          },
+          {
+            "id": "plant-d",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "lightningreed"
+          },
+          {
+            "id": "lvl-10",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy10"
+            ],
+            "title": "10"
+          },
+          {
+            "id": "plant-Pe",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "peanut"
+          },
+          {
+            "id": "lvl-11",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy11"
+            ],
+            "title": "11"
+          },
+          {
+            "id": "upgrade-a",
+            "type": "upgrade",
+            "template": {
+              "type": "upgrade"
+            },
+            "upgradeReward": "upgrade_sunshovel_lvl2"
+          },
+          {
+            "id": "lvl-12",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy12"
+            ],
+            "title": "12",
+            "children": [
+              "branch-12-1"
+            ]
+          },
+          {
+            "id": "plant-e",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "melonpult"
+          },
+          {
+            "id": "lvl-13",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy13"
+            ],
+            "title": "13"
+          },
+          {
+            "id": "lvl-14",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy14"
+            ],
+            "title": "14"
+          },
+          {
+            "id": "plant-sw",
+            "type": "plant",
+            "template": { "type": "plant" },
+            "plantReward": "sweetpotato"
+          },
+          {
+            "id": "upgrade-b",
+            "type": "upgrade",
+            "template": {
+              "type": "upgrade"
+            },
+            "upgradeReward": "upgrade_wallnut_firstaid"
+          },
+          {
+            "id": "lvl-16",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy16"
+            ],
+            "title": "16"
+          },
+          {
+            "id": "gift-b",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            },
+            "children": [
+              "branch-16-1"
+            ]
+          },
+          {
+            "id": "lvl-17",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy17"
+            ],
+            "title": "17"
+          },
+          {
+            "id": "gift-c",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-18",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy18"
+            ],
+            "title": "18",
+            "children": [
+              "branch-18-1"
+            ]
+          },
+          {
+            "id": "plant-f",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "tallnut"
+          },
+          {
+            "id": "lvl-19",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy19"
+            ],
+            "title": "19"
+          },
+          {
+            "id": "lvl-20",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy20"
+            ],
+            "title": "20"
+          },
+          {
+            "id": "plant-AP",
+            "type": "plant",
+            "template": { "type": "plant" },
+            "plantReward": "applemortar"
+          },
+          {
+            "id": "lvl-21",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy21"
+            ],
+            "title": "21"
+          },
+          {
+            "id": "lvl-22",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy22"
+            ],
+            "title": "22",
+            "children": [
+              "branch-22-1"
+            ]
+          },
+          {
+            "id": "plant-cac",
+            "type": "plant",
+            "template": { "type": "plant" },
+            "plantReward": "cactus"
+          },
+          {
+            "id": "gift-d",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-23",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy23"
+            ],
+            "title": "23",
+            "children": [
+              "branch-23-1"
+            ]
+          },
+          {
+            "id": "lvl-24",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy24"
+            ],
+            "title": "24",
+            "children": [
+              "branch-24-1"
+            ]
+          },
+          {
+            "id": "plant-g",
+            "type": "plant",
+            "template": {
+              "type": "plant"
+            },
+            "plantReward": "wintermelon"
+          },
+          {
+            "id": "lvl-25",
+            "type": "level",
+            "appearance": "zomboss",
+            "template": {
+              "levelId": "cowboy25"
+            },
+            "levels": [
+              "cowboy25"
+            ],
+            "title": "25",
+            "relativePosition": {
+              "x": 525,
+              "y": -125
+            }
+          },
+          {
+            "id": "lvl-26",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy26"
+            ],
+            "title": "26"
+          },
+          {
+            "id": "gift-e",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-27",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy27"
+            ],
+            "title": "27"
+          },
+          {
+            "id": "lvl-28",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy28"
+            ],
+            "title": "28"
+          },
+          {
+            "id": "lvl-29",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy29"
+            ],
+            "title": "29",
+            "children": [
+              "branch-29-1"
+            ]
+          },
+          {
+            "id": "lvl-30",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy30"
+            ],
+            "title": "30"
+          },
+          {
+            "id": "gift-f",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-31",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy31"
+            ],
+            "title": "31"
+          },
+          {
+            "id": "lvl-32",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy32"
+            ],
+            "title": "32"
+          },
+          {
+            "id": "lvl-33",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy33"
+            ],
+            "title": "33"
+          },
+          {
+            "id": "lvl-34",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy34"
+            ],
+            "title": "34",
+            "children": [
+              "branch-34-1"
+            ]
+          },
+          {
+            "id": "gift-g",
+            "type": "giftBox",
+            "template": {
+              "type": "giftBox"
+            }
+          },
+          {
+            "id": "lvl-35",
+            "type": "level",
+            "appearance": "zomboss",
+            "template": {
+              "levelId": "cowboy35"
+            },
+            "levels": [
+              "cowboy35"
+            ],
+            "title": "35"
+          }
+        ],
+        "branches": [
+          {
+            "id": "branch-12-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy12_1"
+            ],
+            "title": "12-1",
+            "relativePosition": {
+              "x": 40,
+              "y": 85
+            }
+          },
+          {
+            "id": "branch-18-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy18_1"
+            ],
+            "title": "18-1",
+            "relativePosition": {
+              "x": 45,
+              "y": -85
+            }
+          },
+          {
+            "id": "branch-22-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy22_1"
+            ],
+            "title": "22-1",
+            "relativePosition": {
+              "x": 75,
+              "y": -130
+            }
+          },
+          {
+            "id": "branch-23-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy23_1"
+            ],
+            "title": "23-1",
+            "relativePosition": {
+              "x": 75,
+              "y": -140
+            }
+          },
+          {
+            "id": "branch-24-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "cowboy24_1"
+            ],
+            "title": "24-1",
+            "relativePosition": {
+              "x": 65,
+              "y": 95
+            }
+          },
+          {
+            "id": "branch-29-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "sapfling0"
+            ],
+            "title": "29-1",
+            "children": [
+              "portal-a"
+            ],
+            "relativePosition": {
+              "x": -27,
+              "y": -95
+            }
+          },
+          {
+            "id": "branch-34-1",
+            "type": "level",
+            "appearance": "normal",
+            "levels": [
+              "electriccurrant0"
+            ],
+            "title": "34-1",
+            "children": [
+              "portal-b"
+            ],
+            "relativePosition": {
+              "x": 40,
+              "y": -125
+            }
+          },
+          {
+            "id": "portal-a",
+            "type": "epicPortal",
+            "template": {
+              "type": "epicPortal"
+            },
+            "portalLevels": [
+              "sapfling1",
+              "sapfling2",
+              "sapfling3",
+              "sapfling4",
+              "sapfling5",
+              "sapfling6",
+              "sapfling7"
+            ],
+            "relativePosition": {
+              "x": -55,
+              "y": -75
+            }
+          },
+          {
+            "id": "portal-b",
+            "type": "epicPortal",
+            "template": {
+              "type": "epicPortal"
+            },
+            "portalLevels": [
+              "electriccurrant1",
+              "electriccurrant2",
+              "electriccurrant3",
+              "electriccurrant4",
+              "electriccurrant5"
+            ],
+            "relativePosition": {
+              "x": 75,
+              "y": -90
+            }
+          }
+        ]
+      }
+    }
+  }
+}

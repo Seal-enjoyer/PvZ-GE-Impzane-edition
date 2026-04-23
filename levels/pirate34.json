@@ -1,0 +1,587 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Pirate seas day 34 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "",
+    "Introduction": {
+      "en": "Pirate seas day 34 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to The Pirate Seas",
+        "LevelNumber": 34,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(PirateMowers@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(GraveStones@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LostCityTrapTileGroups@CurrentLevel)",
+           "RTID(PiratePlanks@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Pirate seas day 34 but better",
+        "NameMultiLanguage": {
+          "en": "Pirate seas day 34 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(PirateStage@LevelModules)"
+      }
+    },
+    {
+        "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "lilypad"
+                    }
+                ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+			"aliases": [
+				"PiratePlanks"
+			],
+			"objclass": "PiratePlankProperties",
+			"objdata": {
+				"PlankRows": [
+					1,
+					2,
+					3
+				]
+			}
+	},
+    {
+       },
+    {
+        "aliases": [
+                "DoNotPlantBeforeLine"
+            ],
+            "objclass": "MoldColonyChallengeProps",
+            "objdata": {
+                "MoldMatrix": [
+            "000000000",
+            "000111111",
+            "000111111",
+            "000111111",
+            "000000000"
+                   ]
+    }
+},
+{
+    "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true,
+                "Difficulties": [
+                    400
+                ]
+            }
+        },
+        {
+        "aliases": [
+        "MountingOthers"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridY": "4",
+            "GridX": "0",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "1",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "3",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "2",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "4",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "5",
+            "TypeName": "potholepuddle"
+            },
+          {
+            "GridY": "4",
+            "GridX": "6",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "7",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "8",
+            "TypeName": "potholepuddle"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive While Being a Hero In Pirate Seas.",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+    {
+      "aliases": [
+        "LostCityTrapTileGroups"
+      ],
+      "objclass": "TrapTileProperties",
+      "objdata": {
+        "TrapTiles": [
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 1,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+               "Group": "flame",
+            "Location": {
+              "mX": 0,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 2,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 3,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 4,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+                    },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 5,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+            },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 6,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 7,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+                    },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4.5,
+        "WaveCount": 11,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ]
+          ]
+      }
+    },
+		{
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pirate@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_armor1@ZombieTypes)", "Row": 2
+          },
+          {
+           "Type": "RTID(seagull@ZombieTypes)", "Row": 1
+           },
+          {
+           "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 3
+           },
+          {
+           "Type": "RTID(cannon@ZombieTypes)", "Row": 5
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cannon@ZombieTypes)", "Row": 5
+            },
+          {
+           "Type": "RTID(pirate_armor2@ZombieTypes)", "Row": 2
+           },
+          {
+           "Type": "RTID(pirate_armor2@ZombieTypes)", "Row": 4
+           },
+          {
+           "Type": "RTID(pirate@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 5
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 2
+             },
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 5
+             },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 5
+            },
+          {
+            "Type": "RTID(seagull@ZombieTypes)", "Row": 1
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pirate_armor4@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+    }
+  ],       
+  "version": 1
+}

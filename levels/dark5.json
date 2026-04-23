@@ -1,0 +1,336 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Darkages day 5 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Darkages day 5 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to The Darkages",
+        "LevelNumber": 11,
+        "FirstRewardParam": "hypnoshroom",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(DarkMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SimultaneousPlants@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Darkages day 5 but better",
+        "NameMultiLanguage": {
+          "en": "Darkages day 5 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(DarkStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                    {
+                        "Level": -1,
+                        "PlantType": "hypnoshroom"
+                    }
+                ],
+        "SelectionMethod": "chooser"
+         }
+    },
+	{
+            "aliases": [
+                "Gravestones"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "ForceSpawnData": [
+                    {
+                        "GridX": 5,
+                        "GridY": 4,
+                        "TypeName": "gravestoneSunOnDestruction"
+                    },
+                    {
+                        "GridX": 5,
+                        "GridY": 3,
+                        "TypeName": "gravestonePlantfoodOnDestruction"
+                    },
+					{
+                        "GridX": 5,
+                        "GridY": 1,
+                        "TypeName": "gravestoneSunOnDestruction"
+                    },
+					{
+                        "GridX": 5,
+                        "GridY": 2,
+                        "TypeName": "gravestonePlantfoodOnDestruction"
+                    },
+					{
+                        "GridX": 5,
+                        "GridY": 0,
+                        "TypeName": "gravestoneSunOnDestruction"
+                    }
+                ]
+            }
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dark@ZombieTypes)",
+              "RTID(dark_juggler@ZombieTypes)",
+              "RTID(dark_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dark@ZombieTypes)",
+              "RTID(dark_juggler@ZombieTypes)",
+              "RTID(dark_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dark@ZombieTypes)",
+              "RTID(dark_juggler@ZombieTypes)",
+              "RTID(dark_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 190, // Difficulty AAAAAAAAA
+            "StartingPoints": 150,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dark@ZombieTypes)",
+              "RTID(dark_juggler@ZombieTypes)",
+              "RTID(dark_armor1@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent1"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "1",
+                "GridTypes": [
+                    "RTID(gravestone_dark@GridItemTypes)","RTID(gravestoneSunOnDestruction@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 0,
+                "Zombies": [
+					{"Type": "RTID(lostcity_flag@ZombieTypes)"},
+					{"Type": "RTID(dark_king@ZombieTypes)"}
+                ]
+            }
+        },
+		{
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 11,
+        "WaveCount": 11,
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)"
+             ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+	{
+         "aliases": [
+                "beforderwaveGravestoneEvent1"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 10, "Type": "RTID(gravestone_dark@GridItemTypes)"},
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 1,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    },	
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 5,
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)",
+          },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

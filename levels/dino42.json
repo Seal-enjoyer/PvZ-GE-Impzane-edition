@@ -1,0 +1,213 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Jurassic March flaming hot day 10",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Jurassic March flaming hot day 10",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+},
+  "objects": [
+    {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "<PLAYERNAME>'s trip to jurassic marsh!",
+                "LevelNumber": 10,
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(Gravestones@CurrentLevel)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(ChallengeModule@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+                ],
+                "MusicType": "MiniGame_A",
+                "Name": "Jurassic March flaming hot day 10",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(DinoStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+		"gravebuster",
+		"hotpotato"
+        ],
+        "SelectionMethod": "chooser"
+         }
+    },
+        {
+    "aliases": [
+        "ZombieDistance"
+    ],
+    "objclass": "StarChallengeZombieDistanceProps",
+    "objdata": {
+        "TargetDistance": 2.0
+    }
+},
+{
+    "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(ZombieDistance@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 0,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_dino2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 2,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 8,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxCount": 8,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "megagatling",
+                        "Weight": 12
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "gatling",
+                        "Weight": 11
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 2,
+                        "MinWeightFactor": 3,
+                        "PlantType": "torchwood",
+                        "Weight": 7
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 4,
+                        "MinWeightFactor": 2,
+                        "PlantType": "guacodile",
+                        "Weight": 6
+                    },
+                    {
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 0,
+                        "MinWeightFactor": 0.1,
+                        "PlantType": "doomshroom",
+                        "Weight": 0.5
+                    },
+                    {
+                        "MaxCount": 3,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "bloomerang",
+                        "Weight": 12
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "cherry_bomb",
+                        "Weight": 8
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        }
+    ],
+    "version": 1
+}

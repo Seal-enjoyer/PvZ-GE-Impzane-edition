@@ -1,0 +1,333 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Modern day day 16 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Modern day day 16 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to modern day",
+        "LevelNumber": 16,
+        "FirstRewardParam": "worldkey",
+        "FirstRewardType": "worldtrophy",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(FutureLinkedTileGroups@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(GoldTiles@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Modern day day 16 but better",
+        "NameMultiLanguage": {
+          "en": "Modern day day 16 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TutorialStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(ra@ZombieTypes)",
+              "RTID(cannon@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(monk_imp@ZombieTypes)",
+              "RTID(future_protector@ZombieTypes)",
+              "RTID(dark_king@ZombieTypes)",
+              "RTID(beach_surfer@ZombieTypes)",
+              "RTID(iceage_troglobite@ZombieTypes)",
+              "RTID(sky@ZombieTypes)",
+              "RTID(eighties_8bit_armor1@ZombieTypes)",
+              "RTID(dino_bully_veteran@ZombieTypes)",
+              "RTID(bobsled_team@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(ra@ZombieTypes)",
+              "RTID(cannon@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(monk_imp@ZombieTypes)",
+              "RTID(future_protector@ZombieTypes)",
+              "RTID(dark_king@ZombieTypes)",
+              "RTID(beach_surfer@ZombieTypes)",
+              "RTID(iceage_troglobite@ZombieTypes)",
+              "RTID(sky@ZombieTypes)",
+              "RTID(eighties_8bit_armor1@ZombieTypes)",
+              "RTID(dino_bully_veteran@ZombieTypes)",
+              "RTID(bobsled_team@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(ra@ZombieTypes)",
+              "RTID(cannon@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(monk_imp@ZombieTypes)",
+              "RTID(future_protector@ZombieTypes)",
+              "RTID(dark_king@ZombieTypes)",
+              "RTID(beach_surfer@ZombieTypes)",
+              "RTID(iceage_troglobite@ZombieTypes)",
+              "RTID(sky@ZombieTypes)",
+              "RTID(eighties_8bit_armor1@ZombieTypes)",
+              "RTID(dino_bully_veteran@ZombieTypes)",
+              "RTID(bobsled_team@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 1250, // Difficulty AAAAAAAAA
+            "StartingPoints": 500,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(ra@ZombieTypes)",
+              "RTID(cannon@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(monk_imp@ZombieTypes)",
+              "RTID(future_protector@ZombieTypes)",
+              "RTID(dark_king@ZombieTypes)",
+              "RTID(beach_surfer@ZombieTypes)",
+              "RTID(iceage_troglobite@ZombieTypes)",
+              "RTID(sky@ZombieTypes)",
+              "RTID(eighties_8bit_armor1@ZombieTypes)",
+              "RTID(dino_bully_veteran@ZombieTypes)",
+              "RTID(bobsled_team@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"	
+     }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 19.5,
+        "WaveCount": 8,
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+	{
+        "aliases": [
+				"FrostWindSnowstormEventSmall"
+			],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 5,
+				"ColumnStart": 7,
+				"GroupSize": 100,
+				"TimeBetweenGroups": 0.5,
+				"Type": "sandstorm",
+				"Zombies": [
+				{"Type": "camel_manyhump"},
+                			]
+			}
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 5,
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)",
+          },
+        ]
+      }
+    },
+	{
+            "aliases": [
+                "FutureLinkedTileGroups"
+            ],
+            "objclass": "PowerTileProperties",
+            "objdata": {
+                "LinkedTiles": [
+                    {
+                        "Group": "beta",
+                        "Location": {
+                            "mX": 5,
+                            "mY": 1
+                        },
+                        "PropagationDelay": 0.25
+                    },
+                    {
+                        "Group": "beta",
+                        "Location": {
+                            "mX": 5,
+                            "mY": 3
+                        },
+                        "PropagationDelay": 0.25
+                    },					
+					{
+                        "Group": "beta",
+                        "Location": {
+                            "mX": 5,
+                            "mY": 2
+                        },
+                        "PropagationDelay": 0.25
+					},				
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "FrozenZombiePlacement"
+            ],
+            "objclass": "InitialZombieProperties",
+            "objdata": {
+                "InitialZombiePlacements": [
+                    {
+                        "Condition": "icecubed",
+                        "GridX": 8,
+                        "GridY": 3,
+                        "TypeName": "beach_octopus"
+                    },
+					{
+                        "Condition": "icecubed",
+                        "GridX": 8,
+                        "GridY": 1,
+                        "TypeName": "piano"
+                    },
+					{
+                        "Condition": "icecubed",
+                        "GridX": 8,
+                        "GridY": 2,
+                        "TypeName": "modern_allstar"
+                    }
+                ]
+            }
+    },
+    {
+            "aliases": [
+                "GoldTiles"
+            ],
+            "objclass": "InitialGridItemProperties",
+            "objdata": {
+                "InitialGridItemPlacements": [
+				    {
+                        "GridX": 1,
+                        "GridY": 1,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 3,
+                        "GridY": 3,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 2,
+                        "GridY": 2,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 1,
+                        "GridY": 3,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 3,
+                        "GridY": 1,
+                        "TypeName": "goldtile"
+                    },
+                ]
+            }
+        },
+    {
+
+    }
+  ],
+  "version": 1
+}

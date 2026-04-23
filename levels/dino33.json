@@ -1,0 +1,793 @@
+{
+  "#comment": "Impzane",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Jurassic March flaming hot day 1"
+    },
+    "Author": "Captian Impsanity",
+    "Introduction": {
+      "en": "Jurassic March flaming hot day 1"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to jurassic marsh",
+        "LevelNumber": 1,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(Sunnydropper@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(DinoMowers@LevelModules)",
+          "RTID(StarChallengeSunProducedProps@LevelModules)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(FPP@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Jurassic March flaming hot day 1",
+        "NameMultiLanguage": {
+          "en": "Jurassic March flaming hot day 1",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(DinoStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+          "meteorflower",
+          "snowpea",
+          "missiletoe",
+          "iceburg",
+          "wintermelon",
+          "hurrikale",
+          "coldsnapdragon",
+          "seashroom",
+          "glaciershroom",
+          "snowdrop",
+          "icebloom",
+          "wintermint"
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 0,
+          "Min": 0
+        },
+        "TimeBetween": {
+          "Max": 35,
+          "Min": 20
+        },
+        "Repeat": {
+          "Max": 100,
+          "Min": 100
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(WaveMissileEvent@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveMissileEvent"
+      ],
+      "objclass": "MissileLocateWaveActionProps",
+      "objdata": {
+        "MissileCount": 2,
+        "ColumnStart": 0,
+        "ColumnEnd": 9,
+        "MissileFallCountdown": 0,
+        "WaveStartMessage": "",
+        "ProjectileType": "zomboss_missile_dark"
+      }
+    },
+    {
+      "aliases": [
+        "Sunnydropper"
+      ],
+      "objclass": "SunDropperProperties",
+      "objdata": {
+        "InitialSunDropDelay": 6,
+        "SunCountdownBase": 7,
+        "SunCountdownIncreasePerSun": 1,
+        "SunCountdownMax": 17.5,
+        "SunCountdownRange": 1,
+        "Value": 125
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive a flaming hot day in jurassic-marsh."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel2@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel2"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "This expansion has the gimmick that every ice and water related plant is banned but sun drops from the sky is 125."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60,
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 260,
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {},
+    {},
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 35,
+          "Min": 35
+        },
+        "TimeBetween": {
+          "Max": 30,
+          "Min": 30
+        },
+        "Repeat": {
+          "Max": 150,
+          "Min": 150
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Giantambush@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "hunter"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(hunter@CurrentLevel)",
+        "ZombieBasedOn": "iceage_hunter"
+      }
+    },
+    {
+      "aliases": [
+        "hunter"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeTossedByCitron": false,
+        "ChillInsteadOfFreeze": true,
+        "WalkSPS": 0.12,
+        "EatDPS": 100,
+        "Toughness": 300,
+        "StartingArmors": [
+          "dino_armor3"
+        ],
+        "FarAttackRange": 4,
+        "SnowballsPerBarrage": 8,
+        "WavePointCost": 300,
+        "Weight": 1500,
+        "SnowballType": "meteor",
+        "HitRect": "RTID(CommonHitRect@RectangleProps)",
+        "AttackRect": "RTID(CommonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveVeteranOverrideTypes": [
+          1
+        ],
+        "FlagWaveInterval": 15,
+        "WaveCount": 15,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "RaptorRow3"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "3",
+        "DinoType": "stego",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "Giantambush"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "row": 3
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)",
+            "row": 2
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "row": 2
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)",
+            "row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)",
+            "row": 1
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)",
+            "row": 1
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)",
+            "row": 4
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)",
+            "Row": 4
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)",
+            "row": 2
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave15"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(hunter@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(dino_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {}
+  ],
+  "version": 1
+}

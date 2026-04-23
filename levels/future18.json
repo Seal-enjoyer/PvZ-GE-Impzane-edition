@@ -1,0 +1,237 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Far future day 18 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Far future day 18 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to the far future",
+        "LevelNumber": 8,
+        "FirstRewardParam": "electricblueberry",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(FutureMowers@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(FutureLinkedTileGroups@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Far future day 18 but better",
+        "NameMultiLanguage": {
+          "en": "Far future day 18 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(FutureStage@LevelModules)"
+      }
+	},
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+         "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "sunshroom"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "electricblueberry"
+                }
+                ],
+        "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(future@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(future@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(future@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 1500, // Difficulty AAAAAAAAA
+            "StartingPoints": 350,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(future@ZombieTypes)",
+              "RTID(mech_cone@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 12.5,
+        "WaveCount": 8,
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)","RTID(bombHunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)",
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+	{
+            "aliases": [
+                "FutureLinkedTileGroups"
+            ],
+            "objclass": "PowerTileProperties",
+            "objdata": {
+                "LinkedTiles": [
+                    {
+                        "Group": "beta",
+                        "Location": {
+                            "mX": 0,
+                            "mY": 1
+                        },
+                        "PropagationDelay": 0.25
+                    },
+                    {
+                        "Group": "beta",
+                        "Location": {
+                            "mX": 0,
+                            "mY": 3
+                        },
+                        "PropagationDelay": 0.25
+                    },					
+					{
+                        "Group": "beta",
+                        "Location": {
+                            "mX": 0,
+                            "mY": 2
+                        },
+                        "PropagationDelay": 0.25
+					},				
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "HunterEvent"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(dark_king@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+		{ "aliases": [
+                "bombHunterEvent"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(kongfu_bomb@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+		{
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 5,
+        "Zombies": [
+          {
+            "Type": "RTID(dark@ZombieTypes)",
+          },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

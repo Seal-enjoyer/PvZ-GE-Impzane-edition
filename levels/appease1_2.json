@@ -1,0 +1,718 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Random realm night 2",
+      "zh-CN": ""
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Random realm night 2",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME> trip into the Random realm.",
+        "LevelNumber": 1,
+        "FirstIntroNarrative": "INTRO",
+        "FirstOutroNarrative": "OUTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "ReplayOutroNarrative": "OUTRO",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(SunProduced@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(FutureMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Random realm night 2",
+        "NameMultiLanguage": {
+          "en": "Random realm night 2",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(FutureNightStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "User Dave, I see boulders flying from the sky. ",
+              "zh": "User Dave, I see boulders flying from the sky."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "They come out of portals. ",
+              "zh": "They come out of portals."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "We need to move out of here.",
+              "zh": "We need to move out of here."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "StarChallengeSunProducedProps",
+      "aliases": [
+        "SunProduced"
+      ],
+      "objdata": {
+        "TargetSun": 5000
+      }
+    },
+     {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 1,
+              "Plants": [
+                "sunshroom",
+                "coconutcannon",
+                "applemortar",
+                "stallia",
+                "goldbloom",
+                "blover",
+                "marigold",
+                "gumnut"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "sunflower",
+                "cactus",
+                "thymewarp",
+                "shrinkingviolet",
+                "bloomerang",
+                "wintermelon",
+                "hurrikale"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 15,
+            "StartingPoints": 15,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 30,
+            "StartingPoints": 30,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)",
+              "RTID(barrelroller@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 130,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(cowboy@ZombieTypes)",
+              "RTID(cowboy_armor1@ZombieTypes)",
+              "RTID(cowboy_armor2@ZombieTypes)",
+              "RTID(tomb_raiser@ZombieTypes)",
+              "RTID(barrelroller@ZombieTypes)",
+              "RTID(modern_balloon@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive while boulders are flying on your lawn."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {},
+    {},
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 16,
+          "Min": 16
+        },
+        "TimeBetween": {
+          "Max": 55,
+          "Min": 44
+        },
+        "Repeat": {
+          "Max": 100,
+          "Min": 100
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(WaveMissileEvent@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveMissileEvent"
+      ],
+      "objclass": "MissileLocateWaveActionProps",
+      "objdata": {
+        "MissileCount": 1,
+        "ColumnStart": 0,
+        "ColumnEnd": 7,
+        "MissileFallCountdown": 0,
+        "WaveStartMessage": "",
+        "ProjectileType": "trap_boulder"
+      }
+    },
+    {
+      "aliases": [
+        "WaveMissileEvent1"
+      ],
+      "objclass": "MissileLocateWaveActionProps",
+      "objdata": {
+        "MissileCount": 10,
+        "ColumnStart": 5,
+        "ColumnEnd": 9,
+        "MissileFallCountdown": 0,
+        "WaveStartMessage": "",
+        "ProjectileType": "trap_boulder"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 8,
+        "WaveCount": 16,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave16@CurrentLevel)",
+            "RTID(WaveMissileEvent1@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+      },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_armor4@ZombieTypes)"
+          }
+        ]
+      }
+      },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+      },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_balloon@ZombieTypes)"
+          }
+        ]
+      }
+      },
+    {
+      "aliases": [
+        "Wave15"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)"
+          }
+        ]
+      }
+      },
+    {
+      "aliases": [
+        "Wave16"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {}
+  ],
+  "version": 1
+}

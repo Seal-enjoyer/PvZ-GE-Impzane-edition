@@ -1,0 +1,233 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Modern day day 5 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Modern day day 5 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to modern day",
+        "LevelNumber": 5,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Modern day day 5 but better",
+        "NameMultiLanguage": {
+          "en": "Modern day day 5 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(LostCityNightStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive The Lucky Box Zombies",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+    {
+         "aliases": [
+        "C_pharaoh"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(C_pharaoh@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh"
+      }
+    },
+    {
+      "aliases": [
+				"C_pharaoh"
+			],
+			"objclass": "ZombieProperties",
+			"objdata": { "CannotBeTossedByCitron": false, "ProtectsInside": true, "ZombieInside": ["dark","dark_armor1","dark_armor2","dark_armor3","dark_armor4","dark_wizard","dark_juggler","dark_king","dark_imp_dragon","dark_imp","dark_gargantuar","tutorial","tutorial_armor1", "tutorial_armor2", "tutorial_armor4", "tutorial_flag", "tutorial_flag_veteran", "duckytube", "duckytube_armor1", "duckytube_armor2", "duckytube_armor4", "duckytube_flag", "duckytube_flag_veteran", "tutorial_imp", "tutorial_gargantuar", "vase_gargantuar", "bobsled", "bobsled_team", "modern_balloon", "modern_newspaper", "newspaper_veteran", "modern_allstar", "modern_superfanimp", "lunar_superfanimp", "zomboni", "catapult", "mummy", "mummy_armor1", "mummy_armor2", "mummy_armor4", "mummy_flag", "mummy_flag_veteran","ra", "camel_segment", "camel_onehump", "camel_twohump", "camel_threehump", "camel_manyhump", "camel_segment_touch", "camel_onehump_touch", "camel_twohump_touch", "camel_threehump_touch", "camel_manyhump_touch", "explorer", "explorer_veteran", "tomb_raiser", "pharaoh_inner", "pharaoh_weak", "pharaoh", "egypt_imp", "egypt_gargantuar","pirate", "pirate_armor1", "pirate_armor2", "pirate_armor4", "pirate_flag", "pirate_flag_veteran", "swashbuckler", "seagull", "pelican", "barrelroller", "pirate_barrel", "pirate_imp", "cannon", "pirate_captain", "pirate_captain_parrot", "pirate_gargantuar","cowboy", "cowboy_armor1", "cowboy_armor2", "cowboy_armor4", "cowboy_flag", "cowboy_flag_veteran", "prospector", "piano", "poncho", "poncho_no_plate", "poncho_plate", "chicken_farmer", "chicken", "chicken_pumpkin", "west_bull", "west_bull_veteran", "west_bullrider", "cowboy_gargantuar","kongfu", "kongfu_armor1", "kongfu_armor2", "kongfu_armor3", "kongfu_flag", "kongfu_flag_veteran", "kongfu_torch", "kongfu_hammer", "kongfu_drink", "kongfu_chi", "kongfu_bomb", "kongfu_gong", "monk", "monk_armor1", "monk_armor2", "monk_armor3", "monk_flag", "monk_flag_veteran", "monk_torch", "monk_blade", "monk_nunchaku", "monk_drink", "monk_imp", "kongfu_rocket_imp","future", "future_armor1", "future_armor2", "future_armor4", "future_flag", "future_flag_veteran", "future_jetpack", "future_jetpack_disco", "future_jetpack_veteran", "future_protector", "future_protector_shield", "future_infinut_shield", "mech_cone", "future_imp", "disco_mech", "football_mech", "future_gargantuar","dark", "dark_armor1", "dark_armor2", "dark_armor3", "dark_armor4", "dark_flag", "dark_flag_veteran", "dark_imp", "dark_juggler", "dark_wizard", "dark_wizard_veteran", "dark_king", "dark_king_veteran", "dark_imp_dragon", "dark_gargantuar","beach", "beach_armor1", "beach_armor2", "beach_armor4", "beach_fem", "beach_fem_armor1", "beach_fem_armor2", "beach_fem_armor4", "beach_flag", "beach_flag_veteran", "beach_snorkel", "beach_surfer", "beach_surfer_veteran", "beach_imp", "beach_octopus", "beach_fisherman", "beach_gargantuar","iceage", "iceage_armor1", "iceage_armor2", "iceage_armor3", "iceage_armor4", "iceage_flag", "iceage_flag_veteran", "iceage_hunter", "iceage_hunter_veteran", "iceage_dodo", "iceage_imp", "iceage_troglobite", "iceage_troglobite_1block", "iceage_troglobite_2block", "iceage_troglobite_veteran", "iceage_weaselhoarder", "iceage_weasel", "iceage_gargantuar","lostcity", "lostcity_armor1", "lostcity_armor2", "lostcity_flag", "lostcity_excavator", "lostcity_jane", "lostcity_lostpilot", "lostcity_imp", "lostcity_bug", "lostcity_bug_armor1", "lostcity_bug_armor2", "lostcity_impporter", "lostcity_relichunter", "lostcity_crystalskull", "lostcity_gargantuar","sky", "sky_armor1", "sky_armor2", "sky_flag","eighties", "eighties_armor1", "eighties_armor2", "eighties_flag", "eighties_punk", "eighties_glitter", "eighties_mc", "eighties_imp", "eighties_breakdancer", "eighties_arcade", "eighties_8bit", "eighties_8bit_armor1", "eighties_8bit_armor2", "eighties_boombox", "eighties_gargantuar","dino", "dino_armor1", "dino_armor2", "dino_armor3", "dino_armor4", "dino_flag", "dino_flag_veteran", "dino_imp", "dino_bully", "dino_bully_veteran", "dino_gargantuar","summer_basic", "summer_armor1", "summer_armor2", "summer_flag", "summer_bug", "summer_bug_armor1", "summer_bug_armor2", "summer_imp", "summer_gargantuar"
+				], "WalkSPS": 0.185, "EatDPS": 100, "Toughness": 1, "DamageExtends": false, "NormalDeathWhenMowed": true, "WavePointCost": 450, "Weight": 100, "HitRect": "RTID(PharoahHitRect@RectangleProps)", "AttackRect": "RTID(PharoahAttackRect@RectangleProps)" }
+    },
+    {
+        "aliases": [
+				"FrostWindSnowstormEventSmall"
+			],
+			"objclass": "StormZombieSpawnerProps",
+			"objdata": {
+				"ColumnEnd": 7,
+				"ColumnStart": 7,
+				"GroupSize": 1,
+                "SandstormCount": 5,
+				"TimeBetweenGroups": 1.5,
+				"Type": "sandstorm",
+				"Zombies": [
+				{"Type": "RTID(C_pharaoh@CurrentLevel)"},
+                			]
+			}
+    },
+    {
+        },
+        {
+            "aliases": [
+                "ultra sand storm"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5.8,
+                    "Min": 0.0
+                },
+                "TimeBetween": {
+                    "Max": 10,
+                    "Min": 10
+                },
+                "Repeat": {
+                    "Max": 3,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
+                    "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
+                    "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
+                    "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
+                    "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
+                    "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+                ]
+            }
+        },
+        {
+        "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4.5,
+        "WaveCount": 11,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)","RTID(FrostWindSnowstormEventSmall@CurrentLevel)","RTID(ultra sand storm@CurrentLevel)"
+          ]
+          ]
+      }
+    },
+		{
+      "aliases": [
+        "Wave0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_jetpack@ZombieTypes)", "Row": 1
+          }
+        ]
+      }
+    },
+    {
+    }
+  ],       
+  "version": 1
+}

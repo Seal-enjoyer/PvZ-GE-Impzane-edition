@@ -1,0 +1,767 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "brutal mode guys nighmare",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink":  "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "brutal mode guys nighmare",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s try to unlock the spooky realm.",
+        "LevelNumber": 0,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+		   "RTID(LevelScheduler@CurrentLevel)",
+		   "RTID(LevelScheduler1@CurrentLevel)",
+		  "RTID(LevelScheduler2@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+           "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		   "RTID(InitialTide@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "SENTRY DOWN",
+        "NameMultiLanguage": {
+          "en": "SENTRY DOWN",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(HalloweenStage@LevelModules)"
+		}
+    },
+      {"aliases": ["InitialTide"],
+"objclass": "TideProperties",
+"objdata": {
+    "StartingWaveLocation": 9
+}},
+{
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+            "citron",
+            "melonpult",
+            "megagatling"
+        ],
+        "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "snowpea"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "guacodile"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "wintermelon"
+                },
+				{
+                    "Level": -1,
+                    "PlantType": "lilypad"
+                },
+            ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(dark_juggler@ZombieTypes)",
+
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dark_juggler@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(dark_juggler@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 600, // Difficulty AAAAAAAAA
+            "StartingPoints": 600,
+            "StartingWave": 1,
+            "ZombiePool": [
+                 "RTID(dark_juggler@ZombieTypes)",
+                 "RTID(kongfu_hammer@ZombieTypes)"
+           ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        },
+		{
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive this level to unlock the spooky realm",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+        {
+			"aliases": [
+                "LevelScheduler2"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 10,
+                    "Min": 10
+                },
+                "TimeBetween": {
+                    "Max": 25,
+                    "Min": 25
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(9Tide@CurrentLevel)"
+                ]
+            }
+        },
+        {
+			"aliases": [
+                "LevelScheduler1"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 5,
+                    "Min": 5
+                },
+                "TimeBetween": {
+                    "Max": 20,
+                    "Min": 20
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(0Tide@CurrentLevel)"
+                ]
+            }
+        },
+        {
+			"aliases": [
+                "0Tide"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 0,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+		{
+			"aliases": [
+                "9Tide"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 9,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+		{
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 12,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+           [
+            "RTID(Wave12@CurrentLevel)"
+           ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)","Row": 2
+            },
+            {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)","Row": 2
+           }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)","Row": 2
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)","Row": 0
+          },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)","Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_protector@ZombieTypes)", "Row": 2
+          },
+          {
+           "Type": "RTID(future_protector@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)", "Row": 2
+          },
+          {
+           "Type": "RTID(future_protector@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+            },
+          {
+           "Type": "RTID(future_protector@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(future_protector@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(future_protector@ZombieTypes)", "Row": 1
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row":1
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)", "Row":1
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(future_protector@ZombieTypes)", "Row":1
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)","row":0
+            },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)","row":4
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(future_protector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)", "Row": 2
+             },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)", "Row": 2
+             },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 2
+          },
+          {
+               "Type": "RTID(dark_juggler@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)", "Row":2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)","row":0
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+         },
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(future_protector@ZombieTypes)", "Row": 1
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)", "Row":1
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },{
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)","row":0
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+         },
+		 {
+            "Type": "RTID(abbot_imp@ZombieTypes)","row":0
+            },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(monk_nunchaku@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)","row":4
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(abbot_3section_staff@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(future_protector@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_juggler@ZombieTypes)"
+          }
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

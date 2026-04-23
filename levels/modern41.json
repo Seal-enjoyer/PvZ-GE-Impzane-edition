@@ -1,0 +1,725 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "brutal mode guys nighmare",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "brutal mode guys nighmare",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to modern day",
+        "LevelNumber": 41,
+        "FlagWaveVeteranOverrideTypes": [0, 1],
+        "StartingSun":1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+           "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "brutal mode guys nighmare",
+        "NameMultiLanguage": {
+          "en": "brutal mode guys nighmare",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(EightiesTutorialStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+            "grimrose",
+            "nighshade",
+            "gloomshroom",
+            "dusklobber",
+            "shadowshroom",
+             "dragonbruit",
+             "primalwallnut",
+             "gatling",
+        ],
+        "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "moonflower"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "splitpea"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "hotpotato"
+                },
+            ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(pharaoh@ZombieTypes)",
+
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(pharaoh@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(pharaoh@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 1600, // Difficulty AAAAAAAAA
+            "StartingPoints": 600,
+            "StartingWave": 1,
+            "ZombiePool": [
+                 "RTID(pharaoh@ZombieTypes)",
+                 "RTID(kongfu_gong@ZombieTypes)"
+           ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        },
+		{
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive brutal mode guy FINALSTAND!!!!      Warning turn off sunshovel!!!",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+        {
+            "objclass": "ZombiePotionModuleProperties",
+    "aliases": [
+        "ZombiePotions"
+    ],
+    "objdata": {
+        "InitialPotionCount": 15,
+        "MaxPotionCount": 15,
+        "PotionSpawnTimer": {
+            "Max": 0.1,
+            "Min": 0.1
+        },
+        "PotionTypes": [
+            "zombiepotion_speed",
+            "zombiepotion_toughness"
+        ]
+    }
+},
+{
+    },
+    {
+        "aliases": [
+                "Wave12"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.8,
+                    "Min": 0.8
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave12prop@CurrentLevel)"
+                ]
+            }
+        },
+        {
+             "aliases": [
+                "Wave12prop"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Column": "115",
+                        "Type": "RTID(kongfu_boss_blade@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            },
+    {
+        "aliases": [
+                "Wave12b"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.8,
+                    "Min": 0.8
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave12bprop@CurrentLevel)"
+                ]
+            }
+        },
+        {
+             "aliases": [
+                "Wave12bprop"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Column": "115",
+                        "Type": "RTID(kongfu_boss_explode@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            },
+    {
+    "aliases": [
+        "PlantMods"
+    ],
+    "objclass": "PlantModifierProperties",
+    "objdata": {
+        "HidePlantfood": true,
+        "SuppressParticle": true,
+        "List": [
+            {
+                    "Type": "glaciershroom",
+                    "NewObjdata": {
+				"FreezeDuration": 10,
+				"ChillDuration": 10000,
+				"ChillDurationAmbience": 2000,
+				"FreezeDamage": 100,
+				"EatFreezeDuration": 100,
+				"EatChillDuration": 1000,
+				"EatFreezeInterval": 2.5,
+				"WakeTime": 75,
+				"Cooldown": 120,
+				"CooldownFrom": 0.0,
+				"SunCost": 750,
+				"Toughness": 600,
+				"Family": "Cold",
+				"ImmuneToIceblock": true
+            }
+                }
+    ]
+    }
+},
+{
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 12,
+        "WaveCount": 12,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+           [
+            "RTID(Wave12@CurrentLevel)","RTID(Wave12b@CurrentLevel)"
+           ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            },
+            {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+           }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+          },
+          {
+           "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+          },
+          {
+           "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 1
+            },
+          {
+           "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+           },
+          {
+           "Type": "RTID(pharaoh@ZombieTypes)", "Row": 3
+           },
+          {
+           "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 5
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 2
+             },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 3
+             },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 1
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 1
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(kongfu_bomb@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 3
+         },
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 3
+         },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

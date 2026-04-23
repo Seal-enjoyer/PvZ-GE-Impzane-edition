@@ -1,0 +1,982 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "twilight night 4",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "twilight night 4",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s fourth trick or treating.",
+        "LevelNumber": 4,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(LevelScheduler1@CurrentLevel)",
+          "RTID(LevelScheduler2@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(LostCityTrapTileGroups@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "twilight night 4",
+        "NameMultiLanguage": {
+          "en": "twilight night 4",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(HalloweenStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+          "goldbloom",
+          "primalsunflower",
+          "solartomato"
+        ],
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "ghostpepper"
+          }
+        ],
+        "SelectionMethod": "chooser"
+      },
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(halloween@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(halloween@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(halloween@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 70, // Difficulty AAAAAAAAA
+            "StartingPoints": 70,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(halloween@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive the fourth twilight night.",
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler2"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 70,
+          "Min": 60
+        },
+        "TimeBetween": {
+          "Max": 20,
+          "Min": 10
+        },
+        "Repeat": {
+          "Max": 150,
+          "Min": 150
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(beforderwaveGravestoneEvent1@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler1"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 55,
+          "Min": 55
+        },
+        "TimeBetween": {
+          "Max": 40,
+          "Min": 40
+        },
+        "Repeat": {
+          "Max": 150,
+          "Min": 150
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler1"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 120,
+          "Min": 100
+        },
+        "TimeBetween": {
+          "Max": 70,
+          "Min": 60
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(croGraveSpawnAmbushEvent2@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "halloweengroundspawn"
+      ],
+      "objclass": "BeachStageEventZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 5,
+        "ColumnStart": 6,
+        "GroupSize": 2,
+        "TimeBeforeFullSpawn": 0.5,
+        "TimeBetweenGroups": 0.25,
+        "WaveStartMessage": "[]",
+        "ZombieCount": 2,
+        "ZombieName": "halloween_armor2"
+      }
+    },
+    {
+      "aliases": [
+        "C_AEMummything"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(C_AEMummything@CurrentLevel)",
+        "ZombieBasedOn": "pharaoh"
+      }
+    },
+    {
+      "aliases": [
+        "C_AEMummything"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeTossedByCitron": false,
+        "ProtectsInside": true,
+        "ZombieInside": "halloween",
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "DamageExtends": false,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 450,
+        "Weight": 100,
+        "HitRect": "RTID(PharoahHitRect@RectangleProps)",
+        "AttackRect": "RTID(PharoahAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "beforderwaveGravestoneEvent1"
+      ],
+      "objclass": "SpawnGravestonesWaveActionProps",
+      "objdata": {
+        "GravestonePool": [
+          {
+            "Count": 4,
+            "Type": "RTID(gravestone_tutorial@GridItemTypes)"
+          }
+        ],
+        "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+        "SpawnPositionsPool": [
+          {
+            "mX": 7,
+            "mY": 0
+          },
+          {
+            "mX": 7,
+            "mY": 1
+          },
+          {
+            "mX": 7,
+            "mY": 2
+          },
+          {
+            "mX": 7,
+            "mY": 3
+          },
+          {
+            "mX": 7,
+            "mY": 4
+          },
+          {
+            "mX": 6,
+            "mY": 0
+          },
+          {
+            "mX": 6,
+            "mY": 1
+          },
+          {
+            "mX": 6,
+            "mY": 2
+          },
+          {
+            "mX": 6,
+            "mY": 3
+          },
+          {
+            "mX": 6,
+            "mY": 4
+          },
+          {
+            "mX": 4,
+            "mY": 2
+          },
+          {
+            "mX": 5,
+            "mY": 4
+          },
+          {
+            "mX": 6,
+            "mY": 5
+          },
+          {
+            "mX": 0,
+            "mY": 5
+          },
+          {
+            "mX": 5,
+            "mY": 5
+          },
+          {
+            "mX": 5,
+            "mY": 4
+          },
+          {
+            "mX": 3,
+            "mY": 2
+          },
+          {
+            "mX": 3,
+            "mY": 4
+          },
+          {
+            "mX": 4,
+            "mY": 0
+          },
+          {
+            "mX": 8,
+            "mY": 4
+          }
+        ],
+        "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "croGraveSpawnAmbushEvent2"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": "0",
+        "GridTypes": [
+          "RTID(gravestone_tutorial@GridItemTypes)",
+          "RTID(gravestoneSunOnDestruction@GridItemTypes)"
+        ],
+        "ZombieSpawnWaitTime": 3,
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)"
+          },
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Warning0"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 255,
+        "LabelG": 165,
+        "LabelB": 0,
+        "LabelAInit": 0.1,
+        "OutLineR": 160,
+        "OutLineG": 32,
+        "OutLineB": 240,
+        "String": "TRICK OR TREATING !!!",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 0.5,
+        "LabelInitScale": 4,
+        "Duration": 3.5,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal4"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal4props@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal4props"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 0.5,
+          "Max": 1
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "modern",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "halloween"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "halloween_armor1"
+          },
+          {
+            "Weight": 2,
+            "ZombieTypeName": "halloween_armor2"
+          },
+          {
+            "Weight": 2,
+            "ZombieTypeName": "halloween"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "halloween_armor1"
+          },
+          {
+            "Weight": 2,
+            "ZombieTypeName": "halloween_armor2"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Key1PortalsEvent3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(Portal4@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Key1PortalsEvent4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(Portal4@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Key1PortalsEvent2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(Portal4@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler1"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 50,
+          "Min": 40
+        },
+        "TimeBetween": {
+          "Max": 75,
+          "Min": 70
+        },
+        "Repeat": {
+          "Max": 150,
+          "Min": 150
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning0@CurrentLevel)",
+          "RTID(Key1PortalsEvent3@CurrentLevel)",
+          "RTID(Key1PortalsEvent4@CurrentLevel)",
+          "RTID(Key1PortalsEvent2@CurrentLevel)",
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "croGraveSpawnAmbushEvent1"
+      ],
+      "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+      "objdata": {
+        "AdditionalPlantfood": "0",
+        "GridTypes": [
+          "RTID(gravestone_tutorial@GridItemTypes)",
+          "RTID(gravestoneSunOnDestruction@GridItemTypes)"
+        ],
+        "ZombieSpawnWaitTime": 3,
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 12,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(halloweengroundspawn@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(halloweengroundspawn@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(halloweengroundspawn@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(halloweengroundspawn@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(halloweengroundspawn@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+            "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)",
+            "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(C_AEMummything@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(halloween_armor2@ZombieTypes)",
+            "Row": 3
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

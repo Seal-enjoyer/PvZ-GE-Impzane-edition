@@ -1,0 +1,186 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Jurassic March Sunny day 32",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Jurassic March Sunny day 32",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+},
+  "objects": [
+    {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "<PLAYERNAME>'s trip to jurassic marsh!",
+                "LevelNumber": 32,
+				"FirstRewardParam": "worldtrophy_dino",
+                "FirstRewardType": "worldtrophy",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(Gravestones@CurrentLevel)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "MusicType": "MiniGame_A",
+                "Name": "Jurassic March Sunny day 32",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(DinoStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+		"gravebuster",
+		"hotpotato"
+        ],
+        "SelectionMethod": "chooser"
+         },
+    },
+    {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 0,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_dino",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 2,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 8,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxCount": 3,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "meteorflower",
+                        "Weight": 4
+                    },
+                    {
+                        "MaxCount": 12,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 7,
+                        "MinWeightFactor": 2,
+                        "PlantType": "pepperpult",
+                        "Weight": 15
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 2,
+                        "MinWeightFactor": 3,
+                        "PlantType": "primalpeashooter",
+                        "Weight": 7
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 4,
+                        "MinWeightFactor": 2,
+                        "PlantType": "primalwallnut",
+                        "Weight": 6
+                    },
+                    {
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "primalpotatomine",
+                        "Weight": 2
+                    },
+                    {
+                        "MaxCount": 3,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "lavaguava",
+                        "Weight": 7
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "grapeshot",
+                        "Weight": 8
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        }
+    ],
+    "version": 1
+}

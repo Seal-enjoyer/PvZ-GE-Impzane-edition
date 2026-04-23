@@ -1,0 +1,460 @@
+{
+  "#comment": "Sample LevelΣ",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Portal combat",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian ImpsanityΣ",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Modern day day 14 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "EasyΣ",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to modern day",
+        "LevelNumber": 14,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(FutureLinkedTileGroups@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(GoldTiles@CurrentLevel)",
+          "RTID(FPP@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(LevelScheduler1@CurrentLevel)",
+          "RTID(LevelScheduler2@CurrentLevel)",
+          "RTID(LevelScheduler3@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Portal combat",
+        "NameMultiLanguage": {
+          "en": "Portal combat",
+          "zh": "Σ示例关卡I"
+        },
+        "WritenBy": "Captian impZanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TutorialStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 850, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 170, // Difficulty AAAAAAAAA
+            "StartingPoints": 500,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"	
+     }
+    },
+    {
+            "aliases": [
+                "LevelScheduler"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 60,
+                    "Min": 60
+                },
+                "TimeBetween": {
+                    "Max": 10,
+                    "Min": 10
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(PortalsEvent6@CurrentLevel)",
+                    "RTID(PortalsEvent1@CurrentLevel)",
+                    "RTID(PortalsEvent3@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "LevelScheduler1"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 90,
+                    "Min": 70
+                },
+                "TimeBetween": {
+                    "Max": 10,
+                    "Min": 10
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(PortalsEvent7@CurrentLevel)",
+                    "RTID(PortalsEvent8@CurrentLevel)",
+                    "RTID(PortalsEvent9@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "LevelScheduler2"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 110,
+                    "Min": 100
+                },
+                "TimeBetween": {
+                    "Max": 50,
+                    "Min": 10
+                },
+                "Repeat": {
+                    "Max": 2,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(PortalsEvent10@CurrentLevel)",
+                    "RTID(PortalsEvent11@CurrentLevel)",
+                    "RTID(PortalsEvent12@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "LevelScheduler3"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 130,
+                    "Min": 120
+                },
+                "TimeBetween": {
+                    "Max": 100,
+                    "Min": 10
+                },
+                "Repeat": {
+                    "Max": 3,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(PortalsEvent4@CurrentLevel)",
+                    "RTID(PortalsEvent5@CurrentLevel)",
+                    "RTID(PortalsEvent0@CurrentLevel)"
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent1"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 6,
+                "PortalRow": "0",
+                "PortalType": "modern",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent2"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 5,
+                "PortalRow": "3",
+                "PortalType": "pirate",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent3"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 5,
+                "PortalRow": "2",
+                "PortalType": "west",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent4"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 7,
+                "PortalRow": "4",
+                "PortalType": "future",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent5"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 6,
+                "PortalRow": "1",
+                "PortalType": "dark",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent6"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 6,
+                "PortalRow": "3",
+                "PortalType": "beach",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent7"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 6,
+                "PortalRow": "0",
+                "PortalType": "iceage",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent8"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 7,
+                "PortalRow": "1",
+                "PortalType": "lostcity",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent9"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 6,
+                "PortalRow": "2",
+                "PortalType": "dino",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent10"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 5,
+                "PortalRow": "4",
+                "PortalType": "eighties",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+            "aliases": [
+                "PortalsEvent11"
+            ],
+            "objclass": "SpawnModernPortalsWaveActionProps",
+            "objdata": {
+                "PortalColumn": 4,
+                "PortalRow": "1",
+                "PortalType": "egypt",
+                "SpawnEffectAnimID": "",
+                "SpawnSoundID": ""
+            }
+        },
+        {
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive With Random Portals Appearing."
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 5,
+        "WaveCount": 15,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+            ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+            ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+            ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)","RTID(PortalsEvent1@CurrentLevel)","RTID(PortalsEvent2@CurrentLevel)","RTID(PortalsEvent3@CurrentLevel)","RTID(PortalsEvent4@CurrentLevel)","RTID(PortalsEvent5@CurrentLevel)","RTID(PortalsEvent6@CurrentLevel)",
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)","RTID(PortalsEvent1@CurrentLevel)","RTID(PortalsEvent2@CurrentLevel)","RTID(PortalsEvent3@CurrentLevel)"
+            ],
+          [
+            "RTID(Wave15@CurrentLevel)","RTID(PortalsEvent1@CurrentLevel)","RTID(PortalsEvent2@CurrentLevel)","RTID(PortalsEvent3@CurrentLevel)","RTID(PortalsEvent4@CurrentLevel)","RTID(PortalsEvent5@CurrentLevel)","RTID(PortalsEvent6@CurrentLevel)","RTID(PortalsEvent7@CurrentLevel)","RTID(PortalsEvent8@CurrentLevel)","RTID(PortalsEvent9@CurrentLevel)","RTID(PortalsEvent10@CurrentLevel)","RTID(PortalsEvent11@CurrentLevel)","RTID(PortalsEvent12@CurrentLevel)"
+          ]
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

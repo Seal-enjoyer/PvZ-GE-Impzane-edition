@@ -1,0 +1,122 @@
+{
+    "Plants": [
+        {
+            "CommodityType": "plant",
+            "CommodityName": "meteorflower",
+            "CurrencyType": "gem",
+            "CurrencyRequired": 40,
+            "UnlockLevel": "dino41"
+        },
+        {
+            "CommodityType": "plant",
+            "CommodityName": "lilypad",
+            "CurrencyType": "gem",
+            "CurrencyRequired": 50,
+            "UnlockLevel": "egypt1"
+        },
+        {
+            "CommodityType": "plant",
+            "CommodityName": "noctarine",
+            "CurrencyType": "gem",
+            "CurrencyRequired": 20,
+            "UnlockLevel": "modern7"
+        },
+        {
+            "CommodityType": "plant",
+            "CommodityName": "murkadamianut",
+            "CurrencyType": "gem",
+            "CurrencyRequired": 20,
+            "UnlockLevel": "modern40"
+        }
+    ],
+    "Coin": [
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 5000,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 25,
+            "StackLevel": 0,
+            "CommodityDisplayName": {
+                "en": "Coins, coins, coins!",
+                "zh": "钱钱钱！"
+            }
+        },
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 10000,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 40,
+            "StackLevel": 1,
+            "CommodityDisplayName": {
+                "en": "This'll buy me a thing or two!",
+                "zh": "拿这些钱能买些好东西了！"
+            }
+        },
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 22000,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 72,
+            "StackLevel": 2,
+            "CommodityDisplayName": {
+                "en": "More coins, more fun!",
+                "zh": "钱越多，越幸福！"
+            }
+        },
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 50000,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 142,
+            "StackLevel": 3,
+            "CommodityDisplayName": {
+                "en": "Coins galore!",
+                "zh": "一大笔钱！"
+            }
+        },
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 150000,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 375,
+            "StackLevel": 4,
+            "CommodityDisplayName": {
+                "en": "So many coins!",
+                "zh": "好多钱！"
+            }
+        },
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 350000,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 777,
+            "StackLevel": 5,
+            "CommodityDisplayName": {
+                "en": "So very many coins!",
+                "zh": "真的好多钱！"
+            }
+        },
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 500000,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 1666,
+            "StackLevel": 6,
+            "CommodityDisplayName": {
+                "en": "Guess you can't take them away!",
+                "zh": "猜你搬不走这些钱！"
+            }
+        },
+        {
+            "CommodityType": "coin",
+            "CommodityCount": 1,
+            "CurrencyType": "gem",
+            "CurrencyRequired": 50,
+            "StackLevel": 1,
+            "CommodityDisplayName": {
+                "en": "buy this and go do world key subsidy in the arcade. \n(essentially get a world key. i can't put it in the shop btw)",
+                "zh": "刚从海里打出来的！"
+            }
+        }
+    ]
+}

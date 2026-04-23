@@ -1,0 +1,609 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "PvZH in modernday.",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "PvZH in modern day.",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to modern day.",
+        "LevelNumber": 1,
+        "FirstRewardParam": "moonflower",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+           "RTID(LostCityTrapTileGroups@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "PvZH in modern day.",
+        "NameMultiLanguage": {
+          "en": "PvZH in modern day.",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(HeroesStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+         "SelectionMethod": "chooser"
+         }
+    },
+    {
+        "aliases": [
+                "DoNotPlantBeforeLine"
+            ],
+            "objclass": "MoldColonyChallengeProps",
+            "objdata": {
+                "MoldMatrix": [
+            "000000000",
+            "000111111",
+            "000111111",
+            "000111111",
+            "000000000"
+                   ]
+    }
+},
+{
+    "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true,
+                "Difficulties": [
+                    400
+                ]
+            }
+        },
+        {
+        "aliases": [
+        "MountingOthers"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridY": "4",
+            "GridX": "0",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "1",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "3",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "2",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "4",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "5",
+            "TypeName": "potholepuddle"
+            },
+          {
+            "GridY": "4",
+            "GridX": "6",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "7",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "8",
+            "TypeName": "potholepuddle"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive While Being a Hero"
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+    {
+        "aliases": [
+                "Wave11"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.8,
+                    "Min": 0.8
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave11prop@CurrentLevel)"
+                ]
+            }
+        },
+        {
+             "aliases": [
+                "Wave11prop"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Column": "7",
+                        "Type": "RTID(kongfu_boss_blade@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+      "aliases": [
+        "LostCityTrapTileGroups"
+      ],
+      "objclass": "TrapTileProperties",
+      "objdata": {
+        "TrapTiles": [
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 1,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+               "Group": "flame",
+            "Location": {
+              "mX": 0,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 2,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 3,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 4,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+                    },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 5,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+            },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 6,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 7,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+                    },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4.5,
+        "WaveCount": 11,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ]
+          ]
+      }
+    },
+		{
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_jetpack@ZombieTypes)", "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(duckytube@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(duckytube@ZombieTypes)", "Row": 5
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(duckytube@ZombieTypes)", "Row": 5
+          },
+          {
+           "Type": "RTID(future_jetpack@ZombieTypes)", "Row": 1
+           },
+          {
+           "Type": "RTID(tutorial_armor1@ZombieTypes)", "Row": 3
+           },
+          {
+           "Type": "RTID(dark_king@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)", "Row": 3
+            },
+          {
+           "Type": "RTID(sky@ZombieTypes)", "Row": 1
+           },
+          {
+           "Type": "RTID(tutorial_armor2@ZombieTypes)", "Row": 4
+           },
+          {
+           "Type": "RTID(lostcity_jane@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(duckytube_armor2@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(dark_king@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_chi@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(dark_king@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(dark_king@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_jetpack@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(kongfu_drink@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(dark_king@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_chi@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(lostcity_excavator@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(future_protector@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(duckytube@ZombieTypes)", "Row": 5
+            },
+          {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(dark_wizard@ZombieTypes)", "Row": 2
+             },
+          {
+            "Type": "RTID(beach_fisherman@ZombieTypes)", "Row": 5
+             },
+          {
+            "Type": "RTID(iceage_hunter@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_gargantuar@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_captain_parrot@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain_parrot@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pirate_captain_parrot@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(pirate_captain_parrot@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dark_king_veteran@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(tutorial_armor4@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+    }
+  ],       
+  "version": 1
+}

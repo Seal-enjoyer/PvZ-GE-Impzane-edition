@@ -1,0 +1,613 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Bloodrun twilight night 7",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Bloodrun twilight night 7",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s seventh and last trick or treating.",
+        "LevelNumber": 7,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombossIntro@LevelModules)",
+          "RTID(Gravestones@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(ZombossBattle@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(LevelScheduler1@CurrentLevel)",
+          "RTID(LevelScheduler2@CurrentLevel)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@LevelModules)",
+          "RTID(DoNotPlantBeforeLine@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "MusicPlaybackRate": 0.3,
+        "Name": "Bloodrun twilight night 7",
+        "NameMultiLanguage": {
+          "en": "Bloodrun twilight night 7",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(HalloweenStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+          "springbean",
+          "fumeshroom",
+          "spikeweed",
+          "stunion",
+          "chilibean",
+          "spikerock",
+          "chomper",
+          "kernelpult",
+          "primalpeashooter",
+          "bloominghearts"
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "custom_qigong_bronze"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(custom_qigong_bronze@CurrentLevel)",
+        "ZombieBasedOn": "kongfu_bronze_chi"
+      }
+    },
+    {
+      "aliases": [
+        "custom_qigong_bronze"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "ZombieSort": "Gargantuar",
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "CannotBeDetectedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeKnockedBackByProjectiles": true,
+        "immunetoshrinkingviolet": true,
+        "immunetosweetpotato": true,
+        "ChiliStunDurationMult": -10,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "CannotCarryPlantfoodsInWaves": true,
+        "ImmuneToSporeShroom": true,
+        "NormalDeathWhenMowed": true,
+        "ImmuneToGarlic": true,
+        "IgnoredByThymeWarp": true,
+        "ChillInsteadOfFreeze": true,
+        "StartingArmors": [
+          "halloween_armor3"
+        ],
+        "CannotBeDetectedBySapfling": true,
+        "CannotChangeLaneByPowerToss": true,
+        "CannotBeFlickedByPowerToss": true,
+        "CannotBeDraggedByTangleKelp": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "CannotCarryPlantfoodsInWaves": true,
+        "SmashDamage": 1500,
+        "LivesInDeepWater": true,
+        "WalkSPS": 0,
+        "WalkSPSVarience": 0,
+        "EatDPS": 100,
+        "Toughness": 70000,
+        "NormalDeathWhenMowed": true,
+        "WavePointCost": 1500,
+        "Weight": 3000,
+        "HitRect": "RTID(GargantuarHitRect@RectangleProps)",
+        "AttackRect": "RTID(GargantuarAttackRect@RectangleProps)",
+        "TimeBetweenSkills": {
+          "Min": 10.0,
+          "Max": 12
+        },
+        "TimeBeforeSkills": {
+          "Min": 20,
+          "Max": 25
+        },
+        "ZombiesToSummon": [
+          "halloween",
+          "halloween_armor1",
+          "halloween_armor2",
+          "halloween",
+          "halloween_armor1",
+          "halloween_armor2",
+          "halloween",
+          "halloween_armor1",
+          "halloween_armor2",
+          "halloween",
+          "halloween_armor1",
+          "halloween_armor2"
+        ],
+        "SummonCount": 60,
+        "SummonColume": {
+          "Min": 7,
+          "Max": 9
+        },
+        "SummonTime": 5
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 2,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 3,
+            "MaxPackets": 2
+          },
+          {
+            "Delay": 5,
+            "MaxPackets": 4
+          },
+          {
+            "Delay": 8,
+            "MaxPackets": 8
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 3,
+            "MinWeightFactor": 2,
+            "PlantType": "jackolantern",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "wallnut",
+            "Weight": 8
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 3,
+            "PlantType": "ghostpepper",
+            "Weight": 2
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "vamporcini",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "doomshroom",
+            "Weight": 0.2
+          },
+          {
+            "MaxCount": 6,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 3,
+            "MinWeightFactor": 2,
+            "PlantType": "cactus",
+            "Weight": 7
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "wintermelon",
+            "Weight": 2
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "MinCount": 0,
+            "MinWeightFactor": 2,
+            "PlantType": "pumpkin",
+            "Weight": 2
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 75
+          },
+          {
+            "MaxPackets": 3,
+            "Speed": 75
+          },
+          {
+            "MaxPackets": 5,
+            "Speed": 50
+          },
+          {
+            "MaxPackets": 1,
+            "Speed": 80
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Warning0"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 255,
+        "LabelG": 165,
+        "LabelB": 0,
+        "LabelAInit": 0.1,
+        "OutLineR": 160,
+        "OutLineG": 32,
+        "OutLineB": 240,
+        "String": "TRICK OR TREATING !!!",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 0.5,
+        "LabelInitScale": 4,
+        "Duration": 3.5,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal4"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal4props@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal4props"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 0.5,
+          "Max": 1
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "modern",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "halloween"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "halloween_armor1"
+          },
+          {
+            "Weight": 2,
+            "ZombieTypeName": "halloween_armor2"
+          },
+          {
+            "Weight": 2,
+            "ZombieTypeName": "halloween"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "halloween_armor1"
+          },
+          {
+            "Weight": 4,
+            "ZombieTypeName": "halloween_gargantuar"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Key1PortalsEvent3"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(Portal4@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Key1PortalsEvent4"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 6,
+        "PortalRow": 4,
+        "PortalType": "RTID(Portal4@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Key1PortalsEvent2"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 8,
+        "PortalRow": 2,
+        "PortalType": "RTID(Portal4@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 70,
+          "Min": 70
+        },
+        "TimeBetween": {
+          "Max": 80,
+          "Min": 80
+        },
+        "Repeat": {
+          "Max": 150,
+          "Min": 150
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning0@CurrentLevel)",
+          "RTID(Key1PortalsEvent3@CurrentLevel)",
+          "RTID(Key1PortalsEvent4@CurrentLevel)",
+          "RTID(Key1PortalsEvent2@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Beat the boss"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "DoNotPlantBeforeLine"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "Locations": "RTID(Column6_To_Column8@BoardGridMaps)"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 0, // Difficulty D, easiest
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(kongfu@ZombieTypes)",
+              "RTID(kongfu_armor2@ZombieTypes)",
+              "RTID(kongfu_armor1@ZombieTypes)",
+              "RTID(monk@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(monk_armor1@ZombieTypes)",
+              "RTID(abbot@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)",
+              "RTID(abbot_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 0, // Difficulty C, normal
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(kongfu@ZombieTypes)",
+              "RTID(kongfu_armor2@ZombieTypes)",
+              "RTID(kongfu_armor1@ZombieTypes)",
+              "RTID(monk@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(monk_armor1@ZombieTypes)",
+              "RTID(abbot@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)",
+              "RTID(abbot_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 0, // Difficulty B, advanced
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(kongfu@ZombieTypes)",
+              "RTID(kongfu_armor2@ZombieTypes)",
+              "RTID(kongfu_armor1@ZombieTypes)",
+              "RTID(monk@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(monk_armor1@ZombieTypes)",
+              "RTID(abbot@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)",
+              "RTID(abbot_armor1@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 0, // Difficulty AAAAAAAAA
+            "StartingPoints": 0,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(kongfu@ZombieTypes)",
+              "RTID(kongfu_armor2@ZombieTypes)",
+              "RTID(kongfu_armor1@ZombieTypes)",
+              "RTID(monk@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(monk_armor1@ZombieTypes)",
+              "RTID(abbot@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)",
+              "RTID(abbot_armor1@ZombieTypes)",
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 1,
+        "WaveCount": 1,
+        "Waves": [
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+          ],
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrostWindSnowstormEventSmall"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 7,
+        "ColumnStart": 7,
+        "GroupSize": 100,
+        "TimeBetweenGroups": 0.5,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "RTID(custom_qigong_bronze@CurrentLevel)"
+          },
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(halloween@ZombieTypes)",
+          },
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

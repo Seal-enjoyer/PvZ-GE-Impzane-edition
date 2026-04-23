@@ -1,0 +1,433 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Frostbite Caves day 30",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Frostbite Caves day 30",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Impzane",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "<PLAYERNAME>'s trip to Iceaged Siberia!",
+                "LevelNumber": 10,
+				"FirstRewardParam": "wintermint",
+        "FirstRewardType": "unlock_plant",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+					"RTID(LevelScheduler@CurrentLevel)",
+		  "RTID(LevelScheduler1@CurrentLevel)",
+		  "RTID(LevelScheduler2@CurrentLevel)",
+		  "RTID(LevelScheduler3@CurrentLevel)",
+		  "RTID(LevelScheduler4@CurrentLevel)",
+		  "RTID(LevelScheduler5@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)",
+                    "RTID(ChallengeModule@LevelModules)",
+                    "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+                ],
+                "MusicType": "MiniGame_A",
+                "Name": "Iceaged Siberia day 10",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(IceageStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+		"gravebuster",
+		"hotpotato"
+        ],
+        "SelectionMethod": "chooser"
+         }
+    },
+    {
+    "objclass": "StarChallengeSimultaneousPlantsProps",
+    "aliases": [
+        "SimultaneousPlants"
+    ],
+    "objdata": {
+        "MaximumPlants": 25
+    }
+},
+{
+    "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(SimultaneousPlants@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+				"aliases": [
+                "LevelScheduler1"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "TimeBetween": {
+                    "Max": 25,
+                    "Min": 25
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(AllLaneFrostWindEvent0@CurrentLevel)"
+                ]
+            }
+        },
+        {
+			"aliases": [
+                "LevelScheduler2"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "TimeBetween": {
+                    "Max": 25,
+                    "Min": 20
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(AllLaneFrostWindEvent1@CurrentLevel)"
+                ]
+            }
+        },
+        {
+			"aliases": [
+                "LevelScheduler3"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 20,
+                    "Min": 20
+                },
+                "TimeBetween": {
+                    "Max": 35,
+                    "Min": 35
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(AllLaneFrostWindEvent2@CurrentLevel)"
+                ]
+            }
+        },
+        {
+			"aliases": [
+                "LevelScheduler4"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 20,
+                    "Min": 20
+                },
+                "TimeBetween": {
+                    "Max": 44,
+                    "Min": 20
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(AllLaneFrostWindEvent3@CurrentLevel)"
+                ]
+            }
+        },
+        {
+			"aliases": [
+                "LevelScheduler5"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 34,
+                    "Min": 10
+                },
+                "TimeBetween": {
+                    "Max": 32,
+                    "Min": 12
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+                ]
+            }
+        },
+        {
+			"aliases": [
+                "AllLaneFrostWindEvent1"
+            ],
+            "objclass": "FrostWindWaveActionProps",
+            "objdata": {
+                "Winds": [
+                    {
+                        "Direction": "right",
+                        "Row": 1
+                    }
+      ]
+      }
+    },
+    {
+		"aliases": [
+                "AllLaneFrostWindEvent2"
+            ],
+            "objclass": "FrostWindWaveActionProps",
+            "objdata": {
+                "Winds": [
+                    {
+                        "Direction": "right",
+                        "Row": 2
+                    }
+      ]
+      }
+    },
+    {
+		"aliases": [
+                "AllLaneFrostWindEvent3"
+            ],
+            "objclass": "FrostWindWaveActionProps",
+            "objdata": {
+                "Winds": [
+                    {
+                        "Direction": "right",
+                        "Row": 3
+                    }
+      ]
+      }
+    },
+    {
+		"aliases": [
+                "AllLaneFrostWindEvent4"
+            ],
+            "objclass": "FrostWindWaveActionProps",
+            "objdata": {
+                "Winds": [
+                    {
+                        "Direction": "right",
+                        "Row": 4
+                    }
+      ]
+      }
+    },
+    {
+		"aliases": [
+                "AllLaneFrostWindEvent0"
+            ],
+            "objclass": "FrostWindWaveActionProps",
+            "objdata": {
+                "Winds": [
+                    {
+                        "Direction": "right",
+                        "Row": 0
+                    }
+      ]
+      }
+    },
+    {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 0,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_iceage2",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 2,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 8,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxCount": 7,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 5,
+                        "MinWeightFactor": 2,
+                        "PlantType": "gatling",
+                        "Weight": 13
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 3,
+                        "MinWeightFactor": 2,
+                        "PlantType": "torchwood",
+                        "Weight": 4
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "PlantType": "springbean",
+                        "Weight": 4,
+                        "ForceBoosted": true
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "coconutcannon",
+                        "Weight": 5
+                    },
+                    {
+                        "MaxCount": 5,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "applemortar",
+                        "Weight": 10
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "pinkstarfruit",
+                        "Weight": 7
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "jalapeno",
+                        "Weight": 1
+                    },
+					{
+                        "MaxCount": 3,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 0,
+                        "MinWeightFactor": 2,
+                        "PlantType": "meteorflower",
+                        "Weight": 4
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        },
+        {
+            "aliases": [
+                "Gravestones"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "GravestoneCount": 5,
+                "SpawnColumnEnd": 6,
+                "SpawnColumnStart": 3
+            }
+        }
+    ],
+    "version": 1
+}

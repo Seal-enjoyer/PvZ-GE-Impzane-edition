@@ -1,0 +1,189 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Far future day 26 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Far future day 26 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to the far future",
+        "LevelNumber": 26,
+        "FirstRewardParam": "shootingstarfruit",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(FutureMowers@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(FutureLinkedTileGroups@CurrentLevel)",
+          "RTID(FPP@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Far future day 26 but better",
+        "NameMultiLanguage": {
+          "en": "Far future day 26 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(FutureStage@LevelModules)"
+      }
+	},
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 890, // Difficulty D, easiest
+            "StartingPoints": 590,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(future@ZombieTypes)",
+              "RTID(future_armor1@ZombieTypes)",
+              "RTID(future_armor2@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 1900, // Difficulty C, normal
+            "StartingPoints": 9100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(future@ZombieTypes)",
+              "RTID(future_armor1@ZombieTypes)",
+              "RTID(future_armor2@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 950, // Difficulty B, advanced
+            "StartingPoints": 900,
+            "StartingWave": 0,
+            "ZombiePool": [
+            "RTID(future@ZombieTypes)",
+              "RTID(future_armor1@ZombieTypes)",
+              "RTID(future_armor2@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 2200, // Difficulty AAAAAAAAA
+            "StartingPoints": 850,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(future@ZombieTypes)",
+              "RTID(future_armor1@ZombieTypes)",
+              "RTID(future_armor2@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4,
+        "WaveCount": 8,
+        "FlagWaveVeteranOverrideTypes": [1,1],
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ]
+        ]
+      }
+        },
+		{
+            "aliases": [
+        "FPP"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "shootingstarfruit"
+          },
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 5,
+        "Zombies": [
+          {
+            "Type": "RTID(future_protector@ZombieTypes)",
+          },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

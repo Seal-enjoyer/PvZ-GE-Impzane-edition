@@ -1,0 +1,556 @@
+{
+  "#comment": "Impzane",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Jurassic March Sunny day 30",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Jurassic March Sunny day 30",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to jurassic marsh",
+        "LevelNumber": 30,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+		  "RTID(Sunnydropper@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(DinoMowers@LevelModules)",
+		  "RTID(StarChallengeSunProducedProps@LevelModules)",
+		   "RTID(LevelScheduler@CurrentLevel)",
+		  "RTID(FPP@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Jurassic March Sunny day 30",
+        "NameMultiLanguage": {
+          "en": "Jurassic March Sunny day 30",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(DinoStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+		"meteorflower",
+        ],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+    "aliases": [
+        "Sunnydropper"
+    ],
+    "objclass": "SunDropperProperties",
+    "objdata": {
+        "InitialSunDropDelay": 5,
+        "SunCountdownBase": 5,
+        "SunCountdownIncreasePerSun": 1,
+        "SunCountdownMax": 13.5,
+        "SunCountdownRange": 1,
+        "Value": 75
+    }
+},
+{
+	},
+    {
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+		"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive a sunny day in jurassic-marsh but every zombies is replaced with a jurassic bully.",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 60, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60, // Difficulty C, normal
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60, // Difficulty B, advanced
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 60, // Difficulty AAAAAAAAA
+            "StartingPoints": 160,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino_bully@ZombieTypes)"
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+		},
+		{
+			},
+    {
+            "aliases": [
+                "LevelScheduler"
+            ],
+            "objclass": "LevelSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 35,
+                    "Min": 35
+                },
+                "TimeBetween": {
+                    "Max": 30,
+                    "Min": 30
+                },
+                "Repeat": {
+                    "Max": 150,
+                    "Min": 150
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": false,
+                "Events": [
+                    "RTID(Giantambush@CurrentLevel)"
+                ]
+            }
+        },
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 10,
+        "WaveCount": 10,
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave1@CurrentLevel)","RTID(t-rexRow3@CurrentLevel)","RTID(RRow2@CurrentLevel)","RTID(RRow3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(t-rexRow5@CurrentLevel)","RTID(RRow3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(t-rexRow3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(RRow2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(RaptorRow2@CurrentLevel)"
+          ],
+		  [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(t-rexRow2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(RaptorRow0@CurrentLevel)","RTID(RRow3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)","RTID(RaptorRow2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(RRow2@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+	{
+		"aliases": [
+                "RaptorRow3"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "3",
+                "DinoType": "stego",
+                "DinoWaveDuration": 1
+            }
+        },
+		{
+			"aliases": [
+                "RRow3"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "4",
+                "DinoType": "raptor",
+                "DinoWaveDuration": 2
+            }
+        },
+		{
+			"aliases": [
+                "RRow2"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "2",
+                "DinoType": "raptor",
+                "DinoWaveDuration": 2
+            }
+        },
+		{
+			"aliases": [
+                "RaptorRow4"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "1",
+                "DinoType": "stego",
+                "DinoWaveDuration": 2
+            }
+        },
+		{
+			"aliases": [
+                "RaptorRow0"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "4",
+                "DinoType": "stego",
+                "DinoWaveDuration": 1
+            }
+        },
+	{
+			"aliases": [
+                "t-rexRow5"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "2",
+                "DinoType": "stego",
+                "DinoWaveDuration": 2
+            }
+        },
+		{
+			"aliases": [
+                "t-rexRow2"
+            ],
+            "objclass": "DinoWaveActionProps",
+            "objdata": {
+                "DinoRow": "0",
+                "DinoType": "stego",
+                "DinoWaveDuration": 1
+            }
+        },
+	{
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+		},
+	{
+      "aliases": [
+        "Giantambush"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 3
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 2
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 2
+          },
+          {
+           "Type": "RTID(dino_bully@ZombieTypes)", "row": 2
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 1
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 1
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 4
+            },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		   {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)", "Row": 4
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+		  }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		   {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 2
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)", "row": 2
+            },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+            },
+			{
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+		  }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          },
+		  {
+            "Type": "RTID(dino_bully@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+    }
+  ],       
+  "version": 1
+}

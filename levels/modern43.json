@@ -1,0 +1,1310 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "BAL is the Greayest!",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "BAL is the Greayest!",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to modern day",
+        "LevelNumber": 43,
+        "FlagWaveVeteranOverrideTypes": [0, 1],
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(LostCityTrapTileGroups@CurrentLevel)",
+           "RTID(PiratePlanks@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+           "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "BAL is the Greayest!",
+        "NameMultiLanguage": {
+          "en": "BAL is the Greayest!",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(SummerNightsStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "applemortar"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "bloominghearts"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "hypnoshroom"
+                }
+            ],
+         "SelectionMethod": "chooser"
+         }
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(barrelroller@ZombieTypes)",
+                 "RTID(iceage_troglobite_1block@ZombieTypes)"
+
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(barrelroller@ZombieTypes)",
+                 "RTID(iceage_troglobite_1block@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(barrelroller@ZombieTypes)",
+                 "RTID(iceage_troglobite_1block@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 200, // Difficulty AAAAAAAAA
+            "StartingPoints": 200,
+            "StartingWave": 1,
+            "ZombiePool": [
+                 "RTID(barrelroller@ZombieTypes)",
+                 "RTID(iceage_troglobite_1block@ZombieTypes)"
+           ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        },
+		{
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive Bal is Cool Attack !!!"
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+    },
+    {
+      "aliases": [
+                "croGraveSpawnAmbushEvent1"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "0",
+                "GridTypes": [
+                    "RTID(gravestone_dark@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 0,
+                "Zombies": [
+					{"Type": "RTID(beach_surfer@ZombieTypes)"},
+                    {"Type": "RTID(iceage_troglobite_1block@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent2"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "0",
+                "GridTypes": [
+                    "RTID(gravestone_egypt@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 0,
+                "Zombies": [
+					{"Type": "RTID(beach_surfer@ZombieTypes)"},
+                    {"Type": "RTID(beach_surfer@ZombieTypes)"},
+                    {"Type": "RTID(beach_surfer@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent7"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "0",
+                "GridTypes": [
+                    "RTID(gravestone_pirate@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 0,
+                "Zombies": [
+					{"Type": "RTID(barrelroller@ZombieTypes)"},
+                    {"Type": "RTID(barrelroller@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent3"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "0",
+                "GridTypes": [
+                    "RTID(gravestone_cowboy@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 0,
+                "Zombies": [
+					{"Type": "RTID(barrelroller@ZombieTypes)"},
+                    {"Type": "RTID(beach_surfer@ZombieTypes)"},
+                    {"Type": "RTID(iceage_troglobite_1block@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent4"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "0",
+                "GridTypes": [
+                    "RTID(gravestone_tutorial@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 0,
+                "Zombies": [
+					{"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent5"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "0",
+                "GridTypes": [
+                    "RTID(gravestone_future@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 0,
+                "Zombies": [
+					{"Type": "RTID(iceage_troglobite_veteran@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent6"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "1",
+                "GridTypes": [
+                    "RTID(surfboard@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 1,
+                "Zombies": [
+					{"Type": "RTID(beach_surfer@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+            "aliases": [
+                "croGraveSpawnAmbushEvent7"
+            ],
+            "objclass": "SpawnZombiesFromGridItemSpawnerProps",
+            "objdata": {
+                "AdditionalPlantfood": "0",
+                "GridTypes": [
+                    "RTID(gravestone_iceage@GridItemTypes)"
+                ],
+                "ZombieSpawnWaitTime": 2,
+                "Zombies": [
+					{"Type": "RTID(iceage_troglobite@ZombieTypes)"},
+                    {"Type": "RTID(iceage_troglobite_1block@ZombieTypes)"},
+                    {"Type": "RTID(iceage_troglobite_2block@ZombieTypes)"},
+                    {"Type": "RTID(iceage_troglobite_veteran@ZombieTypes)"},
+                ]
+            }
+        },
+		{
+      "aliases": [
+                "beforderwaveGravestoneEvent1"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 2, "Type": "RTID(gravestone_dark@GridItemTypes)"}
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 4,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+              "aliases": [
+                "beforderwaveGravestoneEvent1"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 2, "Type": "RTID(gravestone_iceage@GridItemTypes)"}
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 4,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+             "aliases": [
+                "beforderwaveGravestoneEvent5"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 2, "Type": "RTID(gravestone_cowboy@GridItemTypes)"}
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 4,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+             "aliases": [
+                "beforderwaveGravestoneEvent0"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 2, "Type": "RTID(gravestone_egypt@GridItemTypes)"}
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 4,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+             "aliases": [
+                "beforderwaveGravestoneEvent2"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 2, "Type": "RTID(gravestone_pirate@GridItemTypes)"}
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 1,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+             "aliases": [
+                "beforderwaveGravestoneEvent3"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 2, "Type": "RTID(gravestone_future@GridItemTypes)"}
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 1,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+             "aliases": [
+                "beforderwaveGravestoneEvent4"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 2, "Type": "RTID(surfboard@GridItemTypes)"}
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 7,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 2
+                    },
+					{
+                        "mX": 6,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 4
+                    },	
+                    {
+                        "mX": 4,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 6,
+                        "mY": 5
+                    },
+					{
+                        "mX": 0,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 5
+                    },
+                    {
+                        "mX": 5,
+                        "mY": 4
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 3,
+                        "mY": 4
+                    },
+					{
+                        "mX": 1,
+                        "mY": 0
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 4
+                    }
+					],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 12,
+        "WaveCount": 12,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)","RTID(croGraveSpawnAmbushEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)","RTID(croGraveSpawnAmbushEvent4@CurrentLevel)","RTID(croGraveSpawnAmbushEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)","RTID(croGraveSpawnAmbushEvent4@CurrentLevel)","RTID(croGraveSpawnAmbushEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)","RTID(croGraveSpawnAmbushEvent4@CurrentLevel)","RTID(croGraveSpawnAmbushEvent5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)","RTID(croGraveSpawnAmbushEvent4@CurrentLevel)","RTID(croGraveSpawnAmbushEvent5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)","RTID(croGraveSpawnAmbushEvent4@CurrentLevel)","RTID(croGraveSpawnAmbushEvent5@CurrentLevel)"
+          ],
+           [
+            "RTID(Wave12@CurrentLevel)","RTID(beforderwaveGravestoneEvent1@CurrentLevel)","RTID(beforderwaveGravestoneEvent2@CurrentLevel)","RTID(beforderwaveGravestoneEvent0@CurrentLevel)","RTID(beforderwaveGravestoneEvent3@CurrentLevel)","RTID(beforderwaveGravestoneEvent4@CurrentLevel)","RTID(beforderwaveGravestoneEvent5@CurrentLevel)","RTID(croGraveSpawnAmbushEvent1@CurrentLevel)","RTID(croGraveSpawnAmbushEvent2@CurrentLevel)","RTID(croGraveSpawnAmbushEvent3@CurrentLevel)","RTID(croGraveSpawnAmbushEvent4@CurrentLevel)","RTID(croGraveSpawnAmbushEvent5@CurrentLevel)"
+           ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+            {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+           }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+           "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type":"RTID(beach_surfer@ZombieTypes)"
+          },
+          {
+           "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+            },
+          {
+           "Type": "RTID(barrelroller@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(barrelroller@ZombieTypes)"
+           },
+          {
+           "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+               "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_surfer_veteran@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(beach_surfer@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+         }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)"
+             },
+          {
+            "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)"
+         }
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

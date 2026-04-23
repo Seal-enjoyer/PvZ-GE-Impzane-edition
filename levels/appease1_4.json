@@ -1,0 +1,960 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Random realm day 4",
+      "zh-CN": ""
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Random realm day 4",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME> trip into the Random realm.",
+        "LevelNumber": 1,
+        "FirstIntroNarrative": "INTRO",
+        "FirstOutroNarrative": "OUTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "ReplayOutroNarrative": "OUTRO",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(SunProduced@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Random realm day 4",
+        "NameMultiLanguage": {
+          "en": "Random realm day 4",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(DinoStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "User Dave my Signals are telling me we have strong cold winds here.",
+              "zh": "User Dave my Signals are telling me we have strong cold winds here."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "What how penny we are beside a volcano ?",
+              "zh": "What how penny we are beside a volcano ?"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Dont ask me User Dave i am confused as you.",
+              "zh": "Dont ask me User Dave i am confused as you."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "That's not the only weird anomaly we have lost pilots flying on our lawn too.",
+              "zh": "That's not the only weird anomaly we have lost pilots flying on our lawn too."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "How are planes flying in this time period ?",
+              "zh": "How are planes flying in this time period ?"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrostwindRow1"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrostwindRow2"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrostwindRow3"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrostwindRow4"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "FrostwindRow0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SnowStormSky"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 3,
+        "ColumnStart": 6,
+        "GroupSize": 100,
+        "TimeBetweenGroups": 0.5,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "sky"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SnowStormdrinkmonk"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 4,
+        "ColumnStart": 9,
+        "GroupSize": 100,
+        "TimeBetweenGroups": 0.5,
+        "Type": "snowstorm",
+        "Zombies": [
+          {
+            "Type": "monk_drink"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SnowStormdrinkhunter"
+      ],
+      "objclass": "StormZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 2,
+        "ColumnStart": 4,
+        "GroupSize": 100,
+        "TimeBetweenGroups": 0.5,
+        "Type": "sandstorm",
+        "Zombies": [
+          {
+            "Type": "iceage_hunter"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 1,
+              "Plants": [
+                "moonflower",
+                "nightshade",
+                "grimrose",
+                "marigold",
+                "pyrevine",
+                "lychee",
+                "intensivecarrot",
+                "lightningreed"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "moonflower",
+                "nightshade",
+                "dusklobber",
+                "marigold",
+                "pyrevine",
+                "doomshroom",
+                "imitater"
+
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 60,
+          "Min": 60
+        },
+        "TimeBetween": {
+          "Max": 60,
+          "Min": 60
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(FrostwindRow0@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 61,
+          "Min": 61
+        },
+        "TimeBetween": {
+          "Max": 61,
+          "Min": 61
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(FrostwindRow1@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 62,
+          "Min": 62
+        },
+        "TimeBetween": {
+          "Max": 62,
+          "Min": 62
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(FrostwindRow2@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 63,
+          "Min": 63
+        },
+        "TimeBetween": {
+          "Max": 63,
+          "Min": 63
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(FrostwindRow3@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 63,
+          "Min": 63
+        },
+        "TimeBetween": {
+          "Max": 63,
+          "Min": 63
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(FrostwindRow4@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 10,
+            "StartingPoints": 10,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(zoybean_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 12,
+            "StartingPoints": 10,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(zoybean_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 30,
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(zoybean_armor1@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 80,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(zoybean_armor1@ZombieTypes)",
+              "RTID(monk_armor2@ZombieTypes)",
+              "RTID(beach_armor4@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(ProtectThePlant@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "SuppressObjectiveTip": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ParachuterainBig"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 4,
+        "ColumnStart": 9,
+        "GroupSize": 1,
+        "SpiderCount": 6,
+        "SpiderZombieName": "lostcity_lostpilot",
+        "TimeBeforeFullSpawn": "3",
+        "TimeBetweenGroups": "0.5",
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": "1.5"
+      }
+    },
+    {
+      "aliases": [
+        "ParachuterainEasy"
+      ],
+      "objclass": "ParachuteRainZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 6,
+        "ColumnStart": 9,
+        "GroupSize": 1,
+        "SpiderCount": 2,
+        "SpiderZombieName": "lostcity_lostpilot",
+        "TimeBeforeFullSpawn": "3",
+        "TimeBetweenGroups": "0.5",
+        "WaveStartMessage": "[WARNING_PARACHUTERAIN]",
+        "ZombieFallTime": "1.5"
+      }
+    },
+    {
+      "aliases": [
+        "petrorow0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "0",
+        "DinoType": "ptero",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "petrorow1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "1",
+        "DinoType": "ptero",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "petrorow2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "2",
+        "DinoType": "ptero",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "petrorow3"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "3",
+        "DinoType": "ptero",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "petrorow4"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "4",
+        "DinoType": "ptero",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "raptorrow0"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "0",
+        "DinoType": "raptor",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "raptorrow1"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "1",
+        "DinoType": "raptor",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "raptorrow2"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "2",
+        "DinoType": "raptor",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "raptorrow3"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "3",
+        "DinoType": "raptor",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "aliases": [
+        "raptorrow4"
+      ],
+      "objclass": "DinoWaveActionProps",
+      "objdata": {
+        "DinoRow": "4",
+        "DinoType": "raptor",
+        "DinoWaveDuration": 1
+      }
+    },
+    {
+      "objclass": "ProtectThePlantChallengeProperties",
+      "aliases": [
+        "ProtectThePlant"
+      ],
+      "objdata": {
+        "MustProtectCount": 100,
+        "Plants": [
+          {
+            "GridX": 0,
+            "GridY": 2,
+            "PlantType": "chardguard"
+          },
+          {
+            "GridX": 4,
+            "GridY": 1,
+            "PlantType": "moonflower"
+          },
+          {
+            "GridX": 4,
+            "GridY": 3,
+            "PlantType": "moonflower"
+          },
+          {
+            "GridX": 2,
+            "GridY": 0,
+            "PlantType": "nightshade"
+          },
+          {
+            "GridX": 2,
+            "GridY": 4,
+            "PlantType": "nightshade"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 12,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)",
+            "RTID(raptorrow4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)",
+            "RTID(raptorrow1@CurrentLevel)",
+            "RTID(ParachuterainEasy@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(petrorow0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(SnowStormmonkdrink@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(petrorow3@CurrentLevel)",
+            "RTID(ParachuterainBig@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(SnowStormSky@CurrentLevel)",
+            "RTID(SnowStormSky@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(petrorow2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(ParachuterainEasy@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(raptorrow3@CurrentLevel)",
+            "RTID(raptorrow0@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(petrorow0@CurrentLevel)",
+            "RTID(SnowStormmonkdrink@CurrentLevel)",
+            "RTID(SnowStormmonkdrink@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(ParachuterainBig@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(petrorow1@CurrentLevel)",
+            "RTID(petrorow2@CurrentLevel)",
+            "RTID(SnowStormhunter@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(zoybean_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(zoybean_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lunar_superfanimp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lunar_superfanimp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lunar_superfanimp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)",
+            "Row": 2
+          }, 
+          {
+            "Type": "RTID(lunar_superfanimp@ZombieTypes)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(monk_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(poncho@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(monk_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lunar_superfanimp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mech_cone@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zoybean_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lunar_superfanimp@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(poncho@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lunar_superfanimp@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(poncho@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(poncho@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(poncho@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(modern_allstar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {}
+  ],
+  "version": 1
+}

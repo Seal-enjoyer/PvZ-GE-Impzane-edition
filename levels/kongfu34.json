@@ -1,0 +1,638 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Kongfu  day 34 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Kongfu day 34 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to Kongfu world",
+        "LevelNumber": 34,
+        "FirstRewardParam": "solarsage",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+           "RTID(LostCityTrapTileGroups@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Kongfu  day 34 but better",
+        "NameMultiLanguage": {
+          "en": "Kongfu  day 34 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(KongfuStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "lilypad"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "solarsage"
+                }
+            ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+        "aliases": [
+                "DoNotPlantBeforeLine"
+            ],
+            "objclass": "MoldColonyChallengeProps",
+            "objdata": {
+                "MoldMatrix": [
+            "000000000",
+            "000111000",
+            "000111000",
+            "000111000",
+            "000000000"
+                   ]
+    }
+},
+{
+    "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true,
+                "Difficulties": [
+                    400
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "WeaponStandTorch"
+            ],
+            "objclass": "SpawnGravestonesWaveActionProps",
+            "objdata": {
+                "GravestonePool": [
+                    {"Count": 4, "Type": "RTID(kongfu_rack_torch@GridItemTypes)"},
+                ],
+                "SpawnEffectAnimID": "POPANIM_EFFECTS_TOMBSTONE_DARK_SPAWN_EFFECT",
+				"SpawnPositionsPool": [
+                    {
+                        "mX": 9,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 7,
+                        "mY": 2
+                    },
+					{
+                        "mX": 7,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 9,
+                        "mY": 3
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 1
+                    },
+                    {
+                        "mX": 9,
+                        "mY": 2
+                    },
+					{
+                        "mX": 8,
+                        "mY": 2
+                    },
+                    {
+                        "mX": 8,
+                        "mY": 3
+                    },					
+				],
+                "SpawnSoundID": "Play_Zomb_Egypt_TombRaiser_Grave_Rise"
+            }
+        },
+		{
+        "aliases": [
+        "MountingOthers"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridY": "4",
+            "GridX": "0",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "1",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "3",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "2",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "4",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "5",
+            "TypeName": "potholepuddle"
+            },
+          {
+            "GridY": "4",
+            "GridX": "6",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "7",
+            "TypeName": "potholepuddle"
+          },
+          {
+            "GridY": "4",
+            "GridX": "8",
+            "TypeName": "potholepuddle"
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive While Being a Hero in Kongfu Temple",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+    {
+      "aliases": [
+        "LostCityTrapTileGroups"
+      ],
+      "objclass": "TrapTileProperties",
+      "objdata": {
+        "TrapTiles": [
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 1,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+               "Group": "flame",
+            "Location": {
+              "mX": 0,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 2,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 3,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 4,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+                    },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 5,
+              "mY": 0
+            },
+            "RecoverDelay": 1.1
+            },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 6,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+          },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 7,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+                    },
+          {
+            "Group": "flame",
+            "Location": {
+              "mX": 8,
+              "mY": 0
+            },
+            "RecoverDelay": 1000.1
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4.5,
+        "WaveCount": 11,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)","RTID(WeaponStandTorch@CurrentLevel)"
+          ]
+          ]
+      }
+    },
+		{
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(abbot@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(abbot@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)", "Row": 4
+          },
+          {
+           "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 2
+           },
+          {
+           "Type": "RTID(abbot@ZombieTypes)", "Row": 3
+           },
+          {
+           "Type": "RTID(abbot@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)", "Row": 3
+            },
+          {
+           "Type": "RTID(monk_imp@ZombieTypes)", "Row": 2
+           },
+          {
+           "Type": "RTID(kongfu_chi@ZombieTypes)", "Row": 3
+           },
+          {
+           "Type": "RTID(abbot_armor2@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(monk@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(monk_armor1@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu_chi@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_chi@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_torch@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(monk_drink@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_chi@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(kongfu@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu@ZombieTypes)", "Row": 5
+            },
+          {
+            "Type": "RTID(kongfu@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(monk_armor1@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 2
+             },
+          {
+            "Type": "RTID(monk_armor1@ZombieTypes)", "Row": 4
+             },
+          {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_drink@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(kongfu_drink@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(kongfu_drink@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 2
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(monk_armor1@ZombieTypes)", "Row": 4
+          },
+          {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_armor1@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(kongfu_hammer@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(monk_drink@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+    }
+  ],       
+  "version": 1
+}

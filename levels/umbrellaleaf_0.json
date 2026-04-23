@@ -1,0 +1,213 @@
+{
+  "#comment": "Sample LevelΣ",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Modern day day 10-1 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian ImpsanityΣ",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Modern day day 15 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "EasyΣ",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to modern day",
+        "LevelNumber": 1,
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(FutureLinkedTileGroups@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(GoldTiles@CurrentLevel)",
+          "RTID(FPP@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Modern day day 10-1 but better",
+        "NameMultiLanguage": {
+          "en": "Modern day day 10-1 but better",
+          "zh": "Σ示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(TutorialStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+         "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "gloomvine"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "gloomshroom"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "moonflower"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "nightshade"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "dusklobber"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "grimrose"
+                }
+            ],
+         "SelectionMethod": "preset"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(iceage_weaselhoarder@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(iceage_weaselhoarder@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 500, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(iceage_weaselhoarder@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 500, // Difficulty AAAAAAAAA
+            "StartingPoints": 350,
+            "StartingWave": 1,
+            "ZombiePool": [
+              "RTID(explorer_veteran@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(chicken_farmer@ZombieTypes)",
+              "RTID(iceage_weaselhoarder@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"	
+     }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 14.5,
+        "WaveCount": 8,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+	{
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(chicken_farmer@ZombieTypes)",
+          },
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

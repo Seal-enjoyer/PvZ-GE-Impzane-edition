@@ -1,0 +1,205 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Egypt Day 25",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Egypt Day 25",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+},
+  "objects": [
+    {
+            "objclass": "LevelDefinition",
+            "objdata": {
+                "Description": "<PLAYERNAME>'s Trip to Egypt!",
+                "LevelNumber": 25,
+				"FirstRewardParam": "worldtrophy_egypt",
+                "FirstRewardType": "worldtrophy",
+                "Loot": "RTID(DefaultLoot@LevelModules)",
+                "Modules": [
+                    "RTID(ZombossIntro@LevelModules)",
+                    "RTID(Gravestones@CurrentLevel)",
+                    "RTID(ConveyorBelt@CurrentLevel)",
+                    "RTID(ZombossBattle@CurrentLevel)",
+                    "RTID(DefaultZombieWinCondition@LevelModules)",
+                    "RTID(NewWaves@CurrentLevel)"
+                ],
+                "MusicType": "MiniGame_A",
+                "Name": "Egypt Day 25",
+                "NormalPresentTable": "egypt_normal_01",
+                "ShinyPresentTable": "egypt_shiny_01",
+                "StageModule": "RTID(EgyptStage@LevelModules)",
+                "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
+            }
+        },
+        {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+		"gravebuster",
+		"hotpotato"
+        ],
+        "SelectionMethod": "chooser"
+         }
+    },
+    {
+            "aliases": [
+                "ZombossBattle"
+            ],
+            "objclass": "ZombossBattleModuleProperties",
+            "objdata": {
+                "ReservedColumnCount": 0,
+                "ZombossDeathColumn": 5,
+                "ZombossDeathRow": 3,
+                "ZombossMechType": "zombossmech_egypt",
+                "ZombossSpawnGridPosition": {
+                    "mX": 6,
+                    "mY": 3
+                }
+            }
+        },
+        {
+            "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 2,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 8,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxCount": 7,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 5,
+                        "MinWeightFactor": 2,
+                        "PlantType": "bonkchoy",
+                        "Weight": 13
+                    },
+                    {
+                        "MaxCount": 4,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 3,
+                        "MinWeightFactor": 2,
+                        "PlantType": "buttercup",
+                        "Weight": 8
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 1,
+                        "MinWeightFactor": 3,
+                        "PlantType": "potatomine",
+                        "Weight": 4
+                    },
+                    {
+                        "MaxCount": 3,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "cabbagepult",
+                        "Weight": 5
+                    },
+                    {
+                        "MaxCount": 5,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "repeater",
+                        "Weight": 10
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "snowdrop",
+                        "Weight": 7
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 2,
+                        "MinWeightFactor": 2,
+                        "PlantType": "gravebuster",
+                        "Weight": 3
+                    },
+					{
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0,
+                        "MinCount": 0,
+                        "MinWeightFactor": 2,
+                        "PlantType": "powerlily",
+                        "Weight": 2
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "NewWaves"
+            ],
+            "objclass": "WaveManagerModuleProperties",
+            "objdata": {
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+            }
+        },
+        {
+            "aliases": [
+                "WaveManagerProps"
+            ],
+            "objclass": "WaveManagerProperties",
+            "objdata": {
+                "Waves": []
+            }
+        },
+        {
+            "aliases": [
+                "Gravestones"
+            ],
+            "objclass": "GravestoneProperties",
+            "objdata": {
+                "GravestoneCount": 5,
+                "SpawnColumnEnd": 6,
+                "SpawnColumnStart": 3
+            }
+        }
+    ],
+    "version": 1
+}

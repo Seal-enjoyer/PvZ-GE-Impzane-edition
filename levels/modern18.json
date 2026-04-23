@@ -1,0 +1,320 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Modern day day 18 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Modern day day 18 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to modern day",
+        "LevelNumber": 18,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+           "RTID(LostCityTrapTileGroups@CurrentLevel)",
+           "RTID(GoldTiles@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(FPP@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Modern day day 18 but better",
+        "NameMultiLanguage": {
+          "en": "Modern day day 18 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impzanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(LostCityNightStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+            "bloominghearts"
+        ],
+         "SelectionMethod": "chooser"
+         },
+          },
+    {
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive The Boss Rush",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+    {
+        "aliases": [
+                "GoldTiles"
+            ],
+            "objclass": "InitialGridItemProperties",
+            "objdata": {
+                "InitialGridItemPlacements": [
+				    {
+                        "GridX": 1,
+                        "GridY": 1,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 1,
+                        "GridY": 3,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 1,
+                        "GridY": 2,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 1,
+                        "GridY": 5,
+                        "TypeName": "goldtile"
+                    },
+					{
+                        "GridX": 1,
+                        "GridY": 0,
+                        "TypeName": "goldtile"
+                        },
+					{
+                        "GridX": 1,
+                        "GridY": 4,
+                        "TypeName": "goldtile"
+                    },
+                ]
+            }
+    },
+    {
+         "aliases": [
+        "FPP"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 1,
+            "GridY": 1,
+            "TypeName": "electriccurrant"
+          },
+           {
+            "GridX": 1,
+            "GridY": 3,
+            "TypeName": "electriccurrant"
+          },
+           {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "missiletoe"
+          },
+        ]
+      }
+    },
+    {
+        "aliases": [
+                "Wave1"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.8,
+                    "Min": 0.8
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave1prop@CurrentLevel)"
+                ]
+            }
+        },
+        {
+             "aliases": [
+                "Wave1prop"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Column": "7",
+                        "Type": "RTID(zombossmech_future@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            "aliases": [
+                "Wave2"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.8,
+                    "Min": 0.8
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave2prop@CurrentLevel)"
+                ]
+            }
+        },
+        {
+             "aliases": [
+                "Wave2prop"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "AdditionalPlantfood": 0,
+                "Zombies": [
+                    {
+                        "Row": "4",
+                        "Column": "7",
+                        "Type": "RTID(zombossmech_egypt@ZombieTypes)"
+                    }
+                ],
+                "MustKillAllToNextWave": true
+            }
+        },
+        {
+            "aliases": [
+                "Wave3"
+            ],
+            "objclass": "WaveSchedulerProps",
+            "objdata": {
+                "TimeBeforeFirst": {
+                    "Max": 0.8,
+                    "Min": 0.8
+                },
+                "TimeBetween": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "Repeat": {
+                    "Max": 1,
+                    "Min": 1
+                },
+                "RewardWhenEnded": false,
+                "SuppressRewardState": true,
+                "Events": [
+                    "RTID(Wave3prop@CurrentLevel)"
+                ]
+            }
+        },
+        {
+        "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+			}
+		},
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 1.0,
+        "WaveCount": 3,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)","RTID(Event4@CurrentLevel)","RTID(TyrannoRow1@CurrentLevel)","RTID(TyrannoRow2@CurrentLevel)","RTID(TyrannoRow3@CurrentLevel)","RTID(TyrannoRow4@CurrentLevel)","RTID(TyrannoRow5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(Event4@CurrentLevel)","RTID(TyrannoRow1@CurrentLevel)","RTID(TyrannoRow2@CurrentLevel)","RTID(TyrannoRow3@CurrentLevel)","RTID(TyrannoRow4@CurrentLevel)","RTID(TyrannoRow5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(Event4@CurrentLevel)","RTID(TyrannoRow1@CurrentLevel)","RTID(TyrannoRow2@CurrentLevel)","RTID(TyrannoRow3@CurrentLevel)","RTID(TyrannoRow4@CurrentLevel)","RTID(TyrannoRow5@CurrentLevel)"
+          ]
+          ]
+      }
+    },
+		{
+      "aliases": [
+        "Wave0"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_jetpack@ZombieTypes)", "Row": 1
+          }
+        ]
+      }
+    },
+    {
+    }
+  ],       
+  "version": 1
+}

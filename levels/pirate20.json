@@ -1,0 +1,805 @@
+{
+  "#comment": "Pirate seas level 20",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "pirate seas day 20",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "pirate seas day 20",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "impzane",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to the ships of Pirate Seas",
+        "LevelNumber": 20,
+        "FirstIntroNarrative": "INTRO",
+        "FirstOutroNarrative": "OUTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "ReplayOutroNarrative": "OUTRO",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(FPP@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(PirateMowers@LevelModules)",
+          "RTID(PiratePlanks@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Pirate Seas day 20",
+        "NameMultiLanguage": {
+          "en": "Pirate Seas day 20",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(PirateStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "User Dave There are a Ton of Cannons.",
+              "zh": "User Dave There are a Ton of Cannons."
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "1..2...3..4 CANNONS.",
+              "zh": "1..2...3..4 CANNONS."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Yes Dave...",
+              "zh": "Yes Dave..."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "PresetPlantList": [],
+        "SelectionMethod": "chooser",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 3,
+              "Plants": [
+                "peashooter",
+                "sunflower",
+                "snapdragon",
+                "bloomerang",
+                "buttercup"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "dandelion",
+                "sunflower",
+                "snapdragon",
+                "bloomerang",
+                "buttercup"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "aliases": [
+        "PiratePlanks"
+      ],
+      "objclass": "PiratePlankProperties",
+      "objdata": {
+        "PlankRows": []
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 50,
+            "StartingWave": 2,
+            "ZombiePool": [
+            ]
+          },
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 80,
+            "StartingWave": 2,
+            "ZombiePool": [
+            ]
+          },
+          {
+            "PointIncrementPerWave": 90,
+            "StartingPoints": 90,
+            "StartingWave": 2,
+            "ZombiePool": [
+            ]
+          },
+          {
+            "PointIncrementPerWave": 110,
+            "StartingPoints": 110,
+            "StartingWave": 2,
+            "ZombiePool": [
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(C_cannon@CurrentLevel)",
+        "ZombieBasedOn": "cannon"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeHypnotizedByProjectiles": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 600,
+        "ImpType": "pirate_imp",
+        "NormalDeathWhenMowed": true,
+        "TimeBefore": 3,
+        "TimeBeforeAdditional": 1,
+        "ShootInterval": 7.5,
+        "ShootIntervalAdditional": 0.5,
+        "MaxImpCount": 5,
+        "MaxImpCountAdditional": 0,
+        "ShootColumns": [
+          5,
+          4
+        ],
+        "ExplodeColumns": [
+          5,
+          4,
+          3,
+          2
+        ],
+        "ExplodeImpCount": 5,
+        "ExplodeImpCountAdditional": 0,
+        "IgnoredByThymeWarp": true,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 700,
+        "Weight": 1500,
+        "HitRect": "RTID(PirateCannonHitRect@RectangleProps)",
+        "AttackRect": "RTID(PirateCannonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_bucket"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(C_cannon_bucket@CurrentLevel)",
+        "ZombieBasedOn": "cannon"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_bucket"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeHypnotizedByProjectiles": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "StartingArmors": [
+          "pirate_armor2"
+        ],
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 600,
+        "ImpType": "pirate_armor2",
+        "NormalDeathWhenMowed": true,
+        "TimeBefore": 8,
+        "TimeBeforeAdditional": 1,
+        "ShootInterval": 17.0,
+        "ShootIntervalAdditional": 0.5,
+        "MaxImpCount": 8,
+        "MaxImpCountAdditional": 0,
+        "ShootColumns": [
+          5
+        ],
+        "ExplodeColumns": [
+          5,
+          4,
+          3,
+          2
+        ],
+        "ExplodeImpCount": 3,
+        "ExplodeImpCountAdditional": 0,
+        "IgnoredByThymeWarp": true,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 700,
+        "Weight": 1500,
+        "HitRect": "RTID(PirateCannonHitRect@RectangleProps)",
+        "AttackRect": "RTID(PirateCannonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_basic"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(C_cannon_basic@CurrentLevel)",
+        "ZombieBasedOn": "cannon"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_basic"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeHypnotizedByProjectiles": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 300,
+        "ImpType": "pirate",
+        "NormalDeathWhenMowed": true,
+        "TimeBefore": 5,
+        "TimeBeforeAdditional": 1,
+        "ShootInterval": 8.5,
+        "ShootIntervalAdditional": 0.5,
+        "MaxImpCount": 7,
+        "MaxImpCountAdditional": 0,
+        "ShootColumns": [
+          5,
+          4
+        ],
+        "ExplodeColumns": [
+          5,
+          4,
+          3,
+          2
+        ],
+        "ExplodeImpCount": 5,
+        "ExplodeImpCountAdditional": 0,
+        "IgnoredByThymeWarp": true,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 700,
+        "Weight": 1500,
+        "HitRect": "RTID(PirateCannonHitRect@RectangleProps)",
+        "AttackRect": "RTID(PirateCannonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_Barrel"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(C_cannon_Barrel@CurrentLevel)",
+        "ZombieBasedOn": "cannon"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_Barrel"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeHypnotizedByProjectiles": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 1200,
+        "ImpType": "pirate_barrel",
+        "NormalDeathWhenMowed": true,
+        "TimeBefore": 12,
+        "TimeBeforeAdditional": 1,
+        "ShootInterval": 20,
+        "ShootIntervalAdditional": 0.5,
+        "MaxImpCount": 5,
+        "MaxImpCountAdditional": 0,
+        "ShootColumns": [
+          4
+        ],
+        "ExplodeColumns": [
+          5,
+          4
+        ],
+        "ExplodeImpCount": 2,
+        "ExplodeImpCountAdditional": 0,
+        "IgnoredByThymeWarp": true,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 700,
+        "Weight": 1500,
+        "HitRect": "RTID(PirateCannonHitRect@RectangleProps)",
+        "AttackRect": "RTID(PirateCannonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_seagull"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(C_cannon_seagull@CurrentLevel)",
+        "ZombieBasedOn": "cannon"
+      }
+    },
+    {
+      "aliases": [
+        "C_cannon_seagull"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeHypnotizedByProjectiles": true,
+        "CannotBeEnlightenedBySolarSage": true,
+        "CannotBeGrabbedByPtero": true,
+        "ImmuneToSweetPotato": true,
+        "ImmuneToShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "CannotBeTossedByCitron": true,
+        "CannotBeSwallowedByChomper": true,
+        "WalkSPS": 0.185,
+        "EatDPS": 100,
+        "Toughness": 800,
+        "ImpType": "seagull",
+        "NormalDeathWhenMowed": true,
+        "TimeBefore": 14,
+        "TimeBeforeAdditional": 1,
+        "ShootInterval": 18.5,
+        "ShootIntervalAdditional": 0.5,
+        "MaxImpCount": 2,
+        "MaxImpCountAdditional": 0,
+        "ShootColumns": [
+          5,
+          6,
+          7
+        ],
+        "ExplodeColumns": [
+          6,
+          7,
+          8
+        ],
+        "ExplodeImpCount": 3,
+        "ExplodeImpCountAdditional": 0,
+        "IgnoredByThymeWarp": true,
+        "ImmuneToGarlic": true,
+        "WavePointCost": 700,
+        "Weight": 1500,
+        "HitRect": "RTID(PirateCannonHitRect@RectangleProps)",
+        "AttackRect": "RTID(PirateCannonAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive while Zombies are flying out of cannons."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {},
+    {},
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 12,
+        "ZombieCountdownFirstWaveSecs": 25,
+        "MaxNextWaveHealthPercentage": 0.75,
+        "MinNextWaveHealthPercentage": 0.75,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_basic@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_bucket@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_Barrel@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(C_cannon_seagull@CurrentLevel)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

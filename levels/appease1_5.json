@@ -1,0 +1,613 @@
+{
+  "#comment": "Darkest night",
+  "Information": {
+    "uuid": "62c00932-c3d4-407e-869f-4caed34ba693",
+    "name": {
+      "en": "Random realm night 5",
+      "zh-CN": "Random realm night 5"
+    },
+    "Author": "Captian impzanity (seal)",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "<PLAYERNAME> trip into the Random realm.",
+      "zh-CN": "<PLAYERNAME> trip into the Random realm."
+    },
+    "GameVersion": "0.8.2",
+    "Version": "1.0",
+    "CreatedAt": "09.04.2026",
+    "UpdatedAt": "09.04.2026",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME> trip into the Random realm.",
+        "LevelNumber": 1,
+        "FirstIntroNarrative": "INTRO",
+        "FirstOutroNarrative": "OUTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "ReplayOutroNarrative": "OUTRO",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(Crater@CurrentLevel)",
+          "RTID(LevelOfTheDayIntro@LevelModules)",
+          "RTID(LevelOfTheDayModule@CurrentLevel)",
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(SunProduced@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(DarkMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Random realm night 5",
+        "NameMultiLanguage": {
+          "en": "Random realm night 5",
+          "zh": "Random realm night 5"
+        },
+        "WritenBy": "Captian impzanity (seal)",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "VictoryModule": "RTID(LevelOfTheDayOutro@LevelModules)",
+        "StageModule": "RTID(DarkStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "User Dave, I can't see anything.",
+              "zh": "用户戴夫，我什么也看不到。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "My car lights don't work either.",
+              "zh": "我的车灯也不亮。"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "It's the darkest night I ever saw in my life.",
+              "zh": "这是我一生中见过的最黑暗的夜晚。"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Penny, I am blind !",
+              "zh": "佩妮，我瞎了！"
+            }
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "User Dave, open your eyes...",
+              "zh": "用户戴夫，睁开你的眼睛......"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelOfTheDayModule"
+      ],
+      "objclass": "LevelOfTheDayModuleProperties",
+      "objdata": {
+        "FlagCount": 2,
+        "PlantfoodToSpawnCount": 0,
+        "PointIncrementPerWave": 150,
+        "StartingPoints": 200,
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)",
+        "WavesPerFlag": 6,
+        "ZombiePool": [
+          "RTID(kongfu@ZombieTypes)",
+          "RTID(kongfu_armor1@ZombieTypes)",
+          "RTID(kongfu_armor2@ZombieTypes)",
+          "RTID(kongfu_armor4@ZombieTypes)",
+          "RTID(swashbuckler@ZombieTypes)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 50,
+          "Min": 50
+        },
+        "TimeBetween": {
+          "Max": 30,
+          "Min": 30
+        },
+        "Repeat": {
+          "Max": 100,
+          "Min": 100
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning4@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Warning4"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 0,
+        "LabelG": 0,
+        "LabelB": 0,
+        "LabelAInit": 0.1,
+        "OutLineR": 0,
+        "OutLineG": 0,
+        "OutLineB": 0,
+        "String": "PLAY IMPZANE",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 200,
+        "LabelInitScale": 5,
+        "Duration": 6,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "DoNotPlantBeforeLine"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "MoldMatrix": [
+          "001000010",
+          "010100101",
+          "001010000",
+          "010101000",
+          "001000101"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 4,
+            "MaxPackets": -1
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "moonflower",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 4,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 4,
+            "MinWeightFactor": 2,
+            "PlantType": "nightshade",
+            "Weight": 11
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 3,
+            "PlantType": "dusklobber",
+            "Weight": 4
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "gloomvine",
+            "Weight": 4
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "gloomshroom",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "murkadamia",
+            "Weight": 5
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "noctarine",
+            "Weight": 3
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": -1,
+            "Speed": 70
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive while your screen goes black randomly."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 12,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(kongfu_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)",
+            "Row": 2
+          },
+          {
+            "Type": "RTID(kongfu_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_gong@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(kongfu_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(west_bull_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(foodfight_gobbler_king@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cannon@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

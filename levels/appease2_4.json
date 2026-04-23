@@ -1,0 +1,1008 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Broken rift realm day 4",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Broken rift realm day 3",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to the Broken rift",
+        "LevelNumber": 4,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(IceageMowers@LevelModules)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Broken rift realm day 4",
+        "NameMultiLanguage": {
+          "en": "Broken rift realm day 4",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(IceageVeteranStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "OverrideSeedSlotsCount": 6,
+        "PlantExcludeList": [
+          "potatomine",
+          "iceburg",
+          "gravebuster",
+          "cherry_bomb",
+          "powerlily",
+          "squash",
+          "chilibean",
+          "spikeweed",
+          "spikerock",
+          "springbean",
+          "jalapeno",
+          "imitater",
+          "blover",
+          "empea",
+          "hypnoshroom",
+          "magnetshroom",
+          "plantern",
+          "tanglekelp",
+          "hurrikale",
+          "stunion",
+          "lavaguava",
+          "stallia",
+          "thympewarp",
+          "celerystalker",
+          "garlic",
+          "perfumeshroom",
+          "primalpotatomine",
+          "shadownshroom",
+          "grimrose",
+          "ghostpepper",
+          "grapeshot",
+          "shrinkingviolet",
+          "electriccurrant",
+          "escaperoot",
+          "hotdate",
+          "buttercup",
+          "zoybeanpod",
+          "iceweed",
+          "marigold",
+          "cranjellly"
+        ],
+        "PresetPlantList": [],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "AllLaneFrostWindEvent1"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 1
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "AllLaneFrostWindEvent2"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 2
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "AllLaneFrostWindEvent3"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "AllLaneFrostWindEvent4"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "AllLaneFrostWindEvent0"
+      ],
+      "objclass": "FrostWindWaveActionProps",
+      "objdata": {
+        "Winds": [
+          {
+            "Direction": "right",
+            "Row": 0
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "DoNotPlantBeforeLine"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "MoldMatrix": [
+          "111000001",
+          "111000001",
+          "111000001",
+          "111000001",
+          "111000001"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive but every zombie is a dodo variantion"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Cone = more speedy"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "bucket = more bulky"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "ice cube = more eat speed less hp"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Mammoth head = More hp more dmg more speed"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive while only have 6 seedslots"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive without any special plant"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Cone_dodo"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(Cone_dodo@CurrentLevel)",
+        "ZombieBasedOn": "iceage_dodo"
+      }
+    },
+    {
+      "aliases": [
+        "Cone_dodo"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeEnlightenedBySolarSage": true,
+        "KilledByShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "ChillInsteadOfFreeze": true,
+        "CannotBePushedBySliders": true,
+        "StartingArmors": [
+					"iceage_armor1"
+				],
+        "WalkSPS": 0.7,
+        "EatDPS": 100,
+        "Toughness": 490,
+        "WavePointCost": 600,
+        "Weight": 300,
+        "PlantsToFlyOver": [
+          "iceweed",
+          "spikeweed",
+          "spikerock",
+          "iceburg",
+          "wallnut",
+          "potatomine",
+          "lavaguava",
+          "endurian",
+          "cactus",
+          "primalwallnut",
+          "primalpotatomine",
+          "escaperoot",
+          "murkadamia",
+          "tombtangler",
+          "vamporcini"
+        ],
+        "NormalDeathWhenMowed": true,
+        "HitRect": "RTID(IceageDodoHitRect@RectangleProps)",
+        "AttackRect": "RTID(IceageDodoAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "Bucket_dodo"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(Bucket_dodo@CurrentLevel)",
+        "ZombieBasedOn": "iceage_dodo"
+      }
+    },
+    {
+      "aliases": [
+        "Bucket_dodo"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeEnlightenedBySolarSage": true,
+        "KilledByShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "ChillInsteadOfFreeze": true,
+        "CannotBePushedBySliders": true,
+        "StartingArmors": [
+					"iceage_armor2"
+				],
+        "WalkSPS": 0.3,
+        "EatDPS": 100,
+        "Toughness": 1290,
+        "WavePointCost": 700,
+        "Weight": 400,
+        "PlantsToFlyOver": [
+          "iceweed",
+          "spikeweed",
+          "spikerock",
+          "iceburg",
+          "wallnut",
+          "potatomine",
+          "lavaguava",
+          "endurian",
+          "cactus",
+          "primalwallnut",
+          "primalpotatomine",
+          "escaperoot",
+          "murkadamia",
+          "tombtangler",
+          "vamporcini"
+        ],
+        "NormalDeathWhenMowed": true,
+        "HitRect": "RTID(IceageDodoHitRect@RectangleProps)",
+        "AttackRect": "RTID(IceageDodoAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "icecube_dodo"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(icecube_dodo@CurrentLevel)",
+        "ZombieBasedOn": "iceage_dodo"
+      }
+    },
+    {
+      "aliases": [
+        "icecube_dodo"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeEnlightenedBySolarSage": true,
+        "KilledByShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "ChillInsteadOfFreeze": true,
+        "CannotBePushedBySliders": true,
+        "WalkSPS": 0.3,
+        "StartingArmors": [
+					"iceage_armor3"
+				],
+        "EatDPS": 600,
+        "Toughness": 390,
+        "WavePointCost": 800,
+        "Weight": 500,
+        "PlantsToFlyOver": [
+          "iceweed",
+          "spikeweed",
+          "spikerock",
+          "iceburg",
+          "wallnut",
+          "potatomine",
+          "lavaguava",
+          "endurian",
+          "cactus",
+          "primalwallnut",
+          "primalpotatomine",
+          "escaperoot",
+          "murkadamia",
+          "tombtangler",
+          "vamporcini"
+        ],
+        "NormalDeathWhenMowed": true,
+        "HitRect": "RTID(IceageDodoHitRect@RectangleProps)",
+        "AttackRect": "RTID(IceageDodoAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "Mammoth_dodo"
+      ],
+      "objclass": "ZombieType",
+      "objdata": {
+        "Properties": "RTID(Mammoth_dodo@CurrentLevel)",
+        "ZombieBasedOn": "iceage_dodo"
+      }
+    },
+    {
+      "aliases": [
+        "Mammoth_dodo"
+      ],
+      "objclass": "ZombieProperties",
+      "objdata": {
+        "CannotBeEnlightenedBySolarSage": true,
+        "KilledByShrinkingViolet": true,
+        "ChooseToSpawnOnNonDeckRows": true,
+        "ChillInsteadOfFreeze": true,
+        "CannotBePushedBySliders": true,
+        "WalkSPS": 0.5,
+        "StartingArmors": [
+					"iceage_armor4"
+				],
+        "EatDPS": 300,
+        "Toughness": 1000,
+        "WavePointCost": 900,
+        "Weight": 600,
+        "PlantsToFlyOver": [
+          "iceweed",
+          "spikeweed",
+          "spikerock",
+          "iceburg",
+          "wallnut",
+          "potatomine",
+          "lavaguava",
+          "endurian",
+          "cactus",
+          "primalwallnut",
+          "primalpotatomine",
+          "escaperoot",
+          "murkadamia",
+          "tombtangler",
+          "vamporcini"
+        ],
+        "NormalDeathWhenMowed": true,
+        "HitRect": "RTID(IceageDodoHitRect@RectangleProps)",
+        "AttackRect": "RTID(IceageDodoAttackRect@RectangleProps)"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 50,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(Cone_dodo@CurrentLevel)",
+              "RTID(Bucket_dodo@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(Cone_dodo@CurrentLevel)",
+              "RTID(Bucket_dodo@CurrentLevel)",
+              "RTID(icecube_dodo@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 200,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(Cone_dodo@CurrentLevel)",
+              "RTID(Bucket_dodo@CurrentLevel)",
+              "RTID(icecube_dodo@CurrentLevel)",
+              "RTID(Mammoth_dodo@CurrentLevel)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 200,
+            "StartingWave": 1,
+            "ZombiePool": [
+              "RTID(Cone_dodo@CurrentLevel)",
+              "RTID(Bucket_dodo@CurrentLevel)",
+              "RTID(icecube_dodo@CurrentLevel)",
+              "RTID(Mammoth_dodo@CurrentLevel)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 3,
+        "SuppressFlagZombie": true,
+        "WaveCount": 12,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent0@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent1@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent2@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent3@CurrentLevel)",
+            "RTID(AllLaneFrostWindEvent4@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Bucket_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Cone_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(icecube_dodo@CurrentLevel)"
+          },
+          {
+            "Type": "RTID(Mammoth_dodo@CurrentLevel)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

@@ -1,0 +1,778 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Broken rift realm day 2",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Broken rift realm day 2",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to the Broken rift",
+        "LevelNumber": 3,
+        "FirstIntroNarrative": "APPEASE_II_C_INTRO",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(FrozenZombiePlacement@CurrentLevel)",
+          "RTID(FrozenPlantPlacement@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Broken rift realm night 2",
+        "NameMultiLanguage": {
+          "en": "Broken rift realm night 2",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(ModernNightStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "PresetPlantList": [],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(SimultaneousPlants@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "objclass": "StarChallengeSimultaneousPlantsProps",
+      "aliases": [
+        "SimultaneousPlants"
+      ],
+      "objdata": {
+        "MaximumPlants": 25
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(KillZombies@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "KillZombies"
+      ],
+      "objclass": "StarChallengeKillZombiesInTimeProps",
+      "objdata": {
+        "Time": 5,
+        "ZombiesToKill": 5
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 50,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 200,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)",
+              "RTID(tutorial_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 100,
+            "StartingWave": 1,
+            "ZombiePool": [
+              "RTID(tutorial@ZombieTypes)",
+              "RTID(tutorial_armor1@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal1da"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal1daprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal1daprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2.5,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "gargantuar",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "dark_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "dark_gargantuar"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal1ps"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal1psprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal1psprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2.5,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "gargantuar",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "pirate_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "pirate_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "pirate_gargantuar"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal2md"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal2mdprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal2mdprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2.5,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "gargantuar",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "tutorial_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "tutorial_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "tutorial_gargantuar"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal2vase"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal2vaseprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal2vaseprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2.5,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "gargantuar",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "vase_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "vase_gargantuar"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "vase_gargantuar"
+          }
+        ]
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal3strong"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal3strongprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal3strongprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2.5,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "gargantuar",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "kongfu_bronze_strong"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bronze_strong"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bronze_strong"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Portal3strong"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 0,
+        "PortalType": "RTID(Portal3strong@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal3magic"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal3magicprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal3magicprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2.5,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "gargantuar",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "kongfu_bronze_chi"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bronze_chi"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bronze_chi"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Portal3magic"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 2,
+        "PortalType": "RTID(Portal3magic@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "objclass": "PortalType",
+      "aliases": [
+        "Portal3agile"
+      ],
+      "objdata": {
+        "Properties": "RTID(Portal3agileprops@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "PortalProps",
+      "aliases": [
+        "Portal3agileprops"
+      ],
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Min": 2.5,
+          "Max": 3
+        },
+        "TimeBetween": {
+          "Min": 4,
+          "Max": 7
+        },
+        "Scale": 1,
+        "World": "gargantuar",
+        "ZombieTypesToSpawn": [
+          {
+            "Weight": 2,
+            "ZombieTypeName": "kongfu_bronze_hook"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bronze_hook"
+          },
+          {
+            "Weight": 1,
+            "ZombieTypeName": "kongfu_bronze_hook"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Portal3agile"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 4,
+        "PortalType": "RTID(Portal3agile@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+       "aliases": [
+        "Portal2vase"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(Portal2vase@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Portal2md"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(Portal2md@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Portal1da"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 1,
+        "PortalType": "RTID(Portal1da@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "Portal1ps"
+      ],
+      "objclass": "SpawnModernPortalsWaveActionProps",
+      "objdata": {
+        "PortalColumn": 7,
+        "PortalRow": 3,
+        "PortalType": "RTID(Portal1ps@CurrentLevel)",
+        "SpawnEffectAnimID": "",
+        "SpawnSoundID": ""
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 3,
+        "MaxNextWaveHealthPercentage": 0.1,
+        "MinNextWaveHealthPercentage": 0.1,
+        "WaveCount": 12,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)",
+            "RTID(Portal1da@CurrentLevel)",
+            "RTID(Portal1ps@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)",
+            "RTID(Portal2md@CurrentLevel)",
+            "RTID(Portal2vase@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Portal3strong@CurrentLevel)",
+            "RTID(Portal3magic@CurrentLevel)",
+            "RTID(Portal3agile@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_captain@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_crystalskull@ZombieTypes)"
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

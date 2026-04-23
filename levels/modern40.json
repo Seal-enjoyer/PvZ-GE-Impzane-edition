@@ -1,0 +1,518 @@
+{
+  "#comment": "IMPZANITY",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "What",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "What",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANITY",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to modern day",
+        "LevelNumber": 40,
+        "FlagWaveVeteranOverrideTypes": [0, 1],
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(InitialTide@CurrentLevel)",
+          "RTID(MountingOthers@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(TutorialMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(Gravestones@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "What",
+        "NameMultiLanguage": {
+          "en": "What",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(BeachTutorialStage@LevelModules)"
+      }
+    },
+{"aliases": ["InitialTide"],
+"objclass": "TideProperties",
+"objdata": {
+    "StartingWaveLocation": 0
+}},
+{
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "PresetPlantList": [
+                {
+                    "Level": -1,
+                    "PlantType": "goldbloom"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "homingthistle"
+                },
+                {
+                    "Level": -1,
+                    "PlantType": "seashroom"
+                },
+                 {
+                    "Level": -1,
+                    "PlantType": "lilypad"
+                }
+            ],
+         "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80, // Difficulty D, easiest
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(pharaoh@ZombieTypes)",
+               "RTID(abbot_imp@ZombieTypes)",
+
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100, // Difficulty C, normal
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(pharaoh@ZombieTypes)",
+               "RTID(abbot_imp@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150, // Difficulty B, advanced
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+             "RTID(pharaoh@ZombieTypes)",
+               "RTID(abbot_imp@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 650, // Difficulty AAAAAAAAA
+            "StartingPoints": 300,
+            "StartingWave": 1,
+            "ZombiePool": [
+                 "RTID(pharaoh@ZombieTypes)",
+           ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        },
+		{
+        "aliases": [
+			"ChallengeModule"
+		],
+			"objclass": "StarChallengeModuleProperties",
+			"objdata": {
+				"Challenges": [
+					[
+						"RTID(BeatTheLevel@CurrentLevel)"
+					]
+				],
+				"ChallengeAlwaysAvailable": true
+			}
+		},
+		{
+			"aliases": [
+			"BeatTheLevel"
+		],
+			"objclass": "StarChallengeBeatTheLevelProps",
+			"objdata": {
+				"Descriptions": [
+				"Survive hexar MADNESS",
+				],
+				"DescriptionsMultiLanguage": [
+					{
+					"en": "123",
+					"zh": "112233"
+					}
+				]
+			}
+		},
+        {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 12,
+        "WaveCount": 12,
+        "Waves": [
+          [
+           "RTID(Wave1@CurrentLevel)","RTID(6Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(3Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(0Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(9Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)","RTID(6Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)","RTID(3Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)","RTID(0Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)","RTID(9Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)","RTID(6Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(3Tide@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)","RTID(0Tide@CurrentLevel)"
+          ],
+           [
+            "RTID(Wave12@CurrentLevel)","RTID(9Tide@CurrentLevel)"
+           ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 0,
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+            },
+            {
+            "Type": "RTID(pharaoh@ZombieTypes)",
+           }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+          },
+          {
+           "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 1
+            },
+          {
+           "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 2
+           },
+          {
+           "Type": "RTID(pharaoh@ZombieTypes)", "Row": 3
+           },
+          {
+           "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 5
+          },
+          {
+               "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 5
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)"
+          },
+           {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row":3
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 5
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 3
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 2
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 3
+          },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 2
+             },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 3
+             },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 1
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 1
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 1
+            },
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 4
+          }
+        ]
+      }
+    },
+    {
+        "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_imp@ZombieTypes)", "Row": 2
+          },
+          {
+            "Type": "RTID(pharaoh@ZombieTypes)", "Row": 4
+            },
+          {
+            "Type": "RTID(abbot_chi@ZombieTypes)", "Row": 3
+         }
+        ]
+      }
+    },
+		{
+            "aliases": [
+                "0Tide"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 0,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+		{
+            "aliases": [
+                "3Tide"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 3,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+		{
+            "aliases": [
+                "5Tide"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 5,
+                    "ChangeType": "absolute"
+                }
+            }
+        },
+		{
+            "aliases": [
+                "9Tide"
+            ],
+            "objclass": "TidalChangeWaveActionProps",
+            "objdata": {
+                "TidalChange": {
+                    "ChangeAmount": 9,
+                    "ChangeType": "absolute"
+                }
+            }
+        }
+  ],       
+  "version": 1
+}

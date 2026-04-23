@@ -1,0 +1,264 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Kongfu day 22 but better",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "https://github.com/Gzh0821",
+    "Introduction": {
+      "en": "Kongfu day 22 but better",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "Your trip to the Kongfu tempel",
+        "LevelNumber": 22,
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(kongfuMowers@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(ZombiePotions@CurrentLevel)",
+          "RTID(FutureLinkedTileGroups@CurrentLevel)",
+          "RTID(FPP@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+		  "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Kongfu day 22 but better",
+        "NameMultiLanguage": {
+          "en": "Kongfu day 22 but better",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(KongfuStage@LevelModules)"
+      }
+	},
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [
+        ],
+        "SelectionMethod": "chooser"
+         },
+    },
+    {
+     "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 890, // Difficulty D, easiest
+            "StartingPoints": 590,
+            "StartingWave": 0,
+            "ZombiePool": [
+               "RTID(monk_imp@ZombieTypes)",
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(kongfu_chi@ZombieTypes)",
+              "RTID(monk_nunchaku@ZombieTypes)",
+              "RTID(kongfu_rocket_imp@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 1900, // Difficulty C, normal
+            "StartingPoints": 9100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(monk_imp@ZombieTypes)",
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(kongfu_chi@ZombieTypes)",
+              "RTID(monk_nunchaku@ZombieTypes)",
+              "RTID(kongfu_rocket_imp@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 950, // Difficulty B, advanced
+            "StartingPoints": 900,
+            "StartingWave": 0,
+            "ZombiePool": [
+            "RTID(monk_imp@ZombieTypes)",
+              "RTID(kongfu_drink@ZombieTypes)",
+              "RTID(kongfu_chi@ZombieTypes)",
+              "RTID(monk_nunchaku@ZombieTypes)",
+              "RTID(kongfu_rocket_imp@ZombieTypes)",
+            ]
+          },
+          {
+            "PointIncrementPerWave": 1200, // Difficulty AAAAAAAAA
+            "StartingPoints": 150,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(kongfu@ZombieTypes)",
+              "RTID(kongfu_chi@ZombieTypes)",
+              "RTID(monk@ZombieTypes)",
+              "RTID(monk_armor3@ZombieTypes)",
+              "RTID(kongfu_hammer@ZombieTypes)",
+              "RTID(abbot_armor1@ZombieTypes)",
+              "RTID(abbot_armor2@ZombieTypes)",
+              "RTID(abbot_armor3@ZombieTypes)",
+            ]
+          }
+        ],
+                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+        "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true,
+                "Difficulties": [
+                    400
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "DoNotPlantBeforeLine"
+            ],
+            "objclass": "MoldColonyChallengeProps",
+            "objdata": {
+                "MoldMatrix": [
+            "010010001",
+            "010010001",
+            "010010001",
+            "010010001",
+            "010010001"
+                   ]
+    }
+},
+{
+    "aliases": [
+                "HunterEvent"
+            ],
+            "objclass": "SpawnZombiesJitteredWaveActionProps",
+            "objdata": {
+                "Zombies": [
+                    {
+                        "Type": "RTID(kongfu_bomb@ZombieTypes)"
+                    }
+                ]
+            }
+        },
+		{
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 9.5,
+        "WaveCount": 14,
+        "Waves": [
+          [
+
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)","RTID(HunterEvent@CurrentLevel)","RTID(HunterEvent@CurrentLevel)"
+          ]
+        ]
+      }
+        },
+		{
+            "aliases": [
+        "FPP"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "GridX": 1,
+            "GridY": 2,
+            "TypeName": "dandelion"
+          },
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "AdditionalPlantfood": 1,
+        "Zombies": [
+          {
+            "Type": "RTID(abbot_armor3@ZombieTypes)",
+          },
+        ]
+      }
+
+    }
+  ],
+  "version": 1
+}

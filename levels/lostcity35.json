@@ -1,0 +1,712 @@
+{
+  "#comment": "Sample Level",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Overgrown ruins day 5",
+      "zh-CN": "示例关卡1"
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Overgrown ruins day 5",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "Easy",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME>'s trip to the Overgrown ruins",
+        "LevelNumber": 5,
+        "FirstRewardParam": "shinevine",
+        "FirstRewardType": "unlock_plant",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(DefaultSunDropper@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(GoldTiles@CurrentLevel)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(SunProduced@CurrentLevel)",
+          "RTID(LostCityTrapTileGroups@CurrentLevel)",
+          "RTID(LostCityMowers@LevelModules)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Overgrown ruins day 5",
+        "NameMultiLanguage": {
+          "en": "Overgrown ruins day 5",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(LostCityStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "sunflower"
+          },
+          {
+            "Level": -1,
+            "PlantType": "twinsunflower"
+          },
+          {
+            "Level": -1,
+            "PlantType": "primalsunflower"
+          },
+          {
+            "Level": -1,
+            "PlantType": "goldbloom"
+          },
+          {
+            "Level": -1,
+            "PlantType": "shinevine"
+          },
+          {
+            "Level": -1,
+            "PlantType": "imitater"
+          },
+          {
+            "Level": -1,
+            "PlantType": "solartomato"
+          }
+        ],
+        "SelectionMethod": "preset"
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 200,
+            "StartingPoints": 400,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)",
+              "RTID(lostcity_armor4@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "objclass": "ProtectThePlantChallengeProperties",
+      "aliases": [
+        "ProtectThePlant"
+      ],
+      "objdata": {
+        "MustProtectCount": 5,
+        "Plants": [
+          {
+            "GridX": 2,
+            "GridY": 0,
+            "PlantType": "magnifyinggrass"
+          },
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "PlantType": "magnifyinggrass"
+          },
+          {
+            "GridX": 2,
+            "GridY": 2,
+            "PlantType": "magnifyinggrass"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "PlantType": "magnifyinggrass"
+          },
+          {
+            "GridX": 2,
+            "GridY": 4,
+            "PlantType": "magnifyinggrass"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(ProtectThePlant@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+                    ]
+                ],
+                "ChallengesAlwaysAvailable": true,
+                "Difficulties": [
+                    400
+                ]
+            }
+        },
+        {
+            "aliases": [
+                "DoNotPlantBeforeLine"
+            ],
+            "objclass": "MoldColonyChallengeProps",
+            "objdata": {
+                "MoldMatrix": [
+            "000111111",
+            "000111111",
+            "000111111",
+            "000111111",
+            "000111111"
+                   ]
+    }
+},
+{
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 4,
+        "WaveCount": 16,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)",
+            "RTID(Parachutegarg2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)",
+            "RTID(Parachutegarg2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)",
+            "RTID(Parachutegarg2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)",
+            "RTID(Parachutegarg2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)",
+            "RTID(Parachutegarg2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave16@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "GoldTiles"
+      ],
+      "objclass": "InitialGridItemProperties",
+      "objdata": {
+        "InitialGridItemPlacements": [
+          {
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 0,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 2,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 3,
+            "TypeName": "goldtile"
+          },
+          {
+            "GridX": 2,
+            "GridY": 4,
+            "TypeName": "goldtile"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          }
+        ]
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_jane@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75,
+            "row": 1
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75,
+            "row": 3
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_impporter@ZombieTypes)",
+						"CarrySun": 150
+          },
+          {
+            "Type": "RTID(lostcity_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)",
+						"CarrySun": 75
+          }
+        ]
+      }
+    }
+  ],
+  "version": 1
+}

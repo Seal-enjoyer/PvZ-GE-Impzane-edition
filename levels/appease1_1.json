@@ -1,0 +1,933 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Random realm day 1",
+      "zh-CN": ""
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Random realm day 1",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME> trip into the Random realm.",
+        "LevelNumber": 1,
+        "FirstIntroNarrative": "INTRO",
+        "FirstOutroNarrative": "OUTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "ReplayOutroNarrative": "OUTRO",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(LevelScheduler1@CurrentLevel)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Random realm day 1",
+        "NameMultiLanguage": {
+          "en": "Random realm day 1",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(PersuitStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {},
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "La la la HUH OH I AM THE GREAT ZOMBOZZ AND I HAVE A GREAT ARMY OF MY BEZT ZOMBIEZ.",
+              "zh": "La la la HUH OH I AM THE GREAT ZOMBOZZ AND I HAVE A GREAT ARMY OF MY BEZT ZOMBIEZ."
+            }
+          },
+          {},
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "TIRED",
+            "Lines": {
+              "en": "Penny these zombies look scary...",
+              "zh": "Penny these zombies look scary..."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Thats right User Dave they are GIANT!",
+              "zh": "Thats right User Dave they are GIANT!"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "I am not sure if we win this User Dave.",
+              "zh": "I am not sure if we win this User Dave."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "OUTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+          "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "HOW ???.",
+              "zh": "HOW ???."
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "you did it... Crazy dave BUT THIS IZNT OUR THE LAZT FIGHTTTTT !!!",
+              "zh": "you did it... Crazy dave BUT THIS IZNT OUR THE LAZT FIGHTTTTT !!!"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_EXIT"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "This Zombozo guy is a bit crazy.",
+              "zh": "This Zombozo guy is a bit crazy."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 1,
+              "Plants": [
+                "primalsunflower",
+                "caulipower",
+                "sapfling",
+                "zoybeanpod",
+                "umbrellaleaf",
+                "bloominghearts",
+                "powerlily",
+                "imitater"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "cantaloupe",
+                "coconutcannon",
+                "snowpea",
+                "primalsunflower",
+                "doomshroom",
+                "imitater",
+                "thymewarp"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(LastStand@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "LastStand"
+      ],
+      "objclass": "LastStandMinigameProperties",
+      "objdata": {
+        "StartingPlantfood": 0,
+        "StartingSun": 9900
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 120,
+          "Min": 100
+        },
+        "TimeBetween": {
+          "Max": 90,
+          "Min": 90
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning0@CurrentLevel)",
+          "RTID(earthquakespawn@CurrentLevel)",
+          "RTID(earthquakespawn1@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Warning0"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 156,
+        "LabelG": 106,
+        "LabelB": 69,
+        "LabelAInit": 0.1,
+        "OutLineR": 161,
+        "OutLineG": 129,
+        "OutLineB": 98,
+        "String": "THE GROUND IS SHAKING",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 0.5,
+        "LabelInitScale": 4,
+        "Duration": 5.5,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "aliases": [
+        "earthquakespawn"
+      ],
+      "objclass": "BeachStageEventZombieSpawnerProps",
+      "objdata": {
+        "ColumnEnd": 8,
+        "ColumnStart": 5,
+        "GroupSize": 3,
+        "TimeBeforeFullSpawn": 0.5,
+        "TimeBetweenGroups": 1,
+        "WaveStartMessage": "[]",
+        "ZombieCount": 8,
+        "ZombieName": "halloween"
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(KillZombies@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "KillZombies"
+      ],
+      "objclass": "StarChallengeKillZombiesInTimeProps",
+      "objdata": {
+        "Time": 10,
+        "ZombiesToKill": 20
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 100,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(pirate_gargantuar@ZombieTypes)",
+              "RTID(cowboy_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+              "RTID(dark_gargantuar@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(iceage_gargantuar@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(eighties_gargantuar@ZombieTypes)",
+              "RTID(dino_gargantuar@ZombieTypes)",
+              "RTID(tutorial_gargantuar@ZombieTypes)",
+              "RTID(zoybean_gargantuar@ZombieTypes)",
+              "RTID(summer_gargantuar@ZombieTypes)",
+              "RTID(halloween_gargantuar@ZombieTypes)",
+              "RTID(feastivus_gargantuar@ZombieTypes)",
+              "RTID(holiday_gargantuar@ZombieTypes)",
+              "RTID(kongfu_bronze_chi@ZombieTypes)",
+              "RTID(kongfu_bronze_hook@ZombieTypes)",
+              "RTID(kongfu_bronze_strong@ZombieTypes)",
+              "RTID(birthday_gargantuar@ZombieTypes)",
+              "RTID(vase_gargantuar@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 100,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(pirate_gargantuar@ZombieTypes)",
+              "RTID(cowboy_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+              "RTID(dark_gargantuar@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(iceage_gargantuar@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(eighties_gargantuar@ZombieTypes)",
+              "RTID(dino_gargantuar@ZombieTypes)",
+              "RTID(tutorial_gargantuar@ZombieTypes)",
+              "RTID(zoybean_gargantuar@ZombieTypes)",
+              "RTID(summer_gargantuar@ZombieTypes)",
+              "RTID(halloween_gargantuar@ZombieTypes)",
+              "RTID(feastivus_gargantuar@ZombieTypes)",
+              "RTID(holiday_gargantuar@ZombieTypes)",
+              "RTID(kongfu_bronze_chi@ZombieTypes)",
+              "RTID(kongfu_bronze_hook@ZombieTypes)",
+              "RTID(kongfu_bronze_strong@ZombieTypes)",
+              "RTID(birthday_gargantuar@ZombieTypes)",
+              "RTID(vase_gargantuar@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 250,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(pirate_gargantuar@ZombieTypes)",
+              "RTID(cowboy_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+              "RTID(dark_gargantuar@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(iceage_gargantuar@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(eighties_gargantuar@ZombieTypes)",
+              "RTID(dino_gargantuar@ZombieTypes)",
+              "RTID(tutorial_gargantuar@ZombieTypes)",
+              "RTID(zoybean_gargantuar@ZombieTypes)",
+              "RTID(summer_gargantuar@ZombieTypes)",
+              "RTID(halloween_gargantuar@ZombieTypes)",
+              "RTID(feastivus_gargantuar@ZombieTypes)",
+              "RTID(holiday_gargantuar@ZombieTypes)",
+              "RTID(kongfu_bronze_chi@ZombieTypes)",
+              "RTID(kongfu_bronze_hook@ZombieTypes)",
+              "RTID(kongfu_bronze_strong@ZombieTypes)",
+              "RTID(birthday_gargantuar@ZombieTypes)",
+              "RTID(vase_gargantuar@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 450,
+            "StartingPoints": 450,
+            "StartingWave": 1,
+            "ZombiePool": [
+              "RTID(egypt_gargantuar@ZombieTypes)",
+              "RTID(pirate_gargantuar@ZombieTypes)",
+              "RTID(cowboy_gargantuar@ZombieTypes)",
+              "RTID(future_gargantuar@ZombieTypes)",
+              "RTID(dark_gargantuar@ZombieTypes)",
+              "RTID(beach_gargantuar@ZombieTypes)",
+              "RTID(iceage_gargantuar@ZombieTypes)",
+              "RTID(lostcity_gargantuar@ZombieTypes)",
+              "RTID(eighties_gargantuar@ZombieTypes)",
+              "RTID(dino_gargantuar@ZombieTypes)",
+              "RTID(tutorial_gargantuar@ZombieTypes)",
+              "RTID(zoybean_gargantuar@ZombieTypes)",
+              "RTID(summer_gargantuar@ZombieTypes)",
+              "RTID(halloween_gargantuar@ZombieTypes)",
+              "RTID(feastivus_gargantuar@ZombieTypes)",
+              "RTID(holiday_gargantuar@ZombieTypes)",
+              "RTID(kongfu_bronze_chi@ZombieTypes)",
+              "RTID(kongfu_bronze_hook@ZombieTypes)",
+              "RTID(kongfu_bronze_strong@ZombieTypes)",
+              "RTID(birthday_gargantuar@ZombieTypes)",
+              "RTID(vase_gargantuar@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive the Bad moon rising."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {},
+    {},
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 5,
+        "WaveCount": 20,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave13@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave14@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave15@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave16@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave17@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave18@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave19@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave20@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(beach_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dark_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(vase_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(birthday_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(zoybean_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(holiday_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(birthday_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(beach_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(halloween_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave13"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(zoybean_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave14"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dark_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave15"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(feastivus_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(zoybean_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave16"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(eighties_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave17"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave18"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(vase_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tutorial_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(summer_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave19"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(cowboy_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(feastivus_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave20"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(future_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {}
+  ],
+  "version": 1
+}

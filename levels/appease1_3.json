@@ -1,0 +1,877 @@
+{
+  "#comment": "IMPZANE",
+  "Information": {
+    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+    "name": {
+      "en": "Random realm day 3",
+      "zh-CN": ""
+    },
+    "Author": "Captian Impsanity",
+    "AuthorLink": "@seal_enjoyer_de",
+    "Introduction": {
+      "en": "Random realm day 3",
+      "zh-CN": "这是一个示例关卡。"
+    },
+    "GameVersion": "0.1.13",
+    "Version": "1.0",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "IMPZANE",
+    "Category": "Survival"
+  },
+  "objects": [
+    {
+      "objclass": "LevelDefinition",
+      "objdata": {
+        "Description": "<PLAYERNAME> trip into the Random realm.",
+        "LevelNumber": 1,
+        "FirstIntroNarrative": "INTRO",
+        "FirstOutroNarrative": "OUTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "ReplayOutroNarrative": "OUTRO",
+        "Loot": "RTID(DefaultLoot@LevelModules)",
+        "Modules": [
+          "RTID(ZombiesDeadWinCon@LevelModules)",
+          "RTID(DefaultZombieWinCondition@LevelModules)",
+          "RTID(NewWaves@CurrentLevel)",
+          "RTID(SunProduced@CurrentLevel)",
+          "RTID(ForzenPlantPlacement@CurrentLevel)",
+          "RTID(LastStand@CurrentLevel)",
+          "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(ModernMowers@LevelModules)",
+          "RTID(ChallengeModule@CurrentLevel)",
+          "RTID(SeedBank@CurrentLevel)",
+          "RTID(StandardIntro@LevelModules)"
+        ],
+        "Name": "Random realm night 3",
+        "NameMultiLanguage": {
+          "en": "Random realm night 3",
+          "zh": "示例关卡I"
+        },
+        "WritenBy": "Captian impsanity",
+        "NormalPresentTable": "egypt_normal_01",
+        "ShinyPresentTable": "egypt_shiny_01",
+        "StageModule": "RTID(CircusStage@LevelModules)"
+      }
+    },
+    {
+      "aliases": [
+        "INTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Penny what are these plants ?",
+              "zh": "Penny what are these plants ?"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Dave i am not sure either...",
+              "zh": "Dave i am not sure either..."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "They look like some kind of a fusion.",
+              "zh": "They look like some kind of a fusion."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser"
+      }
+    },
+    {
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 1,
+              "Plants": [
+                "sunflower",
+                "puffshroom",
+                "snappea",
+                "iceburg",
+                "goldleaf",
+                "cactus",
+                "ghostpepper",
+                "marigold"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "sunflower",
+                "hypnoshroom",
+                "cherrybomb",
+                "cactus",
+                "iceburg",
+                "imitater",
+                "snappea"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(KillZombies@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "KillZombies"
+      ],
+      "objclass": "StarChallengeKillZombiesInTimeProps",
+      "objdata": {
+        "Time": 20,
+        "ZombiesToKill": 20
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 60,
+          "Min": 60
+        },
+        "TimeBetween": {
+          "Max": 60,
+          "Min": 60
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning1@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Warning1"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 255,
+        "LabelG": 255,
+        "LabelB": 0,
+        "LabelAInit": 0.1,
+        "OutLineR": 139,
+        "OutLineG": 128,
+        "OutLineB": 0,
+        "String": "Lights out in 3",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 0.5,
+        "LabelInitScale": 4,
+        "Duration": 1,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 61,
+          "Min": 61
+        },
+        "TimeBetween": {
+          "Max": 61,
+          "Min": 61
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning2@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Warning2"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 255,
+        "LabelG": 255,
+        "LabelB": 0,
+        "LabelAInit": 0.1,
+        "OutLineR": 139,
+        "OutLineG": 128,
+        "OutLineB": 0,
+        "String": "2",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 1,
+        "LabelInitScale": 4,
+        "Duration": 1,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 62,
+          "Min": 62
+        },
+        "TimeBetween": {
+          "Max": 62,
+          "Min": 62
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning3@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Warning3"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 255,
+        "LabelG": 255,
+        "LabelB": 0,
+        "LabelAInit": 0.1,
+        "OutLineR": 139,
+        "OutLineG": 128,
+        "OutLineB": 0,
+        "String": "1",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 2,
+        "LabelInitScale": 4,
+        "Duration": 1,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "aliases": [
+        "LevelScheduler"
+      ],
+      "objclass": "LevelSchedulerProps",
+      "objdata": {
+        "TimeBeforeFirst": {
+          "Max": 63,
+          "Min": 63
+        },
+        "TimeBetween": {
+          "Max": 63,
+          "Min": 63
+        },
+        "Repeat": {
+          "Max": 20,
+          "Min": 20
+        },
+        "RewardWhenEnded": false,
+        "SuppressRewardState": false,
+        "Events": [
+          "RTID(Warning4@CurrentLevel)"
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Warning4"
+      ],
+      "objclass": "WaveWarningProps",
+      "objdata": {
+        "LabelR": 0,
+        "LabelG": 0,
+        "LabelB": 0,
+        "LabelAInit": 0.1,
+        "OutLineR": 0,
+        "OutLineG": 0,
+        "OutLineB": 0,
+        "String": "PLAY IMPZANE",
+        "Sound": "SandStorm",
+        "LabelTargetScale": 200,
+        "LabelInitScale": 5,
+        "Duration": 4,
+        "InitTime": 0.5
+      }
+    },
+    {
+      "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 10,
+            "StartingPoints": 10,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 12,
+            "StartingPoints": 10,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 30,
+            "StartingPoints": 60,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 80,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(lostcity@ZombieTypes)",
+              "RTID(lostcity_armor1@ZombieTypes)",
+              "RTID(lostcity_armor2@ZombieTypes)",
+              "RTID(lostcity_armor4@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {},
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Protect the Mutated plants."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {},
+    {},
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Every 60 seconds your light will go out."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {},
+    {},
+    {
+      "objclass": "ProtectThePlantChallengeProperties",
+      "aliases": [
+        "ProtectThePlant"
+      ],
+      "objdata": {
+        "MustProtectCount": 100,
+        "Plants": [
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "PlantType": "scaredyshroom"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "PlantType": "scaredyshroom"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "PlantType": "scaredyshroom"
+          },
+          {
+            "GridX": 3,
+            "GridY": 0,
+            "PlantType": "snapdragon"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "PlantType": "snapdragon"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "PlantType": "snapdragon"
+          },{
+            "GridX": 3,
+            "GridY": 0,
+            "PlantType": "snappea"
+          },
+          {
+            "GridX": 3,
+            "GridY": 2,
+            "PlantType": "snappea"
+          },
+          {
+            "GridX": 3,
+            "GridY": 4,
+            "PlantType": "snappea"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(ZombieDistance@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "ZombieDistance"
+      ],
+      "objclass": "StarChallengeZombieDistanceProps",
+      "objdata": {
+        "TargetDistance": 3.0
+      }
+    },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(ProtectThePlant@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "SuppressObjectiveTip": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "WaveManagerProps"
+      ],
+      "objclass": "WaveManagerProperties",
+      "objdata": {
+        "FlagWaveInterval": 6,
+        "WaveCount": 12,
+        "Waves": [
+          [
+            "RTID(Wave1@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave2@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave3@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave6@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave7@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave8@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave9@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave10@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave11@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)"
+          ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)",
+            "Row": 5
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)",
+            "Row": 3
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)",
+            "Row": 1
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)",
+            "Row": 5
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)",
+            "Row": 3
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave2"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave3"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully_veteran@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave4"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave5"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor4@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave6"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(dino_bully_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor4@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave8"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_bully_veteran@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave10"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave11"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(lostcity_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(dino_gargantuar@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {}
+  ],
+  "version": 1
+}
