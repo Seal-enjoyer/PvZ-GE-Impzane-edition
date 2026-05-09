@@ -25,6 +25,8 @@
       "objdata": {
         "Description": "<PLAYERNAME>'s  trip to Iceaged Siberia",
         "LevelNumber": 3,
+        "FirstRewardParam": "firepeashooter",
+        "FirstRewardType": "unlock_plant",
         "Loot": "RTID(DefaultLoot@LevelModules)",
         "Modules": [
           "RTID(ZombiesDeadWinCon@LevelModules)",
@@ -70,7 +72,11 @@
         "PresetPlantList": [
           {
             "Level": -1,
-            "PlantType": "lychee"
+            "PlantType": "sunflower"
+          },
+          {
+            "Level": -1,
+            "PlantType": "ghostpepper"
           },
           {
             "Level": -1,
@@ -82,16 +88,86 @@
           },
           {
             "Level": -1,
-            "PlantType": "zoybeanpod"
+            "PlantType": "primalwallnut"
           },
           {
             "Level": -1,
-            "PlantType": "primalwallnut"
+            "PlantType": "firepeashooter"
           }
         ],
-        "SelectionMethod": "chooser"
+        "SelectionMethod": "preset",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 2,
+              "Plants": [
+                "lychee",
+                "umbrellaleaf",
+                "hurrikale",
+                "primalwallnut",
+                "firepeashooter",
+                "cherry_bomb"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "hotdate",
+                "cranjelly",
+                "hurrikale",
+                "jackolantern",
+                "threepeater",
+                "sunflower"
+              ]
+            }
+          ]
+        }
       }
     },
+    {
+      "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(BeatTheLevel@CurrentLevel)"
+          ]
+        ],
+        "ChallengeAlwaysAvailable": true
+      }
+    },
+    {
+      "aliases": [
+        "BeatTheLevel"
+      ],
+      "objclass": "StarChallengeBeatTheLevelProps",
+      "objdata": {
+        "Descriptions": [
+          "Survive the third day in siberia to unlock Fire peashooter."
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
+        ]
+      }
+    },
+    {},
+    {},
     {
       "aliases": [
         "NewWaves"
@@ -103,34 +179,39 @@
           {},
           {},
           {
-            "PointIncrementPerWave": 11180,
+            "PointIncrementPerWave": 20,
             "StartingPoints": 50,
-            "StartingWave": 0,
+            "StartingWave": 4,
             "ZombiePool": [
-              "RTID(iceage_imp@ZombieTypes)",
-              "RTID(iceage_dodo@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
             ]
           },
           {
-            "PointIncrementPerWave": 100,
+            "PointIncrementPerWave": 35,
+            "StartingPoints": 75,
+            "StartingWave": 3,
+            "ZombiePool": [
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 40,
+            "StartingPoints": 80,
+            "StartingWave": 2,
+            "ZombiePool": [
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
             "StartingPoints": 100,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 150,
-            "StartingPoints": 200,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 190,
-            "StartingPoints": 190,
-            "StartingWave": 0,
+            "StartingWave": 2,
             "ZombiePool": [
               "RTID(iceage@ZombieTypes)",
               "RTID(iceage_armor1@ZombieTypes)",
@@ -356,124 +437,53 @@
     },
     {
       "aliases": [
-        "FrostWindSnowstormEventSmall1"
-      ],
-      "objclass": "StormZombieSpawnerProps",
-      "objdata": {
-        "ColumnEnd": 4,
-        "ColumnStart": 8,
-        "GroupSize": 1,
-        "TimeBetweenGroups": 0.5,
-        "Type": "snowstorm",
-        "Zombies": [
-          {
-            "Type": "iceage_gargantuar"
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
         "WaveManagerProps"
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "FlagWaveInterval": 4,
+        "FlagWaveVeteranOverrideTypes": [1, 1],
+        "FlagWaveInterval": 6,
         "WaveCount": 12,
         "Waves": [
           [
-            "RTID(Wave1@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave1@CurrentLevel)"
           ],
           [
-            "RTID(Wave2@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave2@CurrentLevel)"
           ],
           [
-            "RTID(Wave3@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave3@CurrentLevel)"
           ],
           [
-            "RTID(Wave4@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave4@CurrentLevel)"
           ],
           [
-            "RTID(Wave5@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave5@CurrentLevel)"
           ],
           [
-            "RTID(Wave6@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave6@CurrentLevel)"
           ],
           [
-            "RTID(Wave7@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave7@CurrentLevel)"
           ],
           [
-            "RTID(Wave8@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave8@CurrentLevel)"
           ],
           [
-            "RTID(Wave9@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)"
+            "RTID(Wave9@CurrentLevel)"
           ],
           [
-            "RTID(Wave10@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)"
+            "RTID(Wave10@CurrentLevel)"
           ],
           [
-            "RTID(Wave11@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)"
+            "RTID(Wave11@CurrentLevel)"
           ],
           [
-            "RTID(Wave12@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)"
+            "RTID(Wave12@CurrentLevel)"
           ]
         ]
       }
     },
-    {
-      "aliases": [
-        "ChallengeModule"
-      ],
-      "objclass": "StarChallengeModuleProperties",
-      "objdata": {
-        "Challenges": [
-          [
-            "RTID(BeatTheLevel@CurrentLevel)"
-          ]
-        ],
-        "ChallengeAlwaysAvailable": true
-      }
-    },
-    {
-      "aliases": [
-        "BeatTheLevel"
-      ],
-      "objclass": "StarChallengeBeatTheLevelProps",
-      "objdata": {
-        "Descriptions": [
-          "Survive the third day in siberia but dave choose 5 plants for you."
-        ],
-        "DescriptionsMultiLanguage": [
-          {
-            "en": "123",
-            "zh": "112233"
-          }
-        ]
-      }
-    },
-    {},
-    {},
     {
       "aliases": [
         "Wave1"
@@ -482,8 +492,7 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(iceage@ZombieTypes)",
-            "row": 2
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
           }
         ]
       }
@@ -514,7 +523,7 @@
             "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor1@ZombieTypes)"
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
           }
         ]
       }
@@ -530,11 +539,7 @@
             "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 1
-          },
-          {
-            "Type": "RTID(iceage@ZombieTypes)"
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
           }
         ]
       }
@@ -550,17 +555,7 @@
             "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_armor1@ZombieTypes)",
-            "row": 2
-          },
-          {
             "Type": "RTID(iceage_armor1@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage@ZombieTypes)"
           }
         ]
       }
@@ -576,21 +571,7 @@
             "Type": "RTID(iceage_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 1
-          },
-          {
-            "Type": "RTID(iceage@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 3
-          },
-          {
-            "Type": "RTID(iceage_armor3@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_armor1@ZombieTypes)"
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
           }
         ]
       }
@@ -606,25 +587,13 @@
             "Type": "RTID(iceage_dodo@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_dodo@ZombieTypes)"
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor3@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_armor4@ZombieTypes)"
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_dodo@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_armor3@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_armor4@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage@ZombieTypes)"
           }
         ]
       }
@@ -637,7 +606,7 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)"
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_troglobite@ZombieTypes)"
@@ -646,7 +615,7 @@
             "Type": "RTID(iceage_hunter_veteran@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor2@ZombieTypes)"
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_armor1@ZombieTypes)"
@@ -655,7 +624,7 @@
             "Type": "RTID(iceage_dodo@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor3@ZombieTypes)"
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
           }
         ]
       }
@@ -668,10 +637,10 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(iceage_armor4@ZombieTypes)"
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
@@ -681,11 +650,10 @@
             "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 2
+            "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
           }
         ]
       }
@@ -698,42 +666,22 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(iceage_weaselhoarder@ZombieTypes)"
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 0
+            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_dodo@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 4
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor1@ZombieTypes)",
-            "row": 2
+            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor4@ZombieTypes)",
-            "row": 1
-          },
-          {
-            "Type": "RTID(iceage_armor2@ZombieTypes)",
-            "row": 0
-          },
-          {
-            "Type": "RTID(iceage_armor3@ZombieTypes)",
-            "row": 3
-          },
-          {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 2
-          },
-          {
-            "Type": "RTID(iceage_armor3@ZombieTypes)",
-            "row": 4
+            "Type": "RTID(iceage_armor2@ZombieTypes)"
           }
         ]
       }
@@ -752,18 +700,11 @@
             "Type": "RTID(iceage_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor1@ZombieTypes)"
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
             "row": 3
-          },
-          {
-            "Type": "RTID(iceage_armor1@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 2
           },
           {
             "Type": "RTID(iceage_armor1@ZombieTypes)"
@@ -782,7 +723,7 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(iceage_armor4@ZombieTypes)"
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_dodo@ZombieTypes)"
@@ -791,7 +732,7 @@
             "Type": "RTID(iceage_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+            "Type": "RTID(iceage_armor2@ZombieTypes)",
             "row": 2
           },
           {
@@ -804,7 +745,7 @@
             "Type": "RTID(iceage_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor4@ZombieTypes)"
+            "Type": "RTID(iceage_troglobite@ZombieTypes)"
           }
         ]
       }

@@ -65,7 +65,8 @@
           "glaciershroom",
           "snowdrop",
           "icebloom",
-          "wintermint"
+          "wintermint",
+          "iceweed"
         ],
         "SelectionMethod": "chooser"
       }

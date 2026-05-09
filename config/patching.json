@@ -1,0 +1,6 @@
+{
+  "defaultMode": "merge",
+  "features": {
+    "StoreCommodityFeatures": { "mode": "replace" }
+  }
+}

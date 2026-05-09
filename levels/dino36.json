@@ -54,6 +54,7 @@
       ],
       "objclass": "SeedBankProperties",
       "objdata": {
+        "ExcludeListSunProducers": "true",
         "PlantExcludeList": [
           "meteorflower",
           "snowpea",
@@ -65,13 +66,9 @@
           "seashroom",
           "glaciershroom",
           "snowdrop",
-          "wintermint",
           "icebloom",
-          "enlightmint",
-          "primalsunflower",
-          "sunflower",
-          "sunshroom",
-          "goldbloom"
+          "wintermint",
+          "iceweed"
         ],
         "SelectionMethod": "chooser"
       }

@@ -1,22 +1,22 @@
 {
-  "#comment": "Pirate seas level 24",
+  "#comment": "Pirate seas level 18-1",
   "Information": {
     "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
     "name": {
-      "en": "pirate seas day 24",
+      "en": "pirate seas day 18-1",
       "zh-CN": "示例关卡1"
     },
     "Author": "Captian Impsanity",
     "AuthorLink": "@seal_enjoyer_de",
     "Introduction": {
-      "en": "pirate seas day 24",
+      "en": "pirate seas day 18-1",
       "zh-CN": "这是一个示例关卡。"
     },
     "GameVersion": "0.1.13",
     "Version": "1.0",
-    "CreatedAt": "2026-04-15",
-    "UpdatedAt": "2026-04-15",
-    "Difficulty": "Medium",
+    "CreatedAt": "2022-03-08",
+    "UpdatedAt": "2022-03-08",
+    "Difficulty": "impzane",
     "Category": "Survival"
   },
   "objects": [
@@ -24,15 +24,20 @@
       "objclass": "LevelDefinition",
       "objdata": {
         "Description": "<PLAYERNAME>'s trip to the ships of Pirate Seas",
-        "LevelNumber": 24,
-        "FirstRewardParam": "cherry_bomb",
+        "LevelNumber": 18,
+        "FirstRewardParam": "spikerock",
         "FirstRewardType": "unlock_plant",
+        "FirstIntroNarrative": "INTRO",
+        "FirstOutroNarrative": "OUTRO",
+        "ReplayIntroNarrative": "INTRO",
+        "ReplayOutroNarrative": "OUTRO",
         "Loot": "RTID(DefaultLoot@LevelModules)",
         "Modules": [
           "RTID(ZombiesDeadWinCon@LevelModules)",
           "RTID(DefaultZombieWinCondition@LevelModules)",
           "RTID(FPP@CurrentLevel)",
           "RTID(LevelScheduler@CurrentLevel)",
+          "RTID(DefaultSunDropper@LevelModules)",
           "RTID(NewWaves@CurrentLevel)",
           "RTID(ForzenPlantPlacement@CurrentLevel)",
           "RTID(PirateMowers@LevelModules)",
@@ -41,9 +46,9 @@
           "RTID(SeedBank@CurrentLevel)",
           "RTID(StandardIntro@LevelModules)"
         ],
-        "Name": "Pirate Seas day 24",
+        "Name": "Pirate Seas day 18-1",
         "NameMultiLanguage": {
-          "en": "Pirate Seas day 24",
+          "en": "Pirate Seas day 18-1",
           "zh": "示例关卡I"
         },
         "WritenBy": "Captian impsanity",
@@ -54,43 +59,14 @@
     },
     {
       "aliases": [
-        "INTRO"
+        "RandomImitaterAdditional"
       ],
-      "objclass": "NarrativeProperties",
+      "objclass": "RandomImitaterProperties",
       "objdata": {
-        "Flow": [
-          {
-            "Character": "winnie",
-            "Action": "NPC_ENTER"
-          },
-          {
-            "Character": "crazydave",
-            "Action": "NPC_ENTER"
-          },
-          {
-            "Character": "winnie",
-            "Action": "SAY",
-            "Lines": {
-              "en": "no text",
-              "zh": "no text"
-            }
-          },
-          {
-            "Character": "crazydave",
-            "Action": "SAY",
-            "Lines": {
-              "en": "no text",
-              "zh": "no text"
-            }
-          },
-          {
-            "Character": "winnie",
-            "Action": "SAY",
-            "Lines": {
-              "en": "no text",
-              "zh": "no text"
-            }
-          }
+        "ExcludeListSunProducers": "true",
+        "ExtraRandomPlantExcludeList": [
+          "peapod",
+          "empea"
         ]
       }
     },
@@ -100,51 +76,63 @@
       ],
       "objclass": "SeedBankProperties",
       "objdata": {
-        "ExcludeListSunProducers": "true",
         "PlantExcludeList": [],
         "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "imitater"
+          },
+          {
+            "Level": -1,
+            "PlantType": "imitater"
+          },
+          {
+            "Level": -1,
+            "PlantType": "imitater"
+          },
+          {
+            "Level": -1,
+            "PlantType": "vamporcini"
+          }
         ],
-        "SelectionMethod": "chooser",
-         "CardDecks": {
-            "Recommended": [
-              {
-                "Name": {
-                  "en": "Reccomended",
-                  "zh": "接着推进！"
-                },
-                "Leader": 2,
-                "Plants": [
-                  "kernelpult",
-                  "coconutcannon",
-                  "wallnut",
-                  "bonkchoy",
-                  "iceburg",
-                  "bloomerang"
-                ]
-              }
-            ],
-            "ChallengingLocked": false,
-            "Challenging": [
-              {
-                "Name": {
-                  "en": "Challenge",
-                  "zh": "接着受挫"
-                },
-                "Leader": 1,
-                "Plants": [
-                  "threepeater",
-                  "wallnut",
-                  "bloomerang",
-                  "iceburg",
-                  "snowdrop",
-                  "iceburg"
-                ]
-            }
-          ]
-        }
+        "SelectionMethod": "preset"
       }
     },
     {
+    "aliases": [
+        "INTRO"
+    ],
+    "objclass": "NarrativeProperties",
+    "objdata": {
+        "Flow": [
+        {
+                "Character": "winnie",
+                "Action": "NPC_ENTER"
+            },
+            {
+                "Character": "crazydave",
+                "Action": "NPC_ENTER"
+            },
+            {
+                "Character": "crazydave",
+                "Action": "SAY",
+                "Lines": {
+                    "en": "Woah Penny These potatos again that transform into plants !",
+                    "zh": "Woah Penny These potatos again that transform into plants !"
+                }
+            },
+            {
+                "Character": "winnie",
+                "Action": "SAY",
+                "Lines": {
+                    "en": "Yes User Dave we have Imitaters again.",
+                    "zh": "Yes User Dave we have Imitaters again."
+                }
+            }
+        ]
+    }
+},
+{
       "aliases": [
         "ChallengeModule"
       ],
@@ -152,97 +140,46 @@
       "objdata": {
         "Challenges": [
           [
-            "RTID(LastStand@CurrentLevel)"
+            "RTID(BeatTheLevel@CurrentLevel)"
           ]
         ],
-        "ChallengesAlwaysAvailable": true
+        "ChallengeAlwaysAvailable": true
       }
     },
     {
       "aliases": [
-        "LastStand"
+        "BeatTheLevel"
       ],
-      "objclass": "LastStandMinigameProperties",
+      "objclass": "StarChallengeBeatTheLevelProps",
       "objdata": {
-        "StartingPlantfood": 0,
-        "StartingSun": 5000
-      }
-    },
-    {
-      "aliases": [
-        "PiratePlanks"
-      ],
-      "objclass": "PiratePlankProperties",
-      "objdata": {
-        "PlankRows": [
-          0,
-          2,
-          4
+        "Descriptions": [
+          "Survive while having only having random plants"
+        ],
+        "DescriptionsMultiLanguage": [
+          {
+            "en": "123",
+            "zh": "112233"
+          }
         ]
       }
     },
     {
+      
       "aliases": [
         "NewWaves"
       ],
       "objclass": "WaveManagerModuleProperties",
       "objdata": {
-        "DynamicZombies": [
-          {},
-          {},
-          {},
-          {
-            "PointIncrementPerWave": 50,
-            "StartingPoints": 50,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(pirate@ZombieTypes)",
-              "RTID(pirate_armor1@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 100,
-            "StartingPoints": 100,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(pirate@ZombieTypes)",
-              "RTID(pirate_armor1@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 200,
-            "StartingPoints": 200,
-            "StartingWave": 1,
-            "ZombiePool": [
-              "RTID(pirate@ZombieTypes)",
-              "RTID(pirate_armor1@ZombieTypes)",
-              "RTID(pirate_armor2@ZombieTypes)",
-              "RTID(swashbuckler@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 250,
-            "StartingPoints": 250,
-            "StartingWave": 1,
-            "ZombiePool": [
-              "RTID(pirate@ZombieTypes)",
-              "RTID(pirate_armor1@ZombieTypes)",
-              "RTID(pirate_armor2@ZombieTypes)",
-              "RTID(swashbuckler@ZombieTypes)",
-              "RTID(seagull@ZombieTypes)"
-            ]
-          }
-        ],
         "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
       }
-},
-{
+    },
+    {
       "aliases": [
         "WaveManagerProps"
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "FlagWaveInterval": 3,
+        "FlagWaveInterval": 6,
         "WaveCount": 12,
         "Waves": [
           [
@@ -286,6 +223,60 @@
     },
     {
       "aliases": [
+        "NewWaves"
+      ],
+      "objclass": "WaveManagerModuleProperties",
+      "objdata": {
+        "DynamicZombies": [
+          {},
+          {},
+          {},
+          {
+            "PointIncrementPerWave": 80,
+            "StartingPoints": 50,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(pirate@ZombieTypes)",
+              "RTID(pirate_armor1@ZombieTypes)",
+              "RTID(pirate_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(pirate@ZombieTypes)",
+              "RTID(pirate_armor1@ZombieTypes)",
+              "RTID(pirate_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 200,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(pirate@ZombieTypes)",
+              "RTID(pirate_armor1@ZombieTypes)",
+              "RTID(pirate_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 200,
+            "StartingPoints": 500,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(pirate@ZombieTypes)",
+              "RTID(pirate_armor1@ZombieTypes)",
+              "RTID(pirate_armor2@ZombieTypes)"
+            ]
+          }
+        ],
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+      }
+    },
+    {
+      "aliases": [
         "Wave1"
       ],
       "objclass": "SpawnZombiesJitteredWaveActionProps",
@@ -295,15 +286,11 @@
             "Type": "RTID(pirate@ZombieTypes)"
           },
           {
-            "Type": "RTID(swashbuckler@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(swashbuckler@ZombieTypes)"
+            "Type": "RTID(seagull@ZombieTypes)"
           }
         ]
       }
     },
-    {},
     {
       "aliases": [
         "Wave2"
@@ -315,18 +302,14 @@
             "Type": "RTID(pirate_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
             "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_armor1@ZombieTypes)"
           }
         ]
       }
     },
-    {},
     {
       "aliases": [
         "Wave3"
@@ -338,18 +321,15 @@
             "Type": "RTID(barrelroller@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_armor1@ZombieTypes)"
+            "Type": "RTID(seagull@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_armor1@ZombieTypes)"
+            "Type": "RTID(seagull@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_captain@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(swashbuckler@ZombieTypes)"
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
           }
-        ]
+          ]
       }
     },
     {
@@ -360,22 +340,16 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
             "Type": "RTID(pirate_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(seagull@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(pirate_armor1@ZombieTypes)"
           },
           {
             "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
           }
         ]
       }
@@ -388,19 +362,16 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
             "Type": "RTID(pirate_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_captain@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(seagull@ZombieTypes)"
+            "Type": "RTID(swashbuckler@ZombieTypes)"
           },
           {
             "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
           }
         ]
       }
@@ -413,22 +384,16 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
             "Type": "RTID(barrelroller@ZombieTypes)"
           },
           {
             "Type": "RTID(barrelroller@ZombieTypes)"
           },
           {
-            "Type": "RTID(barrelroller@ZombieTypes)"
+            "Type": "RTID(swashbuckler@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(seagull@ZombieTypes)"
           },
           {
             "Type": "RTID(pirate_armor1@ZombieTypes)"
@@ -444,28 +409,34 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(pirate@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
             "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
           },
           {
             "Type": "RTID(swashbuckler@ZombieTypes)"
           },
           {
-            "Type": "RTID(cannon@ZombieTypes)"
+            "Type": "RTID(swashbuckler@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
           }
         ]
       }
@@ -478,16 +449,19 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(swashbuckler@ZombieTypes)"
           },
           {
             "Type": "RTID(swashbuckler@ZombieTypes)"
           },
           {
             "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
           },
           {
             "Type": "RTID(pirate_gargantuar@ZombieTypes)"
@@ -503,22 +477,25 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
           },
           {
             "Type": "RTID(pirate_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(cannon@ZombieTypes)"
+            "Type": "RTID(pirate_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(seagull@ZombieTypes)"
           },
           {
             "Type": "RTID(swashbuckler@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(swashbuckler@ZombieTypes)"
           },
           {
             "Type": "RTID(swashbuckler@ZombieTypes)"
@@ -534,10 +511,10 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
           },
           {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
           },
           {
             "Type": "RTID(seagull@ZombieTypes)"
@@ -547,37 +524,6 @@
           },
           {
             "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(swashbuckler@ZombieTypes)"
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "Wave11"
-      ],
-      "objclass": "SpawnZombiesJitteredWaveActionProps",
-      "objdata": {
-        "Zombies": [
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor1@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(swashbuckler@ZombieTypes)"
           }
         ]
       }
@@ -590,19 +536,19 @@
       "objdata": {
         "Zombies": [
           {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(barrelroller@ZombieTypes)"
+          },
+          {
             "Type": "RTID(pirate_gargantuar@ZombieTypes)"
           },
           {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(barrelroller@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(pirate_armor2@ZombieTypes)"
+            "Type": "RTID(pirate_gargantuar@ZombieTypes)"
           }
         ]
       }

@@ -9,7 +9,7 @@
         },
         {
             "CommodityType": "plant",
-            "CommodityName": "lilypad",
+            "CommodityName": "powerlily",
             "CurrencyType": "gem",
             "CurrencyRequired": 50,
             "UnlockLevel": "egypt1"
@@ -29,6 +29,124 @@
             "UnlockLevel": "modern40"
         }
     ],
+    "Upgrade": [
+        {
+            "CommodityType": "plant",
+            "CommodityName": "peashooter_ALT",
+            "CurrencyType": "coin",
+            "CurrencyRequired": 10000,
+            "UnlockLevel": "tutorial1",
+            "__gpnStore": {
+                "requirePlants": [
+                    "peashooter"
+                ]
+            }
+        },
+        {
+            "CommodityType": "plant",
+            "CommodityName": "sunflower_ALT",
+            "CurrencyType": "coin",
+            "CurrencyRequired": 10000,
+            "UnlockLevel": "tutorial1",
+            "__gpnStore": {
+                "requirePlants": [
+                    "sunflower"
+                ]
+            }
+        },
+        {
+            "CommodityType": "plant",
+            "CommodityName": "wallnut_ALT",
+            "CurrencyType": "coin",
+            "CurrencyRequired": 10000,
+            "UnlockLevel": "tutorial1",
+            "__gpnStore": {
+                "requirePlants": [
+                    "wallnut"
+                ]
+            }
+        },
+        {
+            "CommodityType": "plant",
+            "CommodityName": "potatomine_ALT",
+            "CurrencyType": "coin",
+            "CurrencyRequired": 10000,
+            "UnlockLevel": "tutorial1",
+            "__gpnStore": {
+                "requirePlants": [
+                    "potatomine"
+                ]
+            }
+        }
+  ],
+  "Gem": [
+    {
+      "CommodityDisplayName": {
+        "en": "Pocket full of Gems!",
+        "zh": "一大包钻石！"
+      },
+      "CommodityType": "gem",
+      "CommodityCount": 25,
+      "CurrencyType": "coin",
+      "CurrencyRequired": 7500,
+      "StackLevel": 0
+    },
+    {
+      "CommodityDisplayName": {
+        "en": "The sparkle and shine, so many Gems!",
+        "zh": "好多闪闪发光的钻石！"
+      },
+      "CommodityType": "gem",
+      "CommodityCount": 40,
+      "CurrencyType": "coin",
+      "CurrencyRequired": 15000,
+      "StackLevel": 1
+    },
+    {
+      "CommodityDisplayName": {
+        "en": "It's raining Gems, Gems, Gems!",
+        "zh": "下钻石雨了！"
+      },
+      "CommodityType": "gem",
+      "CommodityCount": 70,
+      "CurrencyType": "coin",
+      "CurrencyRequired": 25000,
+      "StackLevel": 2
+    },
+    {
+      "CommodityDisplayName": {
+        "en": "A treasure trove of Gems!",
+        "zh": "整麻袋的钻石！"
+      },
+      "CommodityType": "gem",
+      "CommodityCount": 250,
+      "CurrencyType": "coin",
+      "CurrencyRequired": 162500,
+      "StackLevel": 3
+    },
+    {
+      "CommodityDisplayName": {
+        "en": "Swimming in Gems!",
+        "zh": "在钻石里游泳！"
+      },
+      "CommodityType": "gem",
+      "CommodityCount": 500,
+      "CurrencyType": "coin",
+      "CurrencyRequired": 375000,
+      "StackLevel": 4
+    },
+    {
+      "CommodityDisplayName": {
+        "en": "Gem Pack 2000",
+        "zh": "钻石包 2000"
+      },
+      "CommodityType": "gem",
+      "CommodityCount": 2000,
+      "CurrencyType": "coin",
+      "CurrencyRequired": 999999,
+      "StackLevel": 5
+    }
+  ],
     "Coin": [
         {
             "CommodityType": "coin",
@@ -54,9 +172,9 @@
         },
         {
             "CommodityType": "coin",
-            "CommodityCount": 22000,
+            "CommodityCount": 20000,
             "CurrencyType": "gem",
-            "CurrencyRequired": 72,
+            "CurrencyRequired": 70,
             "StackLevel": 2,
             "CommodityDisplayName": {
                 "en": "More coins, more fun!",
@@ -65,9 +183,9 @@
         },
         {
             "CommodityType": "coin",
-            "CommodityCount": 50000,
+            "CommodityCount": 132500,
             "CurrencyType": "gem",
-            "CurrencyRequired": 142,
+            "CurrencyRequired": 250,
             "StackLevel": 3,
             "CommodityDisplayName": {
                 "en": "Coins galore!",
@@ -76,9 +194,9 @@
         },
         {
             "CommodityType": "coin",
-            "CommodityCount": 150000,
+            "CommodityCount": 300000,
             "CurrencyType": "gem",
-            "CurrencyRequired": 375,
+            "CurrencyRequired": 500,
             "StackLevel": 4,
             "CommodityDisplayName": {
                 "en": "So many coins!",
@@ -100,22 +218,11 @@
             "CommodityType": "coin",
             "CommodityCount": 500000,
             "CurrencyType": "gem",
-            "CurrencyRequired": 1666,
+            "CurrencyRequired": 2000,
             "StackLevel": 6,
             "CommodityDisplayName": {
                 "en": "Guess you can't take them away!",
                 "zh": "猜你搬不走这些钱！"
-            }
-        },
-        {
-            "CommodityType": "coin",
-            "CommodityCount": 1,
-            "CurrencyType": "gem",
-            "CurrencyRequired": 50,
-            "StackLevel": 1,
-            "CommodityDisplayName": {
-                "en": "buy this and go do world key subsidy in the arcade. \n(essentially get a world key. i can't put it in the shop btw)",
-                "zh": "刚从海里打出来的！"
             }
         }
     ]

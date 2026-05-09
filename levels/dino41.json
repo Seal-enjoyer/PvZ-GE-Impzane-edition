@@ -58,23 +58,9 @@
       ],
       "objclass": "SeedBankProperties",
       "objdata": {
+        "ExcludeListSunProducers": "true",
         "PlantExcludeList": [
           "meteorflower",
-          "sunflower",
-          "twinsunflower",
-          "iceburg",
-          "gravebuster",
-          "sunshroom",
-          "puffshroom",
-          "seashroom",
-          "sunbean",
-          "melonpult",
-          "toadstool",
-          "goldleaf",
-          "stallia",
-          "primalsunflower",
-          "moonflower",
-          "goldbloom",
           "snowpea",
           "missiletoe",
           "iceburg",
@@ -86,7 +72,13 @@
           "snowdrop",
           "icebloom",
           "wintermint",
-          "enlightmint"
+          "iceweed"
+        ],
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "peppermint"
+          }
         ],
         "SelectionMethod": "chooser"
       }

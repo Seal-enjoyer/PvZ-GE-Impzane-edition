@@ -25,6 +25,8 @@
       "objdata": {
         "Description": "<PLAYERNAME>'s  trip to Iceaged Siberia",
         "LevelNumber": 9,
+        "FirstRewardParam": "wintermint",
+        "FirstRewardType": "unlock_plant",
         "Loot": "RTID(DefaultLoot@LevelModules)",
         "Modules": [
           "RTID(ZombiesDeadWinCon@LevelModules)",
@@ -57,35 +59,78 @@
       }
     },
     {
-           "aliases": [
+      "aliases": [
+        "SeedBank"
+      ],
+      "objclass": "SeedBankProperties",
+      "objdata": {
+        "ExcludeListSunProducers": "true",
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "wintermint"
+          }
+        ],
+        "PlantExcludeList": [],
+        "SelectionMethod": "chooser",
+        "aliases": [
         "SeedBank"
       ],
       "objclass": "SeedBankProperties",
       "objdata": {
         "PlantExcludeList": [
-		"sunflower",
-          "twinsunflower",
-          "iceburg",
-          "gravebuster",
-          "sunshroom",
-          "puffshroom",
-          "seashroom",
-          "sunbean",
-          "melonpult",
-          "toadstool",
-          "goldleaf",
-          "stallia",
-          "primalsunflower",
-          "moonflower",
-          "goldbloom",
-          "solarsage",
-          "solartomato"
+          "blover"
         ],
-        "SelectionMethod": "chooser"
+        "PresetPlantList": [
+          {
+            "Level": -1,
+            "PlantType": "seashooter"
+          }
+        ],
+        "SelectionMethod": "chooser",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 2,
+              "Plants": [
+                "wintermint",
+                "sapfling",
+                "pyrevine",
+                "wintermelon",
+                "missiletoe",
+                "plantern",
+                "melon"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "wintermint",
+                "melon",
+                "peashooter",
+                "torchwood",
+                "repeater",
+                "threepeater"
+              ]
+            }
+          ]
+        }
+      }
       }
     },
     {
-		"aliases": [
+      "aliases": [
         "ChallengeModule"
       ],
       "objclass": "StarChallengeModuleProperties",
@@ -105,7 +150,7 @@
       "objclass": "LastStandMinigameProperties",
       "objdata": {
         "StartingPlantfood": 0,
-        "StartingSun": 5000
+        "StartingSun": 7000
       }
     },
     {
@@ -119,12 +164,13 @@
           {},
           {},
           {
-            "PointIncrementPerWave": 11180,
-            "StartingPoints": 50,
+            "PointIncrementPerWave": 75,
+            "StartingPoints": 75,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(iceage_imp@ZombieTypes)",
-              "RTID(iceage_dodo@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
             ]
           },
           {
@@ -132,25 +178,33 @@
             "StartingPoints": 100,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
             ]
           },
           {
-            "PointIncrementPerWave": 150,
-            "StartingPoints": 200,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 390,
-            "StartingPoints": 390,
+            "PointIncrementPerWave": 125,
+            "StartingPoints": 125,
             "StartingWave": 0,
             "ZombiePool": [
               "RTID(iceage@ZombieTypes)",
               "RTID(iceage_armor1@ZombieTypes)",
-              "RTID(iceage_armor2@ZombieTypes)"
+              "RTID(iceage_armor2@ZombieTypes)",
+              "RTID(iceage_dodo@ZombieTypes)",
+              "RTID(iceage_weaselhoarder@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 150,
+            "StartingPoints": 150,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)",
+              "RTID(iceage_dodo@ZombieTypes)",
+              "RTID(iceage_weaselhoarder@ZombieTypes)"
             ]
           }
         ],
@@ -158,174 +212,174 @@
       }
     },
     {
-    "aliases": [
-                "FrozenZombiePlacement"
-            ],
-            "objclass": "InitialZombieProperties",
-            "objdata": {
-                "InitialZombiePlacements": [
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 8,
-                        "GridY": 0,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 7,
-                        "GridY": 0,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 6,
-                        "GridY": 0,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 5,
-                        "GridY": 0,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 8,
-                        "GridY": 1,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 7,
-                        "GridY": 1,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 6,
-                        "GridY": 1,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 5,
-                        "GridY": 1,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 8,
-                        "GridY": 2,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 7,
-                        "GridY": 2,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 6,
-                        "GridY": 2,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 5,
-                        "GridY": 2,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 8,
-                        "GridY": 3,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 7,
-                        "GridY": 3,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 6,
-                        "GridY": 3,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 5,
-                        "GridY": 3,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 8,
-                        "GridY": 4,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 7,
-                        "GridY": 4,
-                        "TypeName": "iceage_armor4"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 6,
-                        "GridY": 4,
-                        "TypeName": "iceage_armor4"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 5,
-                        "GridY": 4,
-                        "TypeName": "iceage_armor4"
-                    }
-                ]
-            }
+      "aliases": [
+        "FrozenZombiePlacement"
+      ],
+      "objclass": "InitialZombieProperties",
+      "objdata": {
+        "InitialZombiePlacements": [
+          {
+            "Condition": "icecubed",
+            "GridX": 8,
+            "GridY": 0,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 7,
+            "GridY": 0,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 6,
+            "GridY": 0,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 5,
+            "GridY": 0,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 8,
+            "GridY": 1,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 7,
+            "GridY": 1,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 6,
+            "GridY": 1,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 5,
+            "GridY": 1,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 8,
+            "GridY": 2,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 7,
+            "GridY": 2,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 6,
+            "GridY": 2,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 5,
+            "GridY": 2,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 8,
+            "GridY": 3,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 7,
+            "GridY": 3,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 6,
+            "GridY": 3,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 5,
+            "GridY": 3,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 8,
+            "GridY": 4,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 7,
+            "GridY": 4,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 6,
+            "GridY": 4,
+            "TypeName": "iceage_armor4"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 5,
+            "GridY": 4,
+            "TypeName": "iceage_armor4"
+          }
+        ]
+      }
     },
     {
       "aliases": [
-                "FrozenPlantPlacement"
-            ],
-            "objclass": "InitialPlantProperties",
-            "objdata": {
-                "InitialPlantPlacements": [
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 2,
-                        "GridY": 0,
-                        "TypeName": "sunbean"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 2,
-                        "GridY": 1,
-                        "TypeName": "sunbean"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 2,
-                        "GridY": 2,
-                        "TypeName": "sunbean"
-                    },
-					{
-                        "Condition": "icecubed",
-                        "GridX": 2,
-                        "GridY": 3,
-                        "TypeName": "sunbean"
-                    },
-                    {
-                        "Condition": "icecubed",
-                        "GridX": 2,
-                        "GridY": 4,
-                        "TypeName": "sunbean"
-                    }
-                ]
-            }
+        "FrozenPlantPlacement"
+      ],
+      "objclass": "InitialPlantProperties",
+      "objdata": {
+        "InitialPlantPlacements": [
+          {
+            "Condition": "icecubed",
+            "GridX": 2,
+            "GridY": 0,
+            "TypeName": "sunbean"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 2,
+            "GridY": 1,
+            "TypeName": "sunbean"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 2,
+            "GridY": 2,
+            "TypeName": "sunbean"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 2,
+            "GridY": 3,
+            "TypeName": "sunbean"
+          },
+          {
+            "Condition": "icecubed",
+            "GridX": 2,
+            "GridY": 4,
+            "TypeName": "sunbean"
+          }
+        ]
+      }
     },
     {
       "aliases": [
@@ -541,7 +595,7 @@
       }
     },
     {
-    "aliases": [
+      "aliases": [
         "FrostWindSnowstormEventSmall1"
       ],
       "objclass": "StormZombieSpawnerProps",
@@ -564,7 +618,11 @@
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "FlagWaveInterval": 4,
+        "FlagWaveVeteranOverrideTypes": [
+          1,
+          1
+        ],
+        "FlagWaveInterval": 6,
         "WaveCount": 12,
         "Waves": [
           [
@@ -639,17 +697,17 @@
         ]
       }
     },
-{
-    "objclass": "StarChallengePlantsLostProps",
-    "aliases": [
+    {
+      "objclass": "StarChallengePlantsLostProps",
+      "aliases": [
         "PlantsLost"
-    ],
-    "objdata": {
-        "MaximumPlantsLost": 10
-    }
-},
-{
-  "aliases": [
+      ],
+      "objdata": {
+        "MaximumPlantsLost": 15
+      }
+    },
+    {
+      "aliases": [
         "ChallengeModule"
       ],
       "objclass": "StarChallengeModuleProperties",

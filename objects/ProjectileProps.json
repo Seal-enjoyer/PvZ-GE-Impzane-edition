@@ -231,6 +231,15 @@
 				"KnockbackDistance": 1.5,
 				"YellowIgnitedType": "pea_mega_flame_yellow",
 				"BlueIgnitedType": "pea_mega_flame_blue",
+				"SplashDamage": [
+					{
+						"Damage": 100,
+						"Range": {
+							"w": 1,
+							"h": 1
+						}
+					}
+				],
 				"Size": {
 					"w": 20,
 					"h": 20
@@ -2956,19 +2965,19 @@
 			"objclass": "ProjectileProperties",
 			"objdata": {
 				"Damage": 15,
+				"CarriesSporeShroom": true,
 				"SplashDamage": [
 					{
 						"Range": {
-							"w": 3,
-							"h": 3
+							"w": 1,
+							"h": 1
 						},
 						"Poison": {
 							"DPS": 20,
-							"Duration": 2
+							"Duration": 0.5
 						}
 					}
 				],
-				"CarriesSporeShroom": true,
 				"Size": {
 					"w": 16,
 					"h": 16
@@ -2992,7 +3001,7 @@
 				],
 				"Poison": {
 					"DPS": 40,
-					"Duration": 4
+					"Duration": 1
 				},
 				"CarriesSporeShroom": true,
 				"Size": {
@@ -3003,7 +3012,7 @@
 		},
 		{
 			"aliases": [
-				"sporeshroom_spore"
+				"sporeshroom_spore2"
 			],
 			"objclass": "ProjectileProperties",
 			"objdata": {
@@ -3018,7 +3027,7 @@
 				],
 				"Poison": {
 					"DPS": 60,
-					"Duration": 6
+					"Duration": 2
 				},
 				"CarriesSporeShroom": true,
 				"Size": {
@@ -3037,8 +3046,8 @@
 				"SplashDamage": [
 					{
 						"Range": {
-							"w": 3,
-							"h": 3
+							"w": 5,
+							"h": 5
 						}
 					}
 				],

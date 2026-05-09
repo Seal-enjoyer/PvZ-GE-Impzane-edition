@@ -20,6 +20,29 @@
 			"PROPS": "RTID(peashooter@PlantProps)"
 		},
 		{
+			"ID": 1000,
+			"NAME": {
+				"en": "Mega-Peashooter",
+				"zh": "Mega-Peashooter"
+			},
+			"_CARDSPRITENAME": "peashooter",
+			"CODENAME": "peashooter_ALT",
+			"TYPE": [
+				"plant"
+			],
+			"COSTUME": 8,
+			"OBTAINWORLD": "frontyard",
+			"ZENGARDEN": {
+				"PlantPlace": "dirt"
+			},
+			"ALMANAC": "RTID(peashooter_ALT@PlantAlmanac)",
+			"PROPS": "RTID(peashooter_ALT@PlantProps)",
+			"RES": {
+				"Disabled": "Peashooter",
+				"Plant": "Peashooter"
+			}
+		},
+		{
 			"ID": 1,
 			"NAME": {
 				"en": "Sunflower",
@@ -37,7 +60,35 @@
 				"PlantPlace": "dirt"
 			},
 			"ALMANAC": "RTID(sunflower@PlantAlmanac)",
-			"PROPS": "RTID(sunflower@PlantProps)"
+			"PROPS": "RTID(sunflower@PlantProps)",
+			"RES": {
+				"Disabled": "Sunflower",
+				"Plant": "Sunflower"
+			}
+		},
+		{
+			"ID": 1001,
+			"NAME": {
+				"en": "Chunkflower",
+				"zh": "Chunkflower"
+			},
+			"_CARDSPRITENAME": "sunflower",
+			"CODENAME": "sunflower_ALT",
+			"TYPE": [
+				"plant",
+				"sunProducer"
+			],
+			"COSTUME": 8,
+			"OBTAINWORLD": "frontyard",
+			"ZENGARDEN": {
+				"PlantPlace": "dirt"
+			},
+			"ALMANAC": "RTID(sunflower_ALT@PlantAlmanac)",
+			"PROPS": "RTID(sunflower_ALT@PlantProps)",
+			"RES": {
+				"Disabled": "Sunflower",
+				"Plant": "Sunflower"
+			}
 		},
 		{
 			"ID": 2,
@@ -59,6 +110,29 @@
 			"PROPS": "RTID(wallnut@PlantProps)"
 		},
 		{
+			"ID": 1002,
+			"NAME": {
+				"en": "Mini-nut",
+				"zh": "Mini-nut"
+			},
+			"_CARDSPRITENAME": "wallnut",
+			"CODENAME": "wallnut_ALT",
+			"TYPE": [
+				"plant"
+			],
+			"COSTUME": 9,
+			"OBTAINWORLD": "frontyard",
+			"ZENGARDEN": {
+				"PlantPlace": "dirt"
+			},
+			"ALMANAC": "RTID(wallnut_ALT@PlantAlmanac)",
+			"PROPS": "RTID(wallnut_ALT@PlantProps)",
+			"RES": {
+				"Disabled": "Wallnut",
+				"Plant": "Wallnut"
+			}
+		},
+		{
 			"ID": 3,
 			"NAME": {
 				"en": "Potato Mine",
@@ -77,6 +151,31 @@
 			},
 			"ALMANAC": "RTID(potatomine@PlantAlmanac)",
 			"PROPS": "RTID(potatomine@PlantProps)"
+		},
+		{
+			"ID": 1003,
+			"NAME": {
+				"en": "Potato-Nugget-Mine",
+				"zh": "Potato-Nugget-Mine"
+			},
+			"_CARDSPRITENAME": "potatomine",
+			"CODENAME": "potatomine_ALT",
+			"TYPE": [
+				"potatomine",
+				"losingPlant",
+				"allowOverlap"
+			],
+			"COSTUME": 3,
+			"OBTAINWORLD": "frontyard",
+			"ZENGARDEN": {
+				"PlantPlace": "solid"
+			},
+			"ALMANAC": "RTID(potatomine_ALT@PlantAlmanac)",
+			"PROPS": "RTID(potatomine_ALT@PlantProps)",
+			"RES": {
+				"Disabled": "PotatoMine",
+				"Plant": "PotatoMine"
+			}
 		},
 		{
 			"ID": 4,
@@ -3460,7 +3559,8 @@
 			"TYPE": [
 				"plant",
 				"lastStandDisallowed",
-				"losingPlant"
+				"losingPlant",
+				"imitateDisallowed"
 			],
 			"COSTUME": 0,
 			"OBTAINWORLD": "mint",
@@ -3672,12 +3772,12 @@
 		"cherry_bomb",
 		"reinforcemint",
 		"splitpea",
-		"cactus",
 		"chilibean",
 		"lightningreed",
 		"tallnut",
 		"peanut",
 		"applemortar",
+		"cactus",
 		"sweetpotato",
 		"peapod",
 		"melonpult",
@@ -3718,10 +3818,10 @@
 		"hurrikale",
 		"xshot",
 		"coldsnapdragon",
-		"firepeashooter",
 		"hotdate",
-		"missiletoe",
+		"firepeashooter",
 		"pyrevine",
+		"missiletoe",
 		"wintermint",
 		"hollyknight",
 		"floawerPot",
@@ -3852,12 +3952,12 @@
 		"cherry_bomb",
 		"reinforcemint",
 		"splitpea",
-		"cactus",
 		"chilibean",
 		"lightningreed",
 		"tallnut",
 		"peanut",
 		"applemortar",
+		"cactus",
 		"sweetpotato",
 		"peapod",
 		"melonpult",
@@ -3898,10 +3998,10 @@
 		"hurrikale",
 		"xshot",
 		"coldsnapdragon",
-		"firepeashooter",
 		"hotdate",
-		"missiletoe",
+		"firepeashooter",
 		"pyrevine",
+		"missiletoe",
 		"wintermint",
 		"hollyknight",
 		"floawerPot",

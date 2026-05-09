@@ -1,35 +1,35 @@
 {
-  "#comment": "IMPZANE",
+  "#comment": "Pirate seas level 35",
   "Information": {
     "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
     "name": {
-      "en": "Egypt Day 25",
+      "en": "pirate seas day 35",
       "zh-CN": "示例关卡1"
     },
     "Author": "Captian Impsanity",
-    "AuthorLink": "https://github.com/Gzh0821",
+    "AuthorLink": "@seal_enjoyer_de",
     "Introduction": {
-      "en": "Egypt Day 25",
+      "en": "pirate seas day 35",
       "zh-CN": "这是一个示例关卡。"
     },
     "GameVersion": "0.1.13",
     "Version": "1.0",
-    "CreatedAt": "2022-03-08",
-    "UpdatedAt": "2022-03-08",
-    "Difficulty": "IMPZANE",
+    "CreatedAt": "2026-04-15",
+    "UpdatedAt": "2026-04-15",
+    "Difficulty": "Medium",
     "Category": "Survival"
-},
+  },
   "objects": [
     {
             "objclass": "LevelDefinition",
             "objdata": {
-                "Description": "<PLAYERNAME>'s Trip to Egypt!",
-                "LevelNumber": 25,
+                "Description": "<PLAYERNAME>'s trip to the ships of Pirate Seas",
+                "LevelNumber": 35,
                 "FirstIntroNarrative": "INTRO",
                 "FirstOutroNarrative": "OUTRO",
                 "ReplayIntroNarrative": "INTRO",
                 "ReplayOutroNarrative": "OUTRO",
-				"FirstRewardParam": "worldtrophy_egypt",
+				"FirstRewardParam": "worldtrophy_pirate2",
                 "FirstRewardType": "worldtrophy",
                 "Loot": "RTID(DefaultLoot@LevelModules)",
                 "Modules": [
@@ -41,10 +41,10 @@
                     "RTID(NewWaves@CurrentLevel)"
                 ],
                 "MusicType": "MiniGame_A",
-                "Name": "Egypt Day 25",
+                "Name": "Pirate Seas day 35",
                 "NormalPresentTable": "egypt_normal_01",
                 "ShinyPresentTable": "egypt_shiny_01",
-                "StageModule": "RTID(EgyptStage@LevelModules)",
+                "StageModule": "RTID(PirateStage@LevelModules)",
                 "VictoryModule": "RTID(ZombossVictoryOutro@LevelModules)"
             }
         },
@@ -55,8 +55,6 @@
       "objclass": "SeedBankProperties",
       "objdata": {
         "PlantExcludeList": [
-		"gravebuster",
-		"hotpotato"
         ],
         "SelectionMethod": "chooser"
          }
@@ -80,24 +78,16 @@
             "Character": "winnie",
             "Action": "SAY",
             "Lines": {
-              "en": "User Dave, do you see this sphinx ?",
-              "zh": "User Dave, do you see this sphinx ?"
+              "en": "It's that ship again, User Dave.",
+              "zh": "It's that ship again, User Dave."
             }
           },
           {
             "Character": "dave",
             "Action": "SAY",
             "Lines": {
-              "en": "Yes Penny.",
-              "zh": "Yes Penny."
-            }
-          },
-          {
-            "Character": "winnie",
-            "Action": "SAY",
-            "Lines": {
-              "en": "My radars are saying something is inside it.",
-              "zh": "My radars are saying something is inside it."
+              "en": "Zomboss can't be that far away.",
+              "zh": "Zomboss can't be that far away."
             }
           },
           {
@@ -108,8 +98,8 @@
             "Character": "zombossicon",
             "Action": "SAY",
             "Lines": {
-              "en": "MUAHHAHA YOU'RE RIGHT IN MY TRAP ZPHINXINATOR ACTIVATION !!!",
-              "zh": "MUAHHAHA YOU'RE RIGHT IN MY TRAP ZPHINXINATOR ACTIVATION !!!"
+              "en": "YOU'RE RIGHT, I AM RIGHT HERE, DAVE, AND I UPGRADED MY MECH TO MK.2, AND IT WILL DEZTROY YOU !!!",
+              "zh": "YOU'RE RIGHT, I AM RIGHT HERE, DAVE, AND I UPGRADED MY MECH TO MK.2, AND IT WILL DEZTROY YOU !!!"
             }
           }
         ]
@@ -130,8 +120,8 @@
             "Character": "zombossicon",
             "Action": "SAY",
             "Lines": {
-              "en": "YOU AND YOUR ZTUPID PLANTZ WILL BE ZTOPPED ZOON.",
-              "zh": "YOU AND YOUR ZTUPID PLANTZ WILL BE ZTOPPED ZOON."
+              "en": "AGAIN YOU WON, BUT I WILL ZTOP YOU ZOON IN YOUR TRACKZ.",
+              "zh": "AGAIN YOU WON, BUT I WILL ZTOP YOU ZOON IN YOUR TRACKZ."
             }
           }
         ]
@@ -146,7 +136,7 @@
                 "ReservedColumnCount": 0,
                 "ZombossDeathColumn": 5,
                 "ZombossDeathRow": 3,
-                "ZombossMechType": "zombossmech_egypt",
+                "ZombossMechType": "zombossmech_pirate2",
                 "ZombossSpawnGridPosition": {
                     "mX": 6,
                     "mY": 3
@@ -154,6 +144,38 @@
             }
         },
         {
+            "aliases": [
+        "ChallengeModule"
+      ],
+      "objclass": "StarChallengeModuleProperties",
+      "objdata": {
+        "Challenges": [
+          [
+            "RTID(DoNotPlantBeforeLine@CurrentLevel)"
+          ]
+        ],
+        "ChallengesAlwaysAvailable": true,
+        "Difficulties": [
+          400
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "DoNotPlantBeforeLine"
+      ],
+      "objclass": "MoldColonyChallengeProps",
+      "objdata": {
+        "MoldMatrix": [
+          "000001111",
+          "000001111",
+          "000001111",
+          "000001111",
+          "000001111"
+        ]
+      }
+    },
+    { 
             "aliases": [
                 "ConveyorBelt"
             ],
@@ -179,68 +201,52 @@
                 ],
                 "InitialPlantList": [
                     {
-                        "MaxCount": 7,
+                        "MaxCount": 8,
                         "MaxWeightFactor": 0.1,
                         "MinCount": 5,
-                        "MinWeightFactor": 2,
-                        "PlantType": "bonkchoy",
-                        "Weight": 13
-                    },
-                    {
-                        "MaxCount": 4,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 3,
-                        "MinWeightFactor": 2,
-                        "PlantType": "buttercup",
-                        "Weight": 8
-                    },
-                    {
-                        "MaxCount": 2,
-                        "MaxWeightFactor": 0,
-                        "MinCount": 1,
-                        "MinWeightFactor": 3,
-                        "PlantType": "potatomine",
-                        "Weight": 4
-                    },
-                    {
-                        "MaxCount": 3,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 1,
-                        "MinWeightFactor": 2,
-                        "PlantType": "cabbagepult",
-                        "Weight": 5
-                    },
-                    {
-                        "MaxCount": 5,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 1,
-                        "MinWeightFactor": 2,
-                        "PlantType": "repeater",
-                        "Weight": 10
-                    },
-                    {
-                        "MaxCount": 2,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 1,
                         "MinWeightFactor": 2,
                         "PlantType": "snowdrop",
                         "Weight": 7
                     },
                     {
                         "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "citron",
+                        "Weight": 3
+                    },
+                    {
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "endurian",
+                        "Weight": 3
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "lychee",
+                        "Weight": 3
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "coldsnapdragon",
+                        "Weight": 5
+                    },
+                    {
+                        "MaxCount": 2,
                         "MaxWeightFactor": 0,
                         "MinCount": 2,
                         "MinWeightFactor": 2,
-                        "PlantType": "gravebuster",
-                        "Weight": 3
-                    },
-					{
-                        "MaxCount": 1,
-                        "MaxWeightFactor": 0,
-                        "MinCount": 0,
-                        "MinWeightFactor": 2,
-                        "PlantType": "powerlily",
-                        "Weight": 2
+                        "PlantType": "iceburg",
+                        "Weight": 7
                     }
                 ],
                 "SpeedConditions": [
@@ -271,15 +277,14 @@
         },
         {
             "aliases": [
-                "Gravestones"
-            ],
-            "objclass": "GravestoneProperties",
-            "objdata": {
-                "GravestoneCount": 5,
-                "SpawnColumnEnd": 6,
-                "SpawnColumnStart": 3
-            }
-        }
+        "PiratePlanks"
+      ],
+      "objclass": "PiratePlankProperties",
+      "objdata": {
+        "PlankRows": [
+        ]
+      }
+    }
     ],
     "version": 1
 }

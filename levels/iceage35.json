@@ -64,111 +64,112 @@
       ],
       "objclass": "SeedBankProperties",
       "objdata": {
-        "PlantExcludeList": ["blover"],
-        "PresetPlantList": [
+        "PlantExcludeList": [
+          "blover"
         ],
+        "PresetPlantList": [],
         "SelectionMethod": "chooser"
       }
     },
     {
       "aliases": [
-                "ConveyorBelt"
-            ],
-            "objclass": "ConveyorSeedBankProperties",
-            "objdata": {
-                "DropDelayConditions": [
-                    {
-                        "Delay": 2,
-                        "MaxPackets": 0
-                    },
-                    {
-                        "Delay": 3,
-                        "MaxPackets": 2
-                    },
-                    {
-                        "Delay": 5,
-                        "MaxPackets": 4
-                    },
-                    {
-                        "Delay": 8,
-                        "MaxPackets": 8
-                    }
-                ],
-                "InitialPlantList": [
-                    {
-                        "MaxCount": 5,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 5,
-                        "MinWeightFactor": 2,
-                        "PlantType": "pyrevine",
-                        "Weight": 10
-                    },
-                    {
-                        "MaxCount": 2,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 4,
-                        "MinWeightFactor": 2,
-                        "PlantType": "firepeashooter",
-                        "Weight": 12
-                    },
-                    {
-                        "MaxCount": 1,
-                        "MaxWeightFactor": 0,
-                        "MinCount": 1,
-                        "MinWeightFactor": 3,
-                        "PlantType": "cherry_bomb",
-                        "Weight": 1
-                    },
-                    {
-                        "MaxCount": 3,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 2,
-                        "MinWeightFactor": 2,
-                        "PlantType": "tallnut",
-                        "Weight": 7
-                    },
-                    {
-                        "MaxCount": 10,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 2,
-                        "MinWeightFactor": 2,
-                        "PlantType": "snapdragon",
-                        "Weight": 16
-                    },
-                    {
-                        "MaxCount": 1,
-                        "MaxWeightFactor": 0.1,
-                        "MinCount": 1,
-                        "MinWeightFactor": 2,
-                        "PlantType": "doomshroom",
-                        "Weight": 0.5
-                    },
-                    {
-                        "MaxCount": 2,
-                        "MaxWeightFactor": 0,
-                        "MinCount": 2,
-                        "MinWeightFactor": 2,
-                        "PlantType": "iceweed",
-                        "Weight": 0.5
-                    },
-					{
-                        "MaxCount": 3,
-                        "MaxWeightFactor": 0,
-                        "MinCount": 2,
-                        "MinWeightFactor": 2,
-                        "PlantType": "coconutcannon",
-                        "Weight": 6
-                    }
-                ],
-                "SpeedConditions": [
-                    {
-                        "MaxPackets": 0,
-                        "Speed": 100
-                    }
-                ]
-            }
-        },
-        {
+        "ConveyorBelt"
+      ],
+      "objclass": "ConveyorSeedBankProperties",
+      "objdata": {
+        "DropDelayConditions": [
+          {
+            "Delay": 2,
+            "MaxPackets": 0
+          },
+          {
+            "Delay": 3,
+            "MaxPackets": 2
+          },
+          {
+            "Delay": 5,
+            "MaxPackets": 4
+          },
+          {
+            "Delay": 8,
+            "MaxPackets": 8
+          }
+        ],
+        "InitialPlantList": [
+          {
+            "MaxCount": 16,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 10,
+            "MinWeightFactor": 2,
+            "PlantType": "pyrevine",
+            "Weight": 10
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 4,
+            "MinWeightFactor": 2,
+            "PlantType": "firepeashooter",
+            "Weight": 12
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0,
+            "MinCount": 1,
+            "MinWeightFactor": 3,
+            "PlantType": "cherry_bomb",
+            "Weight": 1
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "tallnut",
+            "Weight": 4
+          },
+          {
+            "MaxCount": 10,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "snapdragon",
+            "Weight": 16
+          },
+          {
+            "MaxCount": 1,
+            "MaxWeightFactor": 0.1,
+            "MinCount": 1,
+            "MinWeightFactor": 2,
+            "PlantType": "doomshroom",
+            "Weight": 0.5
+          },
+          {
+            "MaxCount": 2,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "iceweed",
+            "Weight": 0.5
+          },
+          {
+            "MaxCount": 3,
+            "MaxWeightFactor": 0,
+            "MinCount": 2,
+            "MinWeightFactor": 2,
+            "PlantType": "coconutcannon",
+            "Weight": 6
+          }
+        ],
+        "SpeedConditions": [
+          {
+            "MaxPackets": 0,
+            "Speed": 100
+          }
+        ]
+      }
+    },
+    {
       "aliases": [
         "NewWaves"
       ],
@@ -179,12 +180,13 @@
           {},
           {},
           {
-            "PointIncrementPerWave": 11180,
+            "PointIncrementPerWave": 50,
             "StartingPoints": 50,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(iceage_imp@ZombieTypes)",
-              "RTID(iceage_dodo@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
             ]
           },
           {
@@ -192,20 +194,24 @@
             "StartingPoints": 100,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
             ]
           },
           {
             "PointIncrementPerWave": 150,
-            "StartingPoints": 200,
+            "StartingPoints": 150,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
             ]
           },
           {
-            "PointIncrementPerWave": 190,
-            "StartingPoints": 190,
+            "PointIncrementPerWave": 200,
+            "StartingPoints": 200,
             "StartingWave": 0,
             "ZombiePool": [
               "RTID(iceage@ZombieTypes)",
@@ -436,7 +442,11 @@
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "FlagWaveInterval": 4,
+        "FlagWaveVeteranOverrideTypes": [
+          1,
+          1
+        ],
+        "FlagWaveInterval": 3,
         "WaveCount": 12,
         "Waves": [
           [
@@ -547,7 +557,7 @@
       "objclass": "StarChallengeBeatTheLevelProps",
       "objdata": {
         "Descriptions": [
-          "Survive a very cold day in siberia a new zombies will get shown and if you win you unlock pyrovine"
+          "Survive a very cold day in siberia and unlock pyrovine"
         ],
         "DescriptionsMultiLanguage": [
           {
@@ -829,10 +839,10 @@
             "Type": "RTID(iceage_troglobite_veteran@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor2@ZombieTypes)"
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_dodo@ZombieTypes)"
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_armor4@ZombieTypes)"
@@ -866,13 +876,13 @@
             "Type": "RTID(iceage_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_dodo@ZombieTypes)"
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_armor3@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor4@ZombieTypes)"
+            "Type": "RTID(iceage_gargantuar@ZombieTypes)"
           }
         ]
       }

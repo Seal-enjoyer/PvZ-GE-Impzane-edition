@@ -66,7 +66,8 @@
           "glaciershroom",
           "snowdrop",
           "icebloom",
-          "wintermint"
+          "wintermint",
+          "iceweed"
         ],
         "SelectionMethod": "chooser"
       }
@@ -198,7 +199,23 @@
           {},
           {},
           {
-            "PointIncrementPerWave": 60,
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 20,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 30,
+            "StartingPoints": 30,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
             "StartingPoints": 50,
             "StartingWave": 0,
             "ZombiePool": [
@@ -206,27 +223,13 @@
             ]
           },
           {
-            "PointIncrementPerWave": 60,
-            "StartingPoints": 60,
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(dino@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 60,
-            "StartingPoints": 60,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(dino@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 120,
-            "StartingPoints": 160,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(dino@ZombieTypes)"
+              "RTID(dino@ZombieTypes)",
+              "RTID(dino_armor1@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)"
             ]
           }
         ],

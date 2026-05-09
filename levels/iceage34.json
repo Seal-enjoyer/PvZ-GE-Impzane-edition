@@ -70,7 +70,44 @@
           "blover"
         ],
         "PresetPlantList": [],
-        "SelectionMethod": "chooser"
+        "SelectionMethod": "chooser",
+        "CardDecks": {
+          "Recommended": [
+            {
+              "Name": {
+                "en": "Reccomended",
+                "zh": "接着推进！"
+              },
+              "Leader": 6,
+              "Plants": [
+                "sunflower",
+                "jackolantern",
+                "hurrikale",
+                "sapfling",
+                "wallnut",
+                "ghostpepper"
+              ]
+            }
+          ],
+          "ChallengingLocked": false,
+          "Challenging": [
+            {
+              "Name": {
+                "en": "Challenge",
+                "zh": "接着受挫"
+              },
+              "Leader": 1,
+              "Plants": [
+                "sunflower",
+                "wallnut",
+                "threepeater",
+                "puffshroom",
+                "vamporcini",
+                "potatomine"
+              ]
+            }
+          ]
+        }
       }
     },
     {
@@ -82,27 +119,27 @@
         "MustProtectCount": 5,
         "Plants": [
           {
-            "GridX": 5,
+            "GridX": 4,
             "GridY": 1,
             "PlantType": "chilibean"
           },
           {
-            "GridX": 5,
+            "GridX": 4,
             "GridY": 2,
             "PlantType": "chilibean"
           },
           {
-            "GridX": 5,
+            "GridX": 4,
             "GridY": 3,
             "PlantType": "chilibean"
           },
           {
-            "GridX": 4,
+            "GridX": 3,
             "GridY": 4,
             "PlantType": "chilibean"
           },
           {
-            "GridX": 4,
+            "GridX": 3,
             "GridY": 0,
             "PlantType": "chilibean"
           }
@@ -137,38 +174,45 @@
           {},
           {},
           {
-            "PointIncrementPerWave": 11180,
+            "PointIncrementPerWave": 50,
             "StartingPoints": 50,
-            "StartingWave": 0,
+            "StartingWave": 5,
             "ZombiePool": [
-              "RTID(iceage_imp@ZombieTypes)",
-              "RTID(iceage_dodo@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 75,
+            "StartingPoints": 75,
+            "StartingWave": 4,
+            "ZombiePool": [
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)"
             ]
           },
           {
             "PointIncrementPerWave": 100,
             "StartingPoints": 100,
-            "StartingWave": 0,
+            "StartingWave": 3,
             "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
+              "RTID(iceage@ZombieTypes)",
+              "RTID(iceage_armor1@ZombieTypes)",
+              "RTID(iceage_armor2@ZombieTypes)",
+              "RTID(iceage_dodo@ZombieTypes)"
             ]
           },
           {
             "PointIncrementPerWave": 150,
-            "StartingPoints": 200,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(iceage@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 190,
-            "StartingPoints": 190,
-            "StartingWave": 0,
+            "StartingPoints": 150,
+            "StartingWave": 3,
             "ZombiePool": [
               "RTID(iceage@ZombieTypes)",
               "RTID(iceage_armor1@ZombieTypes)",
-              "RTID(iceage_armor2@ZombieTypes)"
+              "RTID(iceage_armor2@ZombieTypes)",
+              "RTID(iceage_dodo@ZombieTypes)"
             ]
           }
         ],
@@ -412,8 +456,8 @@
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "FlagWaveInterval": 4,
-        "WaveCount": 12,
+        "FlagWaveVeteranOverrideTypes": [1, 1],
+        "FlagWaveInterval": 6,
         "Waves": [
           [
             "RTID(Wave1@CurrentLevel)"
@@ -422,41 +466,31 @@
             "RTID(Wave2@CurrentLevel)"
           ],
           [
-            "RTID(Wave3@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave3@CurrentLevel)"
           ],
           [
-            "RTID(Wave4@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave4@CurrentLevel)"
           ],
           [
             "RTID(Wave5@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
             "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
           ],
           [
-            "RTID(Wave6@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave6@CurrentLevel)"
           ],
           [
             "RTID(Wave7@CurrentLevel)",
             "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)"
           ],
           [
-            "RTID(Wave8@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave8@CurrentLevel)"
           ],
           [
             "RTID(Wave9@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)"
           ],
           [
-            "RTID(Wave10@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave10@CurrentLevel)"
           ],
           [
             "RTID(Wave11@CurrentLevel)",
@@ -464,9 +498,7 @@
           ],
           [
             "RTID(Wave12@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall1@CurrentLevel)"
+            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
           ]
         ]
       }
@@ -559,8 +591,7 @@
             "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 1
+            "Type": "RTID(iceage_dodo@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage@ZombieTypes)"
@@ -605,14 +636,14 @@
             "Type": "RTID(iceage_armor2@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+            "Type": "RTID(iceage_armor4@ZombieTypes)",
             "row": 1
           },
           {
             "Type": "RTID(iceage@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
+            "Type": "RTID(iceage_troglobite@ZombieTypes)",
             "row": 3
           },
           {
@@ -644,12 +675,6 @@
             "Type": "RTID(iceage_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_dodo@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_armor3@ZombieTypes)"
-          },
-          {
             "Type": "RTID(iceage_armor4@ZombieTypes)"
           },
           {
@@ -672,13 +697,7 @@
             "Type": "RTID(iceage_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)"
-          },
-          {
             "Type": "RTID(iceage_armor2@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
             "Type": "RTID(iceage_dodo@ZombieTypes)"
@@ -707,13 +726,6 @@
             "row": 1
           },
           {
-            "Type": "RTID(iceage_armor1@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 2
-          },
-          {
             "Type": "RTID(iceage_armor4@ZombieTypes)"
           }
         ]
@@ -737,14 +749,6 @@
             "Type": "RTID(iceage_dodo@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 4
-          },
-          {
-            "Type": "RTID(iceage_armor1@ZombieTypes)",
-            "row": 2
-          },
-          {
             "Type": "RTID(iceage_armor4@ZombieTypes)",
             "row": 1
           },
@@ -753,16 +757,13 @@
             "row": 0
           },
           {
-            "Type": "RTID(iceage_armor3@ZombieTypes)",
-            "row": 3
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 2
+            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_armor3@ZombieTypes)",
-            "row": 4
+            "Type": "RTID(iceage_armor3@ZombieTypes)"
           }
         ]
       }
@@ -791,13 +792,6 @@
             "Type": "RTID(iceage_armor1@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_hunter_veteran@ZombieTypes)",
-            "row": 2
-          },
-          {
-            "Type": "RTID(iceage_armor1@ZombieTypes)"
-          },
-          {
             "Type": "RTID(iceage_armor2@ZombieTypes)"
           }
         ]
@@ -820,7 +814,7 @@
             "Type": "RTID(iceage_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(iceage_gargantuar@ZombieTypes)",
+            "Type": "RTID(iceage_armor4@ZombieTypes)",
             "row": 2
           },
           {

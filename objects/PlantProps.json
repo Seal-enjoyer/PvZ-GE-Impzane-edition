@@ -25,6 +25,29 @@
 		},
 		{
 			"aliases": [
+				"peashooter_ALT"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"PeaType": "pea_mega",
+				"PeaTypePlantfood": "pea_mega",
+				"ShootInterval": 6.6,
+				"ShootIntervalAdditional": -1.6,
+				"PlantfoodPeaCount": 15,
+				"Cooldown": 15,
+				"CooldownFrom": 1,
+				"SunCost": 150,
+				"Toughness": 300,
+				"Family": "Peashooter",
+				"MintBoostedProps": {
+					"ResistanceMult": 1.5,
+					"SpeedMult": 1.5,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
 				"dusklobber"
 			],
 			"objclass": "PlantProperties",
@@ -94,20 +117,46 @@
 		},
 		{
 			"aliases": [
+				"sunflower_ALT"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"SpawnedScale": 1.50,
+				"PlantfoodTime": 3,
+				"SunValue": 25,
+				"ProduceInterval": 35.0,
+				"ProduceIntervalAdditional": 0,
+				"ProduceCountdownStart": 5,
+				"ProduceCountdownStartAdditional": 0,
+				"Cooldown": 22,
+				"CooldownFrom": 0,
+				"SunCost": 75,
+				"Toughness": 6500,
+				"Family": "Sun",
+				"MintBoostedProps": {
+					"ResistanceMult": 1.5,
+					"SpeedMult": 1.5,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
 				"primalsunflower"
 			],
 			"objclass": "PlantProperties",
 			"objdata": {
+				"SpawnedScale": 1.25,
 				"PlantfoodTime": 1.0000001,
-				"SunValue": 100,
-				"ProduceInterval": 27.5,
-				"ProduceIntervalAdditional": -1.5,
-				"ProduceCountdownStart": 3,
-				"ProduceCountdownStartAdditional": -1.5,
-				"Cooldown": 8,
+				"SunValue": 250,
+				"ProduceInterval": 42.5,
+				"ProduceIntervalAdditional": 0,
+				"ProduceCountdownStart": 22,
+				"ProduceCountdownStartAdditional": 0,
+				"Cooldown": 20,
 				"CooldownFrom": 0,
-				"SunCost": 150,
-				"Toughness": 300,
+				"SunCost": 125,
+				"Toughness": 1200,
 				"Family": "Sun",
 				"MintBoostedProps": {
 					"ResistanceMult": 1.5,
@@ -163,6 +212,26 @@
 		},
 		{
 			"aliases": [
+				"wallnut_ALT"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"SpawnedScale": 0.5,
+				"ArmorToughness": 3500,
+				"Cooldown": 11,
+				"CooldownFrom": 0.75,
+				"SunCost": 25,
+				"Toughness": 3500,
+				"Family": "Defence",
+				"MintBoostedProps": {
+					"ResistanceMult": 1.5,
+					"SpeedMult": 1.5,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
 				"potatomine"
 			],
 			"objclass": "PlantProperties",
@@ -173,6 +242,28 @@
 				"Cooldown": 30,
 				"CooldownFrom": 0.75,
 				"SunCost": 75,
+				"Toughness": 75,
+				"Family": "Explosive",
+				"MintBoostedProps": {
+					"ResistanceMult": 1.5,
+					"SpeedMult": 1.5,
+					"Plantfood": false
+				}
+			}
+		},
+		{
+			"aliases": [
+				"potatomine_ALT"
+			],
+			"objclass": "PlantProperties",
+			"objdata": {
+				"SpawnedScale": 0.75,
+				"ChargeTime": 2,
+				"Damage": 200,
+				"PlantfoodChildrenCount": 5,
+				"Cooldown": 2,
+				"CooldownFrom": 0.75,
+				"SunCost": 25,
 				"Toughness": 75,
 				"Family": "Explosive",
 				"MintBoostedProps": {
@@ -378,7 +469,7 @@
 				"CannotBePushedByFootballMech": true,
 				"CannotBeKilledBySurfboard": true,
 				"BustTime": 100000000,
-				"Cooldown": 300,
+				"Cooldown": 30,
 				"CooldownFrom": 1,
 				"SunCost": 0,
 				"Toughness": 6500,
@@ -512,15 +603,16 @@
 			],
 			"objclass": "PlantProperties",
 			"objdata": {
+				"SpawnedScale": 1.25,
 				"ShootInterval": 2.4,
 				"ShootIntervalAdditional": -0.40,
 				"PlantfoodPeaCount": 20,
 				"KnockbackDistance": 0.2,
 				"KnockbackChance": 100,
-				"Cooldown": 7,
+				"Cooldown": 10,
 				"CooldownFrom": 1,
 				"SunCost": 175,
-				"Toughness": 300,
+				"Toughness": 1200,
 				"Family": "Peashooter",
 				"CallsElectricCurrant": true,
 				"RedAttackStunDuration": "1",
@@ -645,11 +737,11 @@
 			"objdata": {
 				"PlantfoodTime": 1,
 				"SunValue": 25,
-				"ProduceInterval": 20,
+				"ProduceInterval": 30,
 				"ProduceIntervalAdditional": 4,
 				"ProduceCountdownStart": 7,
 				"ProduceCountdownStartAdditional": 5,
-				"ProduceInterval_AtNight": 15.0,
+				"ProduceInterval_AtNight": 25.0,
 				"ProduceIntervalAdditional_AtNight": 4,
 				"ProduceCountdownStart_AtNight": 3,
 				"ProduceCountdownStartAdditional_AtNight": 5,
@@ -836,7 +928,7 @@
 			"objdata": {
 				"ThrowInterval": 2.3,
 				"ThrowIntervalAdditional": 0.35,
-				"ChanceToButter": 0.20,
+				"ChanceToButter": 0.10,
 				"Cooldown": 8,
 				"CooldownFrom": 0.5,
 				"SunCost": 200,
@@ -886,9 +978,9 @@
 			"objdata": {
 				"KnockbackDistance": 3,
 				"RestTime": 13,
-				"Cooldown": 17,
+				"Cooldown": 20,
 				"CooldownFrom": 0.5,
-				"SunCost": 50,
+				"SunCost": 75,
 				"Toughness": 300,
 				"Family": "Slow",
 				"MintBoostedProps": {
@@ -1090,6 +1182,7 @@
 			],
 			"objclass": "PlantProperties",
 			"objdata": {
+				"SpawnedScale": 1.25,
 				"ArmorToughness": 4000,
 				"ImmuneToLightningCharge": true,
 				"CannotBeSheepenedByWizard": true,
@@ -1402,13 +1495,14 @@
 			],
 			"objclass": "PlantProperties",
 			"objdata": {
+				"SpawnedScale": 1.25,
 				"ChargeTime": 30,
 				"Damage": 5000,
 				"PlantfoodChildrenCount": 5,
 				"Cooldown": 20,
 				"CooldownFrom": 1.0,
 				"SunCost": 150,
-				"Toughness": 300,
+				"Toughness": 1200,
 				"Family": "Explosive",
 				"MintBoostedProps": {
 					"ResistanceMult": 1.5,
@@ -1468,7 +1562,7 @@
 			],
 			"objclass": "PlantProperties",
 			"objdata": {
-				"RestTime": 20.0,
+				"RestTime": 25.0,
 				"Cooldown": 14,
 				"CooldownFrom": 1,
 				"SunCost": 350,
@@ -2237,7 +2331,7 @@
 			"objclass": "PlantProperties",
 			"objdata": {
 				"CannotBeSheepenedByWizard": true,
-				"Cooldown": 5,
+				"Cooldown": 10,
 				"CooldownFrom": 0,
 				"SunCost": 0,
 				"Toughness": 30000,
@@ -2271,13 +2365,13 @@
 			],
 			"objclass": "PlantProperties",
 			"objdata": {
-				"RestTime": 0.001,
+				"RestTime": 5,
 				"PlantfoodAbsorbDuration": 7.5,
-				"PlantfoodThrowDamage": 4000,
+				"PlantfoodThrowDamage": 2000,
 				"Cooldown": 7.5,
 				"CooldownFrom": 0.667,
-				"SunCost": 150,
-				"Toughness": 150,
+				"SunCost": 75,
+				"Toughness": 300,
 				"CallsElectricCurrant": true,
 				"RedAttackStunDuration": 0.3,
 				"Family": "Slow",
@@ -3591,12 +3685,12 @@
 			],
 			"objclass": "PlantProperties",
 			"objdata": {
-				"Cooldown": 3,
+				"Cooldown": 8,
 				"CooldownFrom": 1,
-				"SunCost": 225,
-				"Toughness": 400,
+				"SunCost": 250,
+				"Toughness": 500,
 				"Family": "Poison",
-				"ShootInterval": 1,
+				"ShootInterval": 2.95,
 				"ShootIntervalAdditional": 0.2,
 				"MintBoostedProps": {
 					"ResistanceMult": 1.5,

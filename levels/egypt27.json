@@ -36,6 +36,7 @@
           "RTID(EgyptMowers@LevelModules)",
           "RTID(ChallengeModule@CurrentLevel)",
           "RTID(SeedBank@CurrentLevel)",
+          "RTID(ConveyorBelt@CurrentLevel)",
           "RTID(StandardIntro@LevelModules)"
         ],
         "Name": "Sarasaland night 2",
@@ -56,13 +57,85 @@
       "objclass": "SeedBankProperties",
       "objdata": {
         "PlantExcludeList": [
-          "gravebuster",
-          "hotpotato"
         ],
         "SelectionMethod": "chooser"
       }
     },
     {
+      "aliases": [
+                "ConveyorBelt"
+            ],
+            "objclass": "ConveyorSeedBankProperties",
+            "objdata": {
+                "DropDelayConditions": [
+                    {
+                        "Delay": 2,
+                        "MaxPackets": 0
+                    },
+                    {
+                        "Delay": 3,
+                        "MaxPackets": 2
+                    },
+                    {
+                        "Delay": 5,
+                        "MaxPackets": 4
+                    },
+                    {
+                        "Delay": 8,
+                        "MaxPackets": 8
+                    }
+                ],
+                "InitialPlantList": [
+                    {
+                        "MaxCount": 7,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 5,
+                        "MinWeightFactor": 2,
+                        "PlantType": "peashooter",
+                        "Weight": 13
+                    },
+                    {
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "buttercup",
+                        "Weight": 4
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "bloomerang",
+                        "Weight": 5
+                    },
+                    {
+                        "MaxCount": 1,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "coconutcannon",
+                        "Weight": 3
+                    },
+                    {
+                        "MaxCount": 2,
+                        "MaxWeightFactor": 0.1,
+                        "MinCount": 1,
+                        "MinWeightFactor": 2,
+                        "PlantType": "lightningreed",
+                        "Weight": 7
+                    }
+                ],
+                "SpeedConditions": [
+                    {
+                        "MaxPackets": 0,
+                        "Speed": 100
+                    }
+                ]
+            }
+        },
+        {
       "aliases": [
         "FrostWindSnowstormEventSmall"
       ],
@@ -116,9 +189,7 @@
       "objdata": {
         "CannotBeTossedByCitron": false,
         "ProtectsInside": true,
-        "ZombieInside": [
-          "egypt_gargantuar"
-        ],
+        "ZombieInside": "mummy_armor2",
         "WalkSPS": 0.185,
         "EatDPS": 100,
         "Toughness": 400,
@@ -148,9 +219,7 @@
       "objdata": {
         "CannotBeTossedByCitron": false,
         "ProtectsInside": true,
-        "ZombieInside": [
-          "mummy_armor4"
-        ],
+        "ZombieInside": "mummy_armor4",
         "WalkSPS": 0.185,
         "EatDPS": 100,
         "Toughness": 400,
@@ -199,42 +268,51 @@
           {},
           {},
           {
-            "PointIncrementPerWave": 67,
-            "StartingPoints": 67,
+            "PointIncrementPerWave": 50,
+            "StartingPoints": 50,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(mummy@ZombieTypes)"
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)"
             ]
           },
           {
-            "PointIncrementPerWave": 12,
-            "StartingPoints": 10,
+            "PointIncrementPerWave": 75,
+            "StartingPoints": 75,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(mummy@ZombieTypes)"
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)"
             ]
           },
           {
-            "PointIncrementPerWave": 25,
-            "StartingPoints": 15,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(mummy@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 85,
+            "PointIncrementPerWave": 100,
             "StartingPoints": 80,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(mummy@ZombieTypes)"
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(ra@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(mummy@ZombieTypes)",
+              "RTID(mummy_armor1@ZombieTypes)",
+              "RTID(mummy_armor2@ZombieTypes)",
+              "RTID(ra@ZombieTypes)"
             ]
           }
         ],
         "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
       }
     },
-    {},
     {
       "aliases": [
         "croGraveSpawnAmbushEvent1"
@@ -248,9 +326,6 @@
         ],
         "ZombieSpawnWaitTime": 2,
         "Zombies": [
-          {
-            "Type": "RTID(mummy_armor1@ZombieTypes)"
-          },
           {
             "Type": "RTID(mummy_armor1@ZombieTypes)"
           },
@@ -288,33 +363,6 @@
             "en": "123",
             "zh": "112233"
           }
-        ]
-      }
-    },
-    {},
-    {},
-    {
-      "aliases": [
-        "LevelScheduler"
-      ],
-      "objclass": "LevelSchedulerProps",
-      "objdata": {
-        "TimeBeforeFirst": {
-          "Max": 15,
-          "Min": 15
-        },
-        "TimeBetween": {
-          "Max": 19,
-          "Min": 12
-        },
-        "Repeat": {
-          "Max": 150,
-          "Min": 150
-        },
-        "RewardWhenEnded": false,
-        "SuppressRewardState": false,
-        "Events": [
-          "RTID(AllLaneFrostWindEvent0@CurrentLevel)"
         ]
       }
     },
@@ -374,64 +422,35 @@
     },
     {
       "aliases": [
-        "AllLaneFrostWindEvent0"
-      ],
-      "objclass": "FrostWindWaveActionProps",
-      "objdata": {
-        "Winds": [
-          {
-            "Direction": "right",
-            "Row": 2
-          },
-          {
-            "Direction": "right",
-            "Row": 3
-          },
-          {
-            "Direction": "right",
-            "Row": 4
-          },
-          {
-            "Direction": "right",
-            "Row": 0
-          },
-          {
-            "Direction": "right",
-            "Row": 1
-          }
-        ]
-      }
-    },
-    {
-      "aliases": [
         "WaveManagerProps"
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "FlagWaveInterval": 11,
-        "WaveCount": 11,
+        "FlagWaveVeteranOverrideTypes": [
+          1
+        ],
+        "FlagWaveInterval": 12,
+        "WaveCount": 12,
         "Waves": [
-          [],
           [
-            "RTID(Wave2@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave1@CurrentLevel)"
           ],
           [
-            "RTID(Wave3@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave2@CurrentLevel)"
           ],
           [
-            "RTID(Wave4@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave3@CurrentLevel)"
           ],
           [
-            "RTID(Wave5@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(Wave4@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave5@CurrentLevel)"
           ],
           [
             "RTID(Wave6@CurrentLevel)",
             "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmallpharaoh@CurrentLevel)"
+            "RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
           ],
           [
             "RTID(Wave7@CurrentLevel)",
@@ -439,28 +458,37 @@
           ],
           [
             "RTID(Wave8@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
             "RTID(FrostWindSnowstormEventSmallpharaoh@CurrentLevel)"
           ],
           [
             "RTID(Wave9@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)"
+            "RTID(croGraveSpawnAmbushEvent1@CurrentLevel)"
           ],
           [
             "RTID(Wave10@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
             "RTID(FrostWindSnowstormEventSmallpharaoh@CurrentLevel)"
           ],
           [
             "RTID(Wave11@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmall@CurrentLevel)",
-            "RTID(croGraveSpawnAmbushEvent1@CurrentLevel)",
-            "RTID(FrostWindSnowstormEventSmallpharaoh@CurrentLevel)",
+            "RTID(FrostWindSnowstormEventSmallpharaoh@CurrentLevel)"
+          ],
+          [
+            "RTID(Wave12@CurrentLevel)",
             "RTID(FrostWindSnowstormEventSmallpharaoh@CurrentLevel)"
           ]
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave1"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
+          }
         ]
       }
     },
@@ -471,6 +499,9 @@
       "objclass": "SpawnZombiesJitteredWaveActionProps",
       "objdata": {
         "Zombies": [
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
           {
             "Type": "RTID(mummy_armor1@ZombieTypes)"
           }
@@ -485,20 +516,10 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(mummy_armor2@ZombieTypes)",
-            "Row": 5
+            "Type": "RTID(ra@ZombieTypes)"
           },
           {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)",
-            "Row": 1
-          },
-          {
-            "Type": "RTID(mummy_armor4@ZombieTypes)",
-            "Row": 5
-          },
-          {
-            "Type": "RTID(mummy_armor1@ZombieTypes)",
-            "Row": 1
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
           }
         ]
       }
@@ -511,10 +532,13 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)"
+            "Type": "RTID(explorer@ZombieTypes)"
           },
           {
-            "Type": "RTID(mummy_armor1@ZombieTypes)"
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy@ZombieTypes)"
           }
         ]
       }
@@ -527,19 +551,10 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(mummy_armor2@ZombieTypes)"
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(ra@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(mummy_armor1@ZombieTypes)"
-          },
-          {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)"
-          },
-          {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)"
+            "Type": "RTID(explorer@ZombieTypes)"
           },
           {
             "Type": "RTID(mummy_armor4@ZombieTypes)"
@@ -555,20 +570,32 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(mummy_armor2@ZombieTypes)",
-            "Row": 3
+            "Type": "RTID(ra@ZombieTypes)"
           },
           {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)",
-            "Row": 3
+            "Type": "RTID(ra@ZombieTypes)"
           },
           {
-            "Type": "RTID(mummy_armor4@ZombieTypes)",
-            "Row": 3
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave7"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
           },
           {
-            "Type": "RTID(tomb_raiser@ZombieTypes)",
-            "Row": 3
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor1@ZombieTypes)"
           }
         ]
       }
@@ -581,20 +608,32 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(tomb_raiser@ZombieTypes)",
-            "Row": 3
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)",
-            "Row": 1
+            "Type": "RTID(pharaoh@ZombieTypes)"
           },
           {
-            "Type": "RTID(tomb_raiser@ZombieTypes)",
-            "Row": 3
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave9"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
           },
           {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)",
-            "Row": 1
+            "Type": "RTID(pharaoh@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor2@ZombieTypes)"
           }
         ]
       }
@@ -607,22 +646,13 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)"
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
           },
           {
-            "Type": "RTID(C_pharaoh@CurrentLevel)"
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)"
-          },
-          {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)"
-          },
-          {
-            "Type": "RTID(C_pharaoh@CurrentLevel)"
-          },
-          {
-            "Type": "RTID(C2_pharaoh@CurrentLevel)"
+            "Type": "RTID(pharaoh@ZombieTypes)"
           }
         ]
       }
@@ -635,16 +665,41 @@
       "objdata": {
         "Zombies": [
           {
-            "Type": "RTID(C_pharaoh@CurrentLevel)"
+            "Type": "RTID(ra@ZombieTypes)"
           },
           {
-            "Type": "RTID(C_pharaoh@CurrentLevel)"
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
           },
           {
-            "Type": "RTID(C_pharaoh@CurrentLevel)"
+            "Type": "RTID(ra@ZombieTypes)"
           },
           {
-            "Type": "RTID(C_pharaoh@CurrentLevel)"
+            "Type": "RTID(ra@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(ra@ZombieTypes)"
+          }
+        ]
+      }
+    },
+    {
+      "aliases": [
+        "Wave12"
+      ],
+      "objclass": "SpawnZombiesJitteredWaveActionProps",
+      "objdata": {
+        "Zombies": [
+          {
+            "Type": "RTID(explorer@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(tomb_raiser@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(egypt_gargantuar@ZombieTypes)"
+          },
+          {
+            "Type": "RTID(mummy_armor4@ZombieTypes)"
           }
         ]
       }

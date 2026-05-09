@@ -1,31 +1,35 @@
 {
-  "#comment": "Pirate seas level 25",
-  "Information": {
-    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
-    "name": {
-      "en": "pirate seas day 25",
-      "zh-CN": "示例关卡1"
+    "#comment": "Pirate seas level 25",
+    "Information": {
+        "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+        "name": {
+            "en": "pirate seas day 25",
+            "zh-CN": "示例关卡1"
+        },
+        "Author": "Captian Impsanity",
+        "AuthorLink": "@seal_enjoyer_de",
+        "Introduction": {
+            "en": "pirate seas day 25",
+            "zh-CN": "这是一个示例关卡。"
+        },
+        "GameVersion": "0.1.13",
+        "Version": "1.0",
+        "CreatedAt": "2026-04-15",
+        "UpdatedAt": "2026-04-15",
+        "Difficulty": "Medium",
+        "Category": "Survival"
     },
-    "Author": "Captian Impsanity",
-    "AuthorLink": "@seal_enjoyer_de",
-    "Introduction": {
-      "en": "pirate seas day 25",
-      "zh-CN": "这是一个示例关卡。"
-    },
-    "GameVersion": "0.1.13",
-    "Version": "1.0",
-    "CreatedAt": "2026-04-15",
-    "UpdatedAt": "2026-04-15",
-    "Difficulty": "Medium",
-    "Category": "Survival"
-  },
-  "objects": [
-    {
+    "objects": [
+        {
             "objclass": "LevelDefinition",
             "objdata": {
                 "Description": "<PLAYERNAME>'s trip to the ships of Pirate Seas",
                 "LevelNumber": 25,
-				"FirstRewardParam": "worldtrophy_pirate",
+                "FirstIntroNarrative": "INTRO",
+                "FirstOutroNarrative": "OUTRO",
+                "ReplayIntroNarrative": "INTRO",
+                "ReplayOutroNarrative": "OUTRO",
+                "FirstRewardParam": "worldtrophy_pirate",
                 "FirstRewardType": "worldtrophy",
                 "Loot": "RTID(DefaultLoot@LevelModules)",
                 "Modules": [
@@ -45,19 +49,83 @@
             }
         },
         {
-      "aliases": [
-        "SeedBank"
+            "aliases": [
+        "INTRO"
       ],
-      "objclass": "SeedBankProperties",
+      "objclass": "NarrativeProperties",
       "objdata": {
-        "PlantExcludeList": [
-		"gravebuster",
-		"hotpotato"
-        ],
-        "SelectionMethod": "chooser"
-         }
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "crazydave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Oh, what is this giant ship ?",
+              "zh": "Oh, what is this giant ship ?"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "MUAHHAHA THIZ IZ MY ZOMBOZZ PIRATE MECH !!!",
+              "zh": "MUAHHAHA THIZ IZ MY ZOMBOZZ PIRATE MECH !!!"
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "AND IT WILL DEZTROY YOU AND YOUR PLANTZ !",
+              "zh": "AND IT WILL DEZTROY YOU AND YOUR PLANTZ !"
+            }
+          }
+        ]
+      }
     },
     {
+        "aliases": [
+        "OUTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "HOW DID YOU BEAT ME NOOOOO !!!",
+              "zh": "HOW DID YOU BEAT ME NOOOOO !!!"
+            }
+          }
+        ]
+      }
+    },
+    {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PlantExcludeList": [
+                    "gravebuster",
+                    "hotpotato"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
             "aliases": [
                 "ZombossBattle"
             ],
@@ -146,7 +214,7 @@
                         "PlantType": "springbean",
                         "Weight": 7
                     },
-					{
+                    {
                         "MaxCount": 1,
                         "MaxWeightFactor": 0,
                         "MinCount": 0,
@@ -183,14 +251,13 @@
         },
         {
             "aliases": [
-        "PiratePlanks"
-      ],
-      "objclass": "PiratePlankProperties",
-      "objdata": {
-        "PlankRows": [
-        ]
-      }
-    }
+                "PiratePlanks"
+            ],
+            "objclass": "PiratePlankProperties",
+            "objdata": {
+                "PlankRows": []
+            }
+        }
     ],
     "version": 1
 }

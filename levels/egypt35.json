@@ -1,30 +1,34 @@
 {
-  "#comment": "IMPZANE",
-  "Information": {
-    "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
-    "name": {
-      "en": "Sarasaland night 9",
-      "zh-CN": "示例关卡1"
+    "#comment": "IMPZANE",
+    "Information": {
+        "uuid": "c58a208a-a5e3-4cfa-9bc3-cc7fbb08c2e3",
+        "name": {
+            "en": "Sarasaland night 10",
+            "zh-CN": "示例关卡1"
+        },
+        "Author": "Captian Impsanity",
+        "AuthorLink": "https://github.com/Gzh0821",
+        "Introduction": {
+            "en": "Sarasaland night 9",
+            "zh-CN": "这是一个示例关卡。"
+        },
+        "GameVersion": "0.1.13",
+        "Version": "1.0",
+        "CreatedAt": "2022-03-08",
+        "UpdatedAt": "2022-03-08",
+        "Difficulty": "IMPZANE",
+        "Category": "Survival"
     },
-    "Author": "Captian Impsanity",
-    "AuthorLink": "https://github.com/Gzh0821",
-    "Introduction": {
-      "en": "Sarasaland night 9",
-      "zh-CN": "这是一个示例关卡。"
-    },
-    "GameVersion": "0.1.13",
-    "Version": "1.0",
-    "CreatedAt": "2022-03-08",
-    "UpdatedAt": "2022-03-08",
-    "Difficulty": "IMPZANE",
-    "Category": "Survival"
-},
-  "objects": [
-    {
+    "objects": [
+        {
             "objclass": "LevelDefinition",
             "objdata": {
                 "Description": "<PLAYERNAME>'s Trip to Sarasaland!",
                 "LevelNumber": 35,
+                "FirstIntroNarrative": "INTRO",
+                "FirstOutroNarrative": "OUTRO",
+                "ReplayIntroNarrative": "INTRO",
+                "ReplayOutroNarrative": "OUTRO",
                 "Loot": "RTID(DefaultLoot@LevelModules)",
                 "Modules": [
                     "RTID(ZombossIntro@LevelModules)",
@@ -37,8 +41,8 @@
                     "RTID(NewWaves@CurrentLevel)",
                     "RTID(ChallengeModule@LevelModules)",
                     "RTID(ZombiesDeadWinCon@LevelModules)",
-          "RTID(ChallengeModule@CurrentLevel)",
-		  "RTID(StandardIntro@LevelModules)"
+                    "RTID(ChallengeModule@CurrentLevel)",
+                    "RTID(StandardIntro@LevelModules)"
                 ],
                 "MusicType": "MiniGame_A",
                 "Name": "Sarasaland night 10",
@@ -49,19 +53,103 @@
             }
         },
         {
-      "aliases": [
-        "SeedBank"
+            "aliases": [
+        "INTRO"
       ],
-      "objclass": "SeedBankProperties",
+      "objclass": "NarrativeProperties",
       "objdata": {
-        "PlantExcludeList": [
-		"gravebuster",
-		"hotpotato"
-        ],
-        "SelectionMethod": "chooser"
-         }
+        "Flow": [
+          {
+            "Character": "winnie",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "dave",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "dave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Penny, do you feel that vibration?",
+              "zh": "Penny, do you feel that vibration?"
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Yes, User Dave, my systems are saying something is under us.",
+              "zh": "Yes, User Dave, my systems are saying something is under us."
+            }
+          },
+          {
+            "Character": "winnie",
+            "Action": "SAY",
+            "Lines": {
+              "en": "We should move out of here.",
+              "zh": "We should move out of here."
+            }
+          },
+          {
+            "Character": "dave",
+            "Action": "SAY",
+            "Lines": {
+              "en": "Penny, the gate is closed...",
+              "zh": "Penny, the gate is closed..."
+            }
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "DON'T LEAVE LET'Z FIGHT AGAIN, BUT THIS TIME I WILL WIN ! ALL OF MY ABILITIEZ ARE STRONGER NOW !!!",
+              "zh": "DON'T LEAVE LET'Z FIGHT AGAIN, BUT THIS TIME I WILL WIN ! ALL OF MY ABILITIEZ ARE STRONGER NOW !!!"
+            }
+          }
+        ]
+      }
     },
     {
+        "aliases": [
+        "OUTRO"
+      ],
+      "objclass": "NarrativeProperties",
+      "objdata": {
+        "Flow": [
+          {
+            "Character": "zombossicon",
+            "Action": "NPC_ENTER"
+          },
+          {
+            "Character": "zombossicon",
+            "Action": "SAY",
+            "Lines": {
+              "en": "GO AWAY, JUST LEAVE. *CONNECTION LOST*",
+              "zh": "GO AWAY, JUST LEAVE. *CONNECTION LOST*"
+            }
+          }
+        ]
+      }
+    },
+    {
+            "aliases": [
+                "SeedBank"
+            ],
+            "objclass": "SeedBankProperties",
+            "objdata": {
+                "PlantExcludeList": [
+                    "gravebuster",
+                    "hotpotato"
+                ],
+                "SelectionMethod": "chooser"
+            }
+        },
+        {
             "aliases": [
                 "ZombossBattle"
             ],
@@ -158,7 +246,7 @@
                         "PlantType": "ghostpepper",
                         "Weight": 10
                     },
-					{
+                    {
                         "MaxCount": 12,
                         "MaxWeightFactor": 0,
                         "MinCount": 8,
@@ -176,29 +264,29 @@
             }
         },
         {
-             "objclass": "StarChallengePlantsLostProps",
-    "aliases": [
-        "PlantsLost"
-    ],
-    "objdata": {
-        "MaximumPlantsLost": 35
-    }
-},
-{
-  "aliases": [
-        "ChallengeModule"
-      ],
-      "objclass": "StarChallengeModuleProperties",
-      "objdata": {
-        "Challenges": [
-          [
-            "RTID(PlantsLost@CurrentLevel)"
-          ]
-        ],
-        "ChallengeAlwaysAvailable": true
-      }
-    },
-    {
+            "objclass": "StarChallengePlantsLostProps",
+            "aliases": [
+                "PlantsLost"
+            ],
+            "objdata": {
+                "MaximumPlantsLost": 75
+            }
+        },
+        {
+            "aliases": [
+                "ChallengeModule"
+            ],
+            "objclass": "StarChallengeModuleProperties",
+            "objdata": {
+                "Challenges": [
+                    [
+                        "RTID(PlantsLost@CurrentLevel)"
+                    ]
+                ],
+                "ChallengeAlwaysAvailable": true
+            }
+        },
+        {
             "aliases": [
                 "NewWaves"
             ],

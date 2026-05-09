@@ -1,0 +1,93 @@
+{
+  "$schema": "../../../gpn-plant-levels.schema.json",
+  "plants": {
+    "peashooter": {
+      "levels": {
+        "1": {
+          "cloneCodename": "peashooter",
+          "icon": "Star",
+          "displayName": "BASIC"
+        },
+        "2": {
+          "cloneCodename": "peashooter_ALT",
+          "icon": "Star",
+          "displayName": "ALT"
+        }
+      },
+      "ui": {
+        "showInAlmanac": true,
+        "showLevelBadge": true
+      },
+      "almanacUpgrade": {
+        "enabled": false,
+        "lockedReasonText": "Buy the Alt form in the shop when you beaten the world or beat the Master level."
+      }
+    },
+    "sunflower": {
+      "levels": {
+        "1": {
+          "cloneCodename": "sunflower",
+          "icon": "Star",
+          "displayName": "BASIC"
+        },
+        "2": {
+          "cloneCodename": "sunflower_ALT",
+          "icon": "Star",
+          "displayName": "ALT"
+        }
+      },
+      "ui": {
+        "showInAlmanac": true,
+        "showLevelBadge": true
+      },
+      "almanacUpgrade": {
+        "enabled": false,
+        "lockedReasonText": "Buy the Alt form in the shop when you beaten the world or beat the Master level."
+      }
+    },
+    "wallnut": {
+      "levels": {
+        "1": {
+          "cloneCodename": "wallnut",
+          "icon": "Star",
+          "displayName": "BASIC"
+        },
+        "2": {
+          "cloneCodename": "wallnut_ALT",
+          "icon": "Star",
+          "displayName": "ALT"
+        }
+      },
+      "ui": {
+        "showInAlmanac": true,
+        "showLevelBadge": true
+      },
+      "almanacUpgrade": {
+        "enabled": false,
+        "lockedReasonText": "Buy the Alt form in the shop when you beaten the world or beat the Master level."
+      }
+    },
+    "potatomine": {
+      "levels": {
+        "1": {
+          "cloneCodename": "potatomine",
+          "icon": "Star",
+          "displayName": "BASIC"
+        },
+        "2": {
+          "cloneCodename": "potatomine_ALT",
+          "icon": "Star",
+          "displayName": "ALT"
+        }
+      },
+      "ui": {
+        "showInAlmanac": true,
+        "showLevelBadge": true
+      },
+      "almanacUpgrade": {
+        "enabled": false,
+        "lockedReasonText": "Buy the Alt form in the shop when you beaten the world or beat the Master level."
+      }
+    }
+  }
+}

@@ -2808,6 +2808,88 @@
 		},
 		{
 			"aliases": [
+				"potatomine_ALT"
+			],
+			"objclass": "PlantAlmanacProperties",
+			"objdata": {
+				"Elements": [
+					{
+						"TYPE": "SUNCOST"
+					},
+					{
+						"TYPE": "RECHARGE"
+					},
+					{
+						"TYPE": "TOUGHNESS"
+					},
+					{
+						"TYPE": "DAMAGE",
+						"VALUE": 200
+					},
+					{
+						"TYPE": "AREA",
+						"SORT": {
+							"en": "Tile",
+							"zh": "本格"
+						}
+					},
+					{
+						"TYPE": "PLANTFOOD",
+						"SORT": {
+							"en": "Duplication",
+							"zh": "分身"
+						}
+					},
+					{
+						"TYPE": "ARMINGTIME",
+						"VALUE": 2
+					},
+					{
+						"TYPE": "FAMILY"
+					}
+				],
+				"Introduction": {
+					"en": "Potato Nugget Mines explode on contact",
+					"zh": "土豆地雷在被僵尸接触时自爆，但是他们需要时间做准备。将他们种在僵尸的前方。"
+				},
+				"Special": [
+					{
+						"NAME": {
+							"en": "Usage",
+							"zh": "用途"
+						},
+						"DESCRIPTION": {
+							"en": "single use",
+							"zh": "一次性使用，需要等待一段时间才能启动"
+						}
+					},
+					{
+						"NAME": {
+							"en": "Range",
+							"zh": "范围"
+						},
+						"DESCRIPTION": {
+							"en": "contact",
+							"zh": "接触者"
+						}
+					}
+				],
+				"Chat": {
+					"en": "So cute and small a Potato nugget mine is the perfect present for a zombie.",
+					"zh": "爱信不信，昨晚一晚上没发出“轰隆————”声。他专注于尝试别的爆炸声，而且尝试了非常多种类（甚至有吸管的咕噜声？）土豆地雷最后不得不放弃对于突破现状的斗争，只能继续“轰隆————”了……"
+				},
+				"BriefIntroduction": {
+					"en": "Explodes on contact",
+					"zh": "种植一段时间后，在僵尸触碰时爆炸"
+				},
+				"DisplayOffset": {
+					"x": 0,
+					"y": 0
+				}
+			}
+		},
+		{
+			"aliases": [
 				"peashooter"
 			],
 			"objclass": "PlantAlmanacProperties",
@@ -2865,6 +2947,63 @@
 		},
 		{
 			"aliases": [
+				"peashooter_ALT"
+			],
+			"objclass": "PlantAlmanacProperties",
+			"objdata": {
+				"Elements": [
+					{
+						"TYPE": "SUNCOST"
+					},
+					{
+						"TYPE": "RECHARGE"
+					},
+					{
+						"TYPE": "TOUGHNESS"
+					},
+					{
+						"TYPE": "DAMAGE",
+						"VALUE": 400
+					},
+					{
+						"TYPE": "PLANTFOOD",
+						"SORT": {
+							"en": "MEGA Gatling mode",
+							"zh": "MEGA Gatling mode"
+						}
+					},
+					{
+						"TYPE": "RANGE",
+						"SORT": {
+							"en": "Straight",
+							"zh": "直线"
+						}
+					},
+					{
+						"TYPE": "FAMILY"
+					}
+				],
+				"Introduction": {
+					"en": "Peashooters are your first attacker but sadly he will be overshadowed when his brother repeater comes in the light",
+					"zh": "豌豆射手是你的第一道防线。他们会向僵尸发射豌豆。"
+				},
+				"Special": [],
+				"Chat": {
+					"en": "\"What is it like being famous?\"asked Peashooter while sipping his bottled water,\"I can't talk right now, I'm finishing my merchandising deal. Hold my fir coat.\"",
+					"zh": "“成为名人是什么感觉？”豌豆射手问了一句，抿了一口自己的瓶装水，“我现在没法说话，我正在完成我的销售项目，帮我拿一下我的毛皮大衣。”"
+				},
+				"DisplayOffset": {
+					"x": 0,
+					"y": 0
+				},
+				"BriefIntroduction": {
+					"en": "Shoots mega peas at the enemies and knockbacks them",
+					"zh": "向僵尸发射豌豆子弹"
+				}
+			}
+		},
+		{
+			"aliases": [
 				"sunflower"
 			],
 			"objclass": "PlantAlmanacProperties",
@@ -2909,6 +3048,59 @@
 				"BriefIntroduction": {
 					"en": "Gives you additional sun",
 					"zh": "提供额外的阳光"
+				},
+				"DisplayOffset": {
+					"x": 0,
+					"y": 0
+				}
+			}
+		},
+		{
+			"aliases": [
+				"sunflower_ALT"
+			],
+			"objclass": "PlantAlmanacProperties",
+			"objdata": {
+				"Elements": [
+					{
+						"TYPE": "SUNCOST"
+					},
+					{
+						"TYPE": "RECHARGE"
+					},
+					{
+						"TYPE": "TOUGHNESS"
+					},
+					{
+						"TYPE": "PLANTFOOD",
+						"SORT": {
+							"en": "Self heal sun eruption",
+							"zh": "Self heal sun eruption"
+						}
+					},
+					{
+						"TYPE": "SUNPRODUCTION",
+						"SORT": {
+							"en": "Slow",
+							"zh": "Slow"
+						}
+					},
+					{
+						"TYPE": "FAMILY"
+					}
+				],
+				"Introduction": {
+					"en": "Chunkflower is both a sunproducer and a wall",
+					"zh": "向日葵为你提供额外的阳光。种得越多越好！"
+				},
+				"Special": [],
+				"Chat": {
+					"en": "Chunkflower has a youtube channel its named SunASMR she mostly eats a ton of food there and puts it up her mic.",
+					"zh": "Chunkflower has a youtube channel its named SunASMR she mostly eats a ton of food there and puts it up her mic."
+				},
+				"BriefIntroduction": {
+					"en": "Protects and Gives you additional sun",
+					"zh": "Protects and Gives you additional sun"
 				},
 				"DisplayOffset": {
 					"x": 0,
@@ -3004,6 +3196,52 @@
 				"Chat": {
 					"en": "Having retired from his days as a champion bowler in the Pro Leagues, Wall-nut is looking forward to a real challenge on the front lines of home defence. DEFENCE! DEFENCE!",
 					"zh": "自从退休，坚果墙不再在专业团队中作为一个冠军保龄球选手，他正憧憬着面对真正的挑战————在他的前院作为防线。守卫！守卫！"
+				},
+				"BriefIntroduction": {
+					"en": "Blocks off zombies and protects your other plants",
+					"zh": "抵挡僵尸并保护身后的植物"
+				},
+				"DisplayOffset": {
+					"x": 0,
+					"y": 0
+				}
+			}
+		},
+		{
+			"aliases": [
+				"wallnut_ALT"
+			],
+			"objclass": "PlantAlmanacProperties",
+			"objdata": {
+				"Elements": [
+					{
+						"TYPE": "SUNCOST"
+					},
+					{
+						"TYPE": "RECHARGE"
+					},
+					{
+						"TYPE": "TOUGHNESS"
+					},
+					{
+						"TYPE": "PLANTFOOD",
+						"SORT": {
+							"en": "Armor (3500)",
+							"zh": "Armor (3500)"
+						}
+					},
+					{
+						"TYPE": "FAMILY"
+					}
+				],
+				"Introduction": {
+					"en": "Mini-nuts are like wallnut but mini.",
+					"zh": "Mini-nuts are like wallnut but mini."
+				},
+				"Special": [],
+				"Chat": {
+					"en": "As a child he played mostly mario and he loved using the minimushroom.",
+					"zh": "As a child he played mostly mario and he loved using the minimushroom."
 				},
 				"BriefIntroduction": {
 					"en": "Blocks off zombies and protects your other plants",

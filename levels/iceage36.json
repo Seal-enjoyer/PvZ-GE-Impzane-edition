@@ -72,9 +72,25 @@
           {
             "Level": -1,
             "PlantType": "missiletoe"
+          },
+          {
+            "Level": -1,
+            "PlantType": "goldbloom"
+          },
+          {
+            "Level": -1,
+            "PlantType": "sunflower"
+          },
+          {
+            "Level": -1,
+            "PlantType": "solartomato"
+          },
+          {
+            "Level": -1,
+            "PlantType": "hurrikale"
           }
         ],
-        "SelectionMethod": "chooser"
+        "SelectionMethod": "preset"
       }
     },
     {
@@ -327,7 +343,8 @@
       ],
       "objclass": "WaveManagerProperties",
       "objdata": {
-        "FlagWaveInterval": 4,
+        "FlagWaveVeteranOverrideTypes": [1, 1],
+        "FlagWaveInterval": 6,
         "MaxNextWaveHealthPercentage": 0.1,
         "SuppressFlagZombie": true,
         "MinNextWaveHealthPercentage": 0.1,

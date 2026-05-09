@@ -29,7 +29,7 @@
         "FirstOutroNarrative": "OUTRO",
         "ReplayIntroNarrative": "INTRO",
         "ReplayOutroNarrative": "OUTRO",
-        "FirstRewardParam": "vamporchini",
+        "FirstRewardParam": "vamporcini",
         "FirstRewardType": "unlock_plant",
         "Loot": "RTID(DefaultLoot@LevelModules)",
         "Modules": [

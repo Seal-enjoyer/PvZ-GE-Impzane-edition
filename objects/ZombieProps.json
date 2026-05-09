@@ -65,7 +65,7 @@
 					"modern_armor2"
 				],
 				"WavePointCost": 600,
-				"Weight": 40000,
+				"Weight": 4000,
 				"HitRect": "RTID(CommonHitRect@RectangleProps)",
 				"AttackRect": "RTID(CommonAttackRect@RectangleProps)"
 			}
@@ -597,7 +597,7 @@
 				"ChillInsteadOfFreeze": true,
 				"WalkSPS": 0.55,
 				"EatDPS": 100,
-				"Toughness": 400,
+				"Toughness": 250,
 				"WavePointCost": 100,
 				"Weight": 1000,
 				"HitRect": "RTID(CommonHitRect@RectangleProps)",
@@ -615,7 +615,7 @@
 				"ChillInsteadOfFreeze": true,
 				"WalkSPS": 0.55,
 				"EatDPS": 100,
-				"Toughness": 500,
+				"Toughness": 250,
 				"StartingArmors": [
 					"egypt_armor1"
 				],
@@ -636,7 +636,7 @@
 				"ChillInsteadOfFreeze": true,
 				"WalkSPS": 0.55,
 				"EatDPS": 100,
-				"Toughness": 500,
+				"Toughness": 250,
 				"StartingArmors": [
 					"egypt_armor2"
 				],
@@ -657,7 +657,7 @@
 				"ChillInsteadOfFreeze": true,
 				"WalkSPS": 0.55,
 				"EatDPS": 100,
-				"Toughness": 1900,
+				"Toughness": 250,
 				"CannotCarryPlantfoodsInWaves": true,
 				"StartingArmors": [
 					"egypt_armor4"
@@ -2231,8 +2231,8 @@
 				"ChooseToSpawnOnNonDeckRows": true,
 				"CannotBeTossedByCitron": false,
 				"WalkSPS": 0.185,
-				"EatDPS": 200,
-				"Toughness": 2000,
+				"EatDPS": 400,
+				"Toughness": 3000,
 				"WavePointCost": 350,
 				"Weight": 4000,
 				"HitRect": "RTID(CommonHitRect@RectangleProps)",
@@ -2348,11 +2348,11 @@
 				"CannotBeTossedByCitron": false,
 				"CanBeEasilySwallowedByChomper": true,
 				"CannotCarryPlantfoodsInWaves": true,
-				"WalkSPS": 50.4,
+				"WalkSPS": 0.4,
 				"EatDPS": 100,
 				"Toughness": 150,
 				"NormalDeathWhenMowed": true,
-				"FlyingSpeed": 9.4,
+				"FlyingSpeed": 1,
 				"ImmuneToGarlic": true,
 				"WavePointCost": 400,
 				"Weight": 1,
@@ -2665,21 +2665,23 @@
 										"pirate",
 										"pirate_armor1",
 										"pirate_armor2",
-										"pirate_armor4"
+										"pirate_armor4",
+										"pelican",
+										"pirate_captain"
 									],
 									"pointMin": 200,
-									"pointMax": 1111
+									"pointMax": 800
 								},
 								"weight": 10,
-								"repeatMax": 0,
-								"repeatMin": 0
+								"repeatMax": 1,
+								"repeatMin": 1
 							}
 						],
 						"AnimRateModifier": 2,
 						"ChilledDurationFromFrozen": 10,
 						"DamageIndexFull": 0,
 						"DamageIndexHalf": 0,
-						"HitPoints": 30000,
+						"HitPoints": 20000,
 						"MaxIdleTime": 0,
 						"MinIdleTime": 0,
 						"StunDamageScale": 0.5,
@@ -2696,7 +2698,7 @@
 									"pointMin": 1000,
 									"pointMax": 2000
 								},
-								"weight": 67,
+								"weight": 2,
 								"repeatMax": 3,
 								"repeatMin": 2
 							},
@@ -2704,16 +2706,19 @@
 								"actionName": "summon",
 								"summonProps": {
 									"zombieList": [
-										"barrelroller",
-										"pirate_barrel",
+										"pirate",
+										"pirate_armor1",
+										"pirate_armor2",
+										"pirate_armor4",
+										"pelican",
 										"pirate_captain",
-										"cannon"
+										"swashbuckler"
 									],
-									"pointMin": 100,
-									"pointMax": 200
+									"pointMin": 400,
+									"pointMax": 800
 								},
 								"weight": 4,
-								"repeatMax": 3,
+								"repeatMax": 1,
 								"repeatMin": 1
 							},
 							{
@@ -2723,8 +2728,8 @@
 									"pointMin": 1000,
 									"pointMax": 2000
 								},
-								"weight": 100,
-								"repeatMax": 3,
+								"weight": 1,
+								"repeatMax": 2,
 								"repeatMin": 0
 							}
 						],
@@ -2732,7 +2737,7 @@
 						"ChilledDurationFromFrozen": 5,
 						"DamageIndexFull": 3,
 						"DamageIndexHalf": 3,
-						"HitPoints": 40000,
+						"HitPoints": 30000,
 						"MaxIdleTime": 0.3,
 						"MinIdleTime": 0.2,
 						"StunDamageScale": 1.5,
@@ -2746,14 +2751,21 @@
 								"actionName": "summon",
 								"summonProps": {
 									"zombieList": [
-										"cannon"
+										"pirate",
+										"pirate_armor1",
+										"pirate_armor2",
+										"pirate_armor4",
+										"pelican",
+										"pirate_captain",
+										"swashbuckler",
+										"pirate_gargantuar"
 									],
 									"pointMin": 2500,
 									"pointMax": 4100
 								},
-								"weight": 10,
-								"repeatMax": 20,
-								"repeatMin": 2
+								"weight": 3,
+								"repeatMax": 1,
+								"repeatMin": 1
 							},
 							{
 								"actionName": "shoot",
@@ -2762,7 +2774,7 @@
 									"pointMin": 1000,
 									"pointMax": 2000
 								},
-								"weight": 30,
+								"weight": 3,
 								"repeatMax": 2,
 								"repeatMin": 2
 							},
@@ -2793,7 +2805,7 @@
 						"ChilledDurationFromFrozen": 5,
 						"DamageIndexFull": 6,
 						"DamageIndexHalf": 6,
-						"HitPoints": 50000,
+						"HitPoints": 10000,
 						"MaxIdleTime": 1.5,
 						"MinIdleTime": 0.9,
 						"StunDamageScale": 3.0,
@@ -2807,13 +2819,20 @@
 								"actionName": "summon",
 								"summonProps": {
 									"zombieList": [
-										"cannon"
+										"pirate",
+										"pirate_armor1",
+										"pirate_armor2",
+										"pirate_armor4",
+										"pelican",
+										"pirate_captain",
+										"swashbuckler",
+										"pirate_gargantuar"
 									],
 									"pointMin": 2500,
 									"pointMax": 9100
 								},
-								"weight": 10,
-								"repeatMax": 20,
+								"weight": 1,
+								"repeatMax": 2,
 								"repeatMin": 2
 							},
 							{
@@ -2823,7 +2842,7 @@
 									"pointMin": 1000,
 									"pointMax": 2000
 								},
-								"weight": 30,
+								"weight": 3,
 								"repeatMax": 2,
 								"repeatMin": 2
 							},
@@ -2850,11 +2869,11 @@
 								"repeatMin": 1
 							}
 						],
-						"AnimRateModifier": 12.25,
+						"AnimRateModifier": 8.25,
 						"ChilledDurationFromFrozen": 5,
 						"DamageIndexFull": 6,
 						"DamageIndexHalf": 6,
-						"HitPoints": 60000,
+						"HitPoints": 17500,
 						"MaxIdleTime": 3.5,
 						"MinIdleTime": 0.9,
 						"StunDamageScale": 3.0,
@@ -3016,6 +3035,7 @@
 			"objclass": "ZombieProperties",
 			"objdata": {
 				"CannotBeTossedByCitron": false,
+				"CannotBeDraggedByTangleKelp": true,
 				"StartingArmors": [
 					"cowboy_armor4"
 				],
@@ -3037,6 +3057,7 @@
 			"objclass": "ZombieProperties",
 			"objdata": {
 				"CannotBeTossedByCitron": false,
+				"CannotBeDraggedByTangleKelp": true,
 				"StartingArmors": [],
 				"WalkSPS": 0.4,
 				"EatDPS": 4000,
@@ -8371,7 +8392,7 @@
 				"CannotCarryPlantfoodsInWaves": true,
 				"WalkSPS": 1,
 				"EatDPS": 300,
-				"Toughness": 3500,
+				"Toughness": 1200,
 				"WavePointCost": 100,
 				"Weight": 100,
 				"HitRect": "RTID(CommonHitRect@RectangleProps)",

@@ -67,48 +67,10 @@
           "glaciershroom",
           "snowdrop",
           "icebloom",
-          "wintermint"
+          "wintermint",
+          "iceweed"
         ],
         "SelectionMethod": "chooser"
-      }
-    },
-    {
-      "aliases": [
-        "LevelScheduler"
-      ],
-      "objclass": "LevelSchedulerProps",
-      "objdata": {
-        "TimeBeforeFirst": {
-          "Max": 0,
-          "Min": 0
-        },
-        "TimeBetween": {
-          "Max": 35,
-          "Min": 20
-        },
-        "Repeat": {
-          "Max": 100,
-          "Min": 100
-        },
-        "RewardWhenEnded": false,
-        "SuppressRewardState": false,
-        "Events": [
-          "RTID(WaveMissileEvent@CurrentLevel)"
-        ]
-      }
-    },
-    {
-      "aliases": [
-        "WaveMissileEvent"
-      ],
-      "objclass": "MissileLocateWaveActionProps",
-      "objdata": {
-        "MissileCount": 2,
-        "ColumnStart": 0,
-        "ColumnEnd": 9,
-        "MissileFallCountdown": 0,
-        "WaveStartMessage": "",
-        "ProjectileType": "meteor_mint"
       }
     },
     {
@@ -179,7 +141,7 @@
 			"objclass": "StarChallengeBeatTheLevelProps",
 			"objdata": {
 				"Descriptions": [
-				"This levels gimmick is that you have 2 endangered pink-marigold they only have 1 hp so anymistake will led to a lose."
+				"This levels gimmick is that you have 3 endangered pink-marigold they only have 1 hp so anymistake will lead to a lose."
 				],
 				"DescriptionsMultiLanguage": [
 					{
@@ -200,7 +162,23 @@
           {},
           {},
           {
-            "PointIncrementPerWave": 60,
+            "PointIncrementPerWave": 20,
+            "StartingPoints": 20,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 30,
+            "StartingPoints": 30,
+            "StartingWave": 0,
+            "ZombiePool": [
+              "RTID(dino@ZombieTypes)"
+            ]
+          },
+          {
+            "PointIncrementPerWave": 50,
             "StartingPoints": 50,
             "StartingWave": 0,
             "ZombiePool": [
@@ -208,37 +186,21 @@
             ]
           },
           {
-            "PointIncrementPerWave": 60,
-            "StartingPoints": 60,
+            "PointIncrementPerWave": 100,
+            "StartingPoints": 100,
             "StartingWave": 0,
             "ZombiePool": [
-              "RTID(dino@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 60,
-            "StartingPoints": 60,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(dino@ZombieTypes)"
-            ]
-          },
-          {
-            "PointIncrementPerWave": 260,
-            "StartingPoints": 60,
-            "StartingWave": 0,
-            "ZombiePool": [
-              "RTID(dino@ZombieTypes)"
+              "RTID(dino@ZombieTypes)",
+              "RTID(dino_armor1@ZombieTypes)",
+              "RTID(dino_armor2@ZombieTypes)"
             ]
           }
         ],
-                "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
+        "WaveManagerProps": "RTID(WaveManagerProps@CurrentLevel)"
       }
     },
-    {
-		},
-		{
-			},
+    {},
+    {},
     {
             "aliases": [
                 "LevelScheduler"
@@ -303,7 +265,7 @@
         "ProtectThePlant"
     ],
     "objdata": {
-        "MustProtectCount": 2,
+        "MustProtectCount": 3,
         "Plants": [
             {
                 "GridX": 3,
